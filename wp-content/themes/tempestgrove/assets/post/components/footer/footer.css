@@ -1,0 +1,98 @@
+/* =============================================================================
+
+    FOOTER CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $main-footer-background: #111;
+    $main-footer-padding: 0.5rem 0;
+    $main-footer-border: transparent;
+    $main-footer-font-size: 0.75rem;
+
+/* Container ================================================================ */
+.main-footer {
+    background: $main-footer-background;
+    border-top: 1px solid rgba(0,0,0,0.1);
+
+    @media $(p-tablet) {
+
+        p {
+            font-size: $main-footer-font-size;
+        }
+
+    }
+
+}
+
+.main-footer__container {
+    border-top: $main-footer-border;
+    padding: $main-footer-padding;
+    text-align: center;
+
+    @media $(p-tablet) {
+        text-align: left;
+    }
+
+}
+
+/* Element Group ============================================================ */
+.main-footer__group {
+    flex-flow: row wrap;
+}
+
+.main-footer__layout {
+    align-items: center;
+}
+
+.main-footer__logo-wrapper {
+    margin: 0 0 1.5rem;
+
+    @media $(p-tablet) {
+        padding-right: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    @media $(l-tablet) {
+        margin: 0;
+    }
+
+}
+
+.main-footer__logo {
+    max-width: 50%;
+    display: inline-block;
+
+    @media $(l-phone) {
+        max-width: 30%;
+        display:none;
+    }
+
+    @media $(p-tablet) {
+        max-width: 150px;
+        padding-left: 0.5rem;
+        display:none;
+    }
+
+    @media $(l-tablet) {
+        max-width: 100%;
+        display:none;
+    }
+
+}
+
+.main-footer__social {
+    text-align: center;
+    width: 100%;
+
+    @media $(p-tablet) {
+        text-align: right;
+        width: auto;
+    }
+
+}

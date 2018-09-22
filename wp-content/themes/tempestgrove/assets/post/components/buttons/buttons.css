@@ -1,0 +1,154 @@
+/* =============================================================================
+
+    BUTTONS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Basic */
+    $button-padding: 0.6rem 1rem;
+    $button-radius: 0;
+    $button-font-family: $global-font-family;
+    $button-font-size: 0.85rem;
+    $button-font-weight: 600;
+    $button-font-style: normal;
+    $button-text-transform: none;
+    $button-background: var(--dal-grey);
+    $button-color: white;
+
+        /* Basic: Hover */
+        $button-background--hover: $link-color;
+        $button-color--hover: white;
+
+    /* Small */
+    $button-padding--small: 0.4rem 0.6rem;
+    $button-font-size--small: 0.7rem;
+
+/* Form Buttons ============================================================= */
+button,
+input[type="submit"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+[class*="button--"] {
+    padding: $button-padding;
+    border-radius: $button-radius;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    font-style: $button-font-style;
+    text-transform: $button-text-transform;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.no-touchevents {
+
+    [class*="button--"]:hover {
+
+        .core-icon {
+
+            use {
+                fill: white !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* Basic ==================================================================== */
+[class*="button--basic"] {
+    background: $button-background;
+    background-size: cover;
+    color: $button-color;
+    position: relative;
+    overflow: hidden;
+    /* text-shadow: -1px 1px 0 rgba(0,0,0,0.15); */
+
+    span {
+        position: relative;
+        z-index: 10;
+
+        &:after {
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-left-color: var(--uw-red);
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin-left: -0.35rem;
+            opacity: 0;
+            transition: margin $global-timing $global-easing 0ms,
+                        opacity $global-timing $global-easing 0ms;
+        }
+
+    }
+
+}
+
+    /* Basic: Hover */
+    .no-touchevents {
+
+        [class*="button--basic"]:hover {
+
+            span:after {
+                margin-left: 0.75rem;
+                opacity: 1;
+                transition: margin $global-timing $global-easing 0ms,
+                            opacity $global-timing $global-easing 0ms;
+            }
+
+        }
+
+    }
+
+/* Outline ================================================================== */
+[class*="button--"][class*="--outline"] {
+    background: transparent;
+    color: white;
+    border: 2px solid var(--dal-gray);
+    transition: background $global-timing $global-easing 0ms,
+                color $global-timing $global-easing 0ms;
+}
+
+    /* Outline: Hover */
+    .no-touchevents {
+
+        [class*="button--"][class*="--outline"]:hover {
+            background: var(--dal-gray);
+            color: white;
+            transition: background $global-timing $global-easing 0ms,
+                        color $global-timing $global-easing 0ms;
+        }
+
+    }
+
+/* State: Disabled ========================================================== */
+.disabled,
+[disabled] {
+    pointer-events: none;
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Size: Small ============================================================== */
+[class*="button--"].small {
+
+    @media $(l-tablet) {
+        font-size: $button-font-size--small;
+        padding: $button-padding--small;
+    }
+
+}

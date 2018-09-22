@@ -1,0 +1,213 @@
+/* =============================================================================
+
+    BLOCKS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+.services-blocks {
+  background: black;
+  padding: 1rem 0.5rem;
+  .service {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    .service-icon {
+      color: white;
+    }
+    .service-title {
+      font-size: 2rem;
+      color: var(--uw-red);
+    }
+  }
+}
+
+
+/* Landing Blocks =========================================================== */
+.landing-blocks {
+    background: var(--gray--dark);
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+
+    @media $(p-tablet) {
+        border: none;
+    }
+
+    @media $(cinema-xl) {
+        padding: 2rem 0;
+    }
+
+    &.reset {
+
+        @media $(cinema) {
+            /* padding: 0; */
+
+            [class*="container--"] {
+                /* max-width: none; */
+                /* width: 100%; */
+            }
+
+            .landing-blocks__block {
+                padding: 0;
+            }
+
+        }
+
+    }
+
+}
+
+@media $(cinema) {
+
+    .no-touchevents {
+
+        .landing-blocks:hover {
+
+            .landing-blocks__block {
+                opacity: 0.25;
+                transition: opacity $global-timing $global-easing 0ms;
+            }
+
+        }
+
+        .landing-blocks:hover .landing-blocks__block:hover {
+            opacity: 1;
+            transition: opacity $global-timing $global-easing 0ms;
+        }
+
+    }
+
+}
+
+.landing-blocks__container {
+    justify-content: center;
+}
+
+.landing-blocks__block {
+    padding: 1rem 0;
+    display: flex;
+    transition: opacity $global-timing $global-easing 0ms;
+
+    @media $(p-tablet) {
+        padding: 1rem;
+    }
+
+    @media $(l-tablet) {
+        padding: 0.75rem;
+    }
+
+    @media $(cinema) {
+        padding: 1rem 0.5rem;
+    }
+
+}
+
+.landing-blocks__block-inner {
+    background: #111;
+    box-shadow: -5px 5px 60px 0 rgba(0,0,0,0.1),
+                0 2px 3px 0 rgba(0,0,0,0.075);
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+}
+
+.landing-blocks__block-title {
+    font-weight: bold;
+    margin: 0.5rem 0 0;
+    font-size: $font-scale-h3;
+
+    &:after {
+        width: 2rem;
+        height: 4px;
+        content: "";
+        display: block;
+        background: var(--uw-red);
+        margin-top: 0.4rem;
+    }
+
+    @media $(p-tablet) {
+        font-size: $font-scale-h4;
+    }
+
+}
+
+.landing-blocks__block-image-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mix-blend-mode: overlay;
+        background: transparent url('../img/shards--small.png') no-repeat;
+    }
+
+}
+
+.landing-blocks__block-image {
+    display: block;
+    transform: scale(1);
+    transition: transform calc($global-timing * 2) $global-easing 0ms !important;
+}
+
+.no-touchevents {
+
+    .landing-blocks__block-image-link:hover {
+
+        .landing-blocks__block-image {
+            transform: scale(1.2);
+            transition: transform calc($global-timing * 2) $global-easing 0ms !important;
+        }
+
+    }
+
+}
+
+.landing-blocks__block-content {
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, var(--uw-red), white);
+        content: "";
+        opacity: 0.5;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 2rem;
+        height: 2rem;
+        background: var(--uw-red);
+        transform: translate(50%,50%) rotate(45deg);
+    }
+
+}
+
+.landing-blocks__block-cta {
+    margin-top: 0.5rem;
+}

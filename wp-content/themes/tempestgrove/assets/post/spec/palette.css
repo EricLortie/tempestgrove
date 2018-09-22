@@ -1,0 +1,23 @@
+/* =============================================================================
+
+    PALETTE CSS
+
+    Authored by:
+        - Justin Bellefontaine
+
+============================================================================= */
+:root {
+    --gray--dark: #222;
+    --black: #000;
+
+    --uw-red: #D80032;
+    --dal-gray: #707372;
+
+    --highlight: var(--uw-red);
+
+    --color-utility--danger: #ff5d5d;
+}
+
+body {
+  color: #ccc;
+}

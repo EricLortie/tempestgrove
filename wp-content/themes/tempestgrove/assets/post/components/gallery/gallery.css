@@ -1,0 +1,244 @@
+/* =============================================================================
+
+    GALLERY CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $gallery-alignment: left;
+
+    /* Items */
+    $gallery-item-padding: 0.25rem;
+
+    /* Full Gallery */
+
+        /* Close Button */
+        $gallery-close-top-offset: 0;
+        $gallery-close-right-offset: 0;
+        $gallery-close-background: var(--black);
+        $gallery-close-color: white;
+        $gallery-close-padding: 0.25rem;
+        $gallery-close-size: 2rem;
+
+            /* Close Button: Hover */
+            $gallery-close-background--hover: var(--uw-red);
+            $gallery-close-color--hover: white;
+
+        /* Arrows */
+        $gallery-arrow-size: 3rem; /* Sets both width and height */
+        $gallery-arrow-background: var(--uw-red);
+        $gallery-arrow-radius: 0;
+        $gallery-arrow-buffer: 0; /* Controls the space on the left and right */
+
+            /* Arrows: Icons */
+            $gallery-arrow-icon-size: 50%;
+
+            /* Arrows: Hover */
+            $gallery-arrow-background--hover: var(--black);
+
+/* Containers =============================================================== */
+.gallery {
+    text-align: $gallery-alignment;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Items ==================================================================== */
+.gallery__item {
+    padding: $gallery-item-padding;
+    font-size: 1rem;
+    display: inline-block;
+    flex: 0 0 50%;
+
+    @media $(l-tablet) {
+        flex: 0 0 25%;
+    }
+
+}
+
+.gallery__item-link {
+    display: block;
+    opacity: 1;
+    transition: opacity $global-timing $global-easing 0ms !important;
+}
+
+.gallery__item-image--thumbnail {
+    width: 100%;
+}
+
+.no-touchevents {
+
+    .gallery:hover {
+
+        .gallery__item-link {
+            opacity: 0.25;
+            transition: opacity $global-timing $global-easing 0ms;
+        }
+
+    }
+
+    .gallery:hover .gallery__item-link:hover {
+        opacity: 1;
+        transition: opacity $global-timing $global-easing 0ms;
+    }
+
+}
+
+/* Full Gallery ============================================================= */
+
+    /* Container */
+    .gallery--full {
+        height: 100vh;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        transform: translate3d(0,-100%,0);
+        opacity: 0;
+        transition: opacity 250ms $global-easing 0ms,
+                    transform 0ms ease 250ms;
+
+        &.open {
+            transform: translate3d(0,0,0);
+            opacity: 1;
+            transition: opacity 250ms $global-easing 0ms;
+        }
+
+    }
+
+    /* Slides */
+    .gallery__slides {
+        width: 100%;
+
+        /* Track */
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Arrows (Next and Prev) */
+        .slick-arrow {
+            z-index: 1;
+        }
+
+    }
+
+    .gallery__slide {
+        max-height: 80%;
+        max-width: 80vw;
+        padding: 0 2rem;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+
+    }
+
+    /* Images (Full) */
+    .gallery__item-image--full {
+        /* TODO: This should be a percentage value to account for varying screen heights. */
+        max-height: 80vh;
+    }
+
+    /* Close Button */
+    .gallery__close-button {
+        top: $gallery-close-top-offset;
+        right: $gallery-close-right-offset;
+        background: $gallery-close-background;
+        fill: $gallery-close-color;
+        padding: $gallery-close-padding;
+        width: $gallery-close-size;
+        height: $gallery-close-size;
+        position: absolute;
+    }
+
+        /* Close Button: Hover */
+        .no-touchevents .gallery__close-button:hover {
+            background: $gallery-close-background--hover;
+            fill: $gallery-close-color--hover;
+        }
+
+    /* Full Gallery: Navigation Arrows */
+    .gallery--full .slick-arrow {
+        font-size: $gallery-arrow-icon-size;
+        border-radius: $gallery-arrow-radius;
+        background: $gallery-arrow-background;
+        width: $gallery-arrow-size;
+        height: $gallery-arrow-size;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(0,-50%,0);
+        color: white;
+        cursor: pointer;
+        outline: none;
+        display: none;
+
+        @media $(p-tablet) {
+            display: block;
+        }
+
+        /* Prev */
+        &.slick-prev {
+            left: $gallery-arrow-buffer;
+        }
+
+        /* Next */
+        &.slick-next {
+            right: $gallery-arrow-buffer;
+        }
+
+    }
+
+        /* Full Gallery: Arrows (Hover) */
+        .no-touchevents {
+
+            .gallery--full .slick-arrow:hover {
+                background: $gallery-arrow-background--hover;
+            }
+
+        }
+
+        /* Full Gallery: Arrows: Icons */
+        [class*="gallery__arrow-icon--"] {
+            width: $gallery-arrow-icon-size;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+/* Gallery: Sidebar Navigation ============================================== */
+.has-sidebar-nav {
+
+    .gallery--full {
+        width: 100%;
+
+        @media $(l-tablet) {
+            width: calc(100vw - $sidebar-nav-width--tablet);
+        }
+
+        @media $(cinema) {
+            width: calc(100vw - $sidebar-nav-width--cinema);
+        }
+
+        @media $(cinema-xl) {
+            width: calc(100vw - $sidebar-nav-width--cinema-xl);
+        }
+
+    }
+
+}

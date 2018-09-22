@@ -1,0 +1,371 @@
+/* =============================================================================
+
+    FORMS (BASE) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+@import "forms-variables.css";
+
+/* Gravity Forms ============================================================ */
+
+    /* Complex (2 Column) */
+    .ginput_complex {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+
+        input,
+        select,
+        textarea {
+
+            + label {
+                font-family: $form-sublabel-font-family;
+                font-size: $form-sublabel-font-size;
+                color: $form-sublabel-color;
+                font-weight: $form-sublabel-font-weight;
+                font-style: $form-sublabel-font-style;
+                text-transform: $form-sublabel-text-transform;
+                margin: $form-sublabel-margin;
+                display: block;
+            }
+
+        }
+
+        .address_country {
+            margin-top: 1rem;
+        }
+
+        /* Each Item */
+        span {
+            display: block;
+            flex: 0 0 100%;
+            margin: 0 0 $form-field-margin;
+
+            @media $(l-tablet) {
+                flex: 0 0 49%;
+
+                &:nth-last-child(2),
+                &:last-of-type {
+                    margin: 0;
+                }
+
+            }
+
+        }
+
+    }
+
+    .gf_clear_complex {
+        display: none;
+    }
+
+    /* Field Labels */
+    .gform_fields > li > label,
+    label {
+        font-family: $form-label-font-family;
+        font-size: calc($form-label-font-size * 1.2);
+        color: $form-label-color;
+        font-weight: $form-label-font-weight;
+        font-style: $form-label-font-style;
+        text-transform: $form-label-text-transform;
+        margin: $form-label-margin;
+        /* display: inline-block; */
+
+        @media $(p-tablet) {
+            font-size: $form-label-font-size;
+        }
+
+    }
+
+    /* Fields */
+    .gform_fields {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: $global-font-family;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        > li {
+            margin: $form-field-margin 0;
+
+            &.field_sublabel_below {
+
+            }
+
+        }
+
+    }
+
+    /* Buttons */
+    .gform_button.button {
+        padding: $form-submit-button-padding;
+        border-radius: $form-submit-button-radius;
+        font-family: $form-submit-button-font-family;
+        font-size: $form-submit-button-font-size;
+        font-weight: $form-submit-button-font-weight;
+        font-style: $form-submit-button-font-style;
+        text-transform: $form-submit-button-text-transform;
+        background: $form-submit-button-background;
+        color: $form-submit-button-color;
+        transition: background $global-timing $global-easing 0ms,
+                    color $global-timing $global-easing 0ms;
+    }
+
+        /* Buttons: Hover */
+        .no-touchevents .gform_button.button:hover {
+            background: $form-submit-button-background--hover;
+            color: $form-submit-button-color--hover;
+            transition: background $global-timing $global-easing 0ms,
+                        color $global-timing $global-easing 0ms;
+        }
+
+    /* Form Title */
+    .gform_title {
+
+    }
+
+    /* Empty Labels */
+    .gfield_label:empty {
+        display: none;
+    }
+
+    /* Form Sections */
+    .gsection {
+        padding: $form-section-padding;
+    }
+
+        /* Form Section: Title */
+        .gsection_title {
+            font-family: $form-section-title-font-family;
+            font-weight: $form-section-title-font-weight;
+            font-style: $form-section-title-font-style;
+            font-size: $form-section-title-font-size;
+            color: $form-section-title-color;
+            text-transform: $form-section-title-text-transform;
+            padding: $form-section-title-padding;
+            margin: $form-section-title-margin;
+            border-bottom: $form-section-title-border;
+            display: inline-block;
+        }
+
+        /* Form Section: Description */
+        .gsection_description {
+            font-family: $form-section-desc-font-family;
+            font-weight: $form-section-desc-font-weight;
+            font-style: $form-section-desc-font-style;
+            font-size: 1rem;
+            color: $form-section-desc-color;
+            text-transform: $form-section-desc-text-transform;
+            padding: $form-section-desc-padding;
+            margin: $form-section-desc-margin;
+
+            @media $(p-tablet) {
+                font-size: $form-section-desc-font-size;
+            }
+
+        }
+
+    /* Footer */
+    .gform_footer {
+        margin: 1rem 0 0;
+    }
+
+    /* Confirmation */
+    .gform_confirmation_message {
+        font-family: Helvetica, Arial, sans-serif;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.25;
+        font-weight: normal;
+        display: inline-block;
+    }
+
+    /* Required Note */
+    .gfield_required:after {
+        content: "(Required)";
+        font-size: small;
+        font-weight: normal;
+        color: var(--color-utility--danger);
+        text-transform: uppercase;
+        margin-left: 0.25rem;
+    }
+
+/* Form Elements ============================================================ */
+
+form {
+
+    /* Field Types */
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+        border: $form-field-border;
+        font-family: $form-field-font-family;
+        font-weight: $form-field-font-weight;
+        font-size: calc($form-field-font-size * 1.2);
+        padding: $form-field-padding;
+        border-radius: $form-field-border-radius;
+        background: $form-field-background;
+        color: $form-field-color;
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+        transition: border $global-timing $global-easing 0ms,
+                    background $global-timing $global-easing 0ms,
+                    transform $global-timing $global-easing 0ms;
+
+        &:focus {
+            border-color: $form-field-border-color--focus !important;
+            background-color: $form-field-background--focus;
+            transform: translate3d(0,-3px,0);
+            transition: border $global-timing $global-easing 0ms,
+                        background $global-timing $global-easing 0ms,
+                        transform $global-timing $global-easing 0ms;
+        }
+
+        @media $(p-tablet) {
+            font-size: $form-field-font-size;
+        }
+
+    }
+
+    select:not([multiple]) {
+        padding-right: 2rem;
+        box-shadow: none;
+        width: 100%;
+        /* Arrow */
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: %23c08c0c'></polygon></svg>");
+        background-size: 9px 6px;
+        background-position: right -1.5rem center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        outline: none !important;
+        position: relative;
+    }
+
+    /* Form Elements: Textarea */
+    textarea {
+        min-height: $form-field-textarea-height;
+        width: 100%;
+    }
+
+    /* Form Elements: File */
+    input[type="file"] {
+        display: none;
+    }
+
+        /* Form Elements: File: Label */
+        .file-input__label {
+            background: $form-field-file-background;
+            border-radius: $form-field-border-radius;
+            padding: $button-padding;
+            color: $form-field-file-color;
+            font-family: $form-field-file-font-family;
+            font-weight: $form-field-file-font-weight;
+            font-style: $form-field-file-font-style;
+            text-transform: $form-field-file-text-transform;
+            font-size: $form-field-file-font-size;
+            display: inline-block;
+            cursor: pointer;
+            transition: background $global-timing $global-easing 0ms;
+        }
+
+        .file-input__types {
+            font: inherit;
+            font-size: 80%;
+        }
+
+    /* Form Elements: Disabled */
+    input:disabled {
+        opacity: 0.5;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease 0s;
+
+        + label {
+            opacity: 0.6;
+            cursor: default;
+            transition: all 0.2s ease 0s;
+            -webkit-user-select: none;
+        }
+
+    }
+
+}
+
+.no-touchevents {
+
+    form .file-input__label:hover {
+        background: var(--uw-red);
+        transition: background $global-timing $global-easing 0ms;
+    }
+
+}
+
+/* Form Elements: Captcha */
+.g-recaptcha {
+    overflow: visible;
+    text-align: center;
+
+    > div {
+        display: inline-block;
+    }
+
+}
+
+/* Hovers =================================================================== */
+.no-touchevents {
+
+    form {
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea {
+
+            &:not([disabled]):hover {
+                border-color: $form-field-border-color--hover;
+            }
+
+        }
+
+        select:not([disabled]):hover {
+            background-color: $form-field-select-background--hover;
+        }
+
+    }
+
+}

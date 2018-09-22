@@ -1,0 +1,28 @@
+# Translation of Plugins - Menu Item Visibility Control - Development (trunk) in English (Canada)
+# This file is distributed under the same license as the Plugins - Menu Item Visibility Control - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-01-29 15:13:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_CA\n"
+"Project-Id-Version: Plugins - Menu Item Visibility Control - Development (trunk)\n"
+
+#. Author of the plugin/theme
+msgid "Hassan Derakhshandeh"
+msgstr "Hassan Derakhshandeh"
+
+#. Description of the plugin/theme
+msgid "Control the display logic of individual menu items."
+msgstr "Control the display logic of individual menu items."
+
+#. Plugin Name of the plugin/theme
+msgid "Menu Items Visibility Control"
+msgstr "Menu Items Visibility Control"
+
+#: init.php:79
+msgid "Visibility"
+msgstr "Visibility"

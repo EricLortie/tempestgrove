@@ -1,0 +1,40 @@
+[02-Nov-2017 00:27:41 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[16-Nov-2017 10:33:50 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[17-Nov-2017 02:28:25 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[19-Nov-2017 07:39:31 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[31-Jan-2018 13:10:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[06-Feb-2018 20:20:00 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[12-Feb-2018 10:44:06 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[06-Mar-2018 14:48:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[09-Jun-2018 10:11:26 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60
+[08-Aug-2018 02:59:36 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-content/plugins/hello.php on line 60

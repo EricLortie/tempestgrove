@@ -1,0 +1,325 @@
+/* =============================================================================
+
+    NAVIGATION (BASIC) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+    By default, the basic menu will collapse at the 'l-tablet' media query.
+    To change this to a different breakpoint, please see the $menu-media-query
+    variable in core/settings.css.
+
+============================================================================= */
+
+/* Variables: Top Level ===================================================== */
+
+    /* Containers */
+    $basic-nav-mobile-background: var(--black);
+
+    /* Items */
+    $basic-nav-item-padding: 0.75rem; /* The space between each top level item */
+
+    /* Links */
+    $basic-nav-link-color: white;
+    $basic-nav-link-font-family: $global-font-family;
+    $basic-nav-link-font-size: 0.75rem;
+    $basic-nav-link-text-transform: none;
+    $basic-nav-link-font-weight: bold;
+    $basic-nav-link-text-decoration: none;
+    $basic-nav-link-font-style: normal;
+
+        /* Links: Hover */
+        $basic-nav-link-color--hover: $link-color--hover;
+
+    /* Dropdown Indicator */
+    $basic-nav-dropdown-indicator-size: 4px;
+    $basic-nav-dropdown-indicator-color: var(--highlight);
+    $basic-nav-dropdown-indicator-spacing: 0.35rem;
+
+    /* Expander */
+    $basic-nav-expander-padding: 1rem;
+    $basic-nav-expander-color: white;
+    $basic-nav-expander-background: gray;
+    $basic-nav-expander-stroke-size: 3px;
+
+/* Variables: Sublevels ===================================================== */
+
+    /* Containers */
+    $basic-nav-submenu-padding: 0;
+    $basic-nav-submenu-background: white;
+    $basic-nav-submenu-border-width: 2px;
+    $basic-nav-submenu-border: $basic-nav-submenu-border-width solid var(--black);
+
+    /* Items */
+    $basic-nav-submenu-item-padding: 0.5rem;
+    $basic-nav-submenu-item-border: $basic-nav-submenu-border;
+
+    /* Links */
+    $basic-nav-submenu-link-color: var(--black);
+    $basic-nav-submenu-link-font-family: $global-font-family;
+    $basic-nav-submenu-link-font-size: 0.85em;
+    $basic-nav-submenu-link-text-transform: none;
+    $basic-nav-submenu-link-font-weight: normal;
+    $basic-nav-submenu-link-text-decoration: none;
+    $basic-nav-submenu-link-font-style: normal;
+
+        /* Links: Hover */
+        $basic-nav-submenu-link-background--hover: $button-background--hover;
+        $basic-nav-submenu-link-color--hover: white;
+
+/* Variables: Mobile Trigger ================================================ */
+
+    $basic-nav-mobile-trigger-background: var(--black);
+    $basic-nav-mobile-trigger-color: white;
+    $basic-nav-mobile-trigger-padding: 1rem;
+    $basic-nav-mobile-trigger-font-family: $heading-font-family;
+    $basic-nav-mobile-trigger-font-size: $paragraph-font-size;
+    $basic-nav-mobile-trigger-text-transform: none;
+    $basic-nav-mobile-trigger-font-weight: bold;
+    $basic-nav-mobile-trigger-text-decoration: none;
+    $basic-nav-mobile-trigger-font-style: normal;
+
+/* Container ================================================================ */
+.main-nav__wrapper {
+    background: $basic-nav-mobile-background;
+    position: relative;
+    z-index: 5000;
+}
+
+.main-nav {
+    background: $basic-nav-mobile-background;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    @media $menu-media-query {
+        position: static;
+        display: block;
+        width: auto;
+        height: auto;
+        /* background: transparent; */
+        margin-right: -$basic-nav-item-padding;
+    }
+
+}
+
+/* Top Level: Items ========================================================= */
+.main-nav__item {
+    display: block;
+    position: relative;
+
+    @media $menu-media-query {
+        display: inline-block;
+    }
+
+}
+
+/* Top Level: Links ========================================================= */
+.main-nav__item-link {
+    padding: $basic-nav-item-padding;
+    color: $basic-nav-link-color;
+    font-family: $basic-nav-link-font-family;
+    font-size: $basic-nav-link-font-size;
+    font-weight: $basic-nav-link-font-weight;
+    font-style: $basic-nav-link-font-style;
+    text-decoration: $basic-nav-link-text-decoration;
+    text-transform: $basic-nav-link-text-transform;
+    display: block;
+    position: relative;
+}
+
+    /* Hovers: Top Level */
+    .no-touchevents {
+
+        .main-nav__item-link:hover {
+            color: $basic-nav-link-color--hover;
+        }
+
+    }
+
+/* Sublevels ================================================================ */
+[class*="main-nav__submenu--"] {
+    background: $basic-nav-submenu-background;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    display: none;
+    text-align: left;
+
+    &.open {
+        display: block;
+    }
+
+    @media $menu-media-query {
+        position: absolute;
+        min-width: 200px;
+        display: none;
+        padding: $basic-nav-submenu-padding;
+        border: $basic-nav-submenu-border;
+    }
+
+}
+
+.main-nav__submenu-item {
+
+    @media $menu-media-query {
+        border: $basic-nav-submenu-item-border;
+        border-width: 0 0 $basic-nav-submenu-border-width;
+    }
+
+    &:last-child {
+        border: 0;
+    }
+
+}
+
+/* Sublevels: Links ========================================================= */
+.main-nav__submenu-item-link {
+    padding: $basic-nav-submenu-item-padding;
+    color: $basic-nav-submenu-link-color;
+    font-family: $basic-nav-submenu-link-font-family;
+    font-size: $basic-nav-submenu-link-font-size;
+    text-transform: $basic-nav-submenu-link-text-transform;
+    font-weight: $basic-nav-submenu-link-font-weight;
+    text-decoration: $basic-nav-submenu-link-text-decoration;
+    font-style: $basic-nav-submenu-link-font-style;
+    display: block;
+    position: relative;
+}
+
+    /* Has Submenus */
+    .has-submenu {
+        position: relative;
+
+        /* Dropdown Indicator */
+        .main-nav__item-link:after {
+
+            @media $menu-media-query {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 0;
+                height: 0;
+                border: $basic-nav-dropdown-indicator-size solid transparent;
+                border-color: $basic-nav-dropdown-indicator-color transparent transparent transparent;
+                margin: 0 0 0 $basic-nav-dropdown-indicator-spacing;
+            }
+
+        }
+
+    }
+
+    @media $menu-media-query {
+
+        /* Hovers: Sublevels */
+        .no-touchevents {
+
+            .main-nav__submenu-item-link:hover {
+                background: $basic-nav-submenu-link-background--hover;
+                color: $basic-nav-submenu-link-color--hover;
+            }
+
+        }
+
+        /* Hovers: Hide/Show Submenus */
+        .no-touchevents {
+
+            .has-submenu:hover {
+
+                > [class*="main-nav__submenu--"] {
+                    display: block;
+                }
+
+            }
+
+        }
+
+    }
+
+/* Sublevel: Dropdown ======================================================= */
+.main-nav__submenu--dropdown {
+    top: 100%;
+    left: 0;
+}
+
+/* Sublevel: Flyout ========================================================= */
+.main-nav__submenu--flyout {
+    right: 100%;
+    top: -$basic-nav-submenu-border-width;
+}
+
+/* Mobile Trigger =========================================================== */
+.nav-toggle {
+    background: $basic-nav-mobile-trigger-background;
+    font-family: $basic-nav-mobile-trigger-font-family;
+    font-size: $basic-nav-mobile-trigger-font-size;
+    text-transform: $basic-nav-mobile-trigger-text-transform;
+    font-weight: $basic-nav-mobile-trigger-font-weight;
+    text-decoration: $basic-nav-mobile-trigger-text-decoration;
+    font-style: $basic-nav-mobile-trigger-font-style;
+    color: $basic-nav-mobile-trigger-color;
+    padding: $basic-nav-mobile-trigger-padding;
+    position: fixed;
+    bottom: 4rem;
+    right: 0;
+    display: block;
+    z-index: 6000;
+
+    @media $menu-media-query {
+        display: none;
+    }
+
+}
+
+/* Submenu Expanders ======================================================== */
+.main-nav__submenu-expand {
+    padding: $basic-nav-expander-padding;
+    color: $basic-nav-expander-color;
+    background: $basic-nav-expander-background;
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate(0,-50%);
+
+    &:before,
+    &:after {
+        width: $basic-nav-expander-stroke-size;
+        background: $basic-nav-expander-color;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 50%;
+    }
+
+    &:after {
+        transform: translate(-50%,-50%) rotate(90deg);
+    }
+
+    @media $menu-media-query {
+        display: none;
+    }
+
+}
+
+.main-nav [class*="item-link"].active .main-nav__submenu-expand {
+
+    &:before {
+        display: none;
+    }
+
+}

@@ -1,0 +1,122 @@
+/*
+ * Plugin Name: OS AnsPress Custom Fields
+ * Plugin URI: http://offshorent.com/blog/extensions/os-anspress-custom-fields
+ * Description: OS AnsPress Custom Fields
+ * Version: 1.0
+ * Author: Jinesh P.V, Team Leader Offshorent Solutions Pvt Ltd
+ * Author URI: http://offshorent.com/
+ * Requires at least: 3.8
+ * Tested up to: 4.4
+*/
+.osap-header {
+	background-color: #E8E8E8;
+	border-bottom: 1px solid #ccc;
+	cursor: move;
+	padding: 6px 10px;
+	color: #222;
+	text-transform: capitalize;
+}
+.osap-body {
+	padding: 10px 10px 0 10px;
+}
+.osap-controls {
+	float: right;
+}
+.osap-caption {
+	float: left;
+	font-size: 14px;
+}
+.osap-controls span.delete, .osap-controls span.down, .osap-controls span.up {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+.osap-controls span.delete {
+	background: url(../images/delete.png) left top no-repeat;
+}
+.osap-controls span.up {
+	background: url(../images/up.png) left top no-repeat;
+	margin-right: 5px;
+}
+.osap-controls span.down {
+	background: url(../images/down.png) left top no-repeat;
+	margin-right: 5px;
+}
+.osap-row {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+.osap-box {
+	width: 540px;
+	margin-bottom: 10px;
+	margin-right: 10px; 
+	background: #E8E8E8;
+	border: 1px solid #ccc;
+	clear: both;
+	display: inline-block;
+	vertical-align: top;
+}
+.osap-box:nth-child(2n) {
+	margin-right: 0; 
+}
+#poststuff .osap-row h3,
+#poststuff #osap-settings-wrapper h3  {
+	padding-left: 0;
+	border-bottom:1px solid #ccc;
+	margin-bottom:20px;
+	padding-bottom:5px;
+}
+.osap-row label, .osap-row-box label {
+	margin-bottom: 5px;
+	display: block;
+	font-weight:700;
+}
+.osap-row input, 
+.osap-row select, 
+.osap-row textarea, 
+.osap-row-box input,
+.osap-row-box select,
+.osap-row-box textarea  {
+	border: 1px solid #d3d3d3;
+	padding: 5px 10px;
+	color: #000;
+	cursor: pointer;
+	margin: 0;
+	width: 100%;
+	font-size:13px;
+	font-weight: 300;
+	height: auto;
+	line-height: auto;
+	resize: none;
+}
+.osap-row-box select {
+	padding: 4px 10px;
+}
+#osap-settings-wrapper .osap-row .wp-picker-container input.wp-color-picker[type="text"] {
+	width: 65px;
+	padding: 3px 10px;
+	margin-right: 10px;
+}
+#osap-settings-wrapper .osap-row input.wp-picker-default, #osap-settings-wrapper .osap-row input.wp-picker-clear {
+	width: auto;
+}
+.osap-row-box {
+	width: 49%;
+	float:left;
+	margin-right:2%;
+	margin-bottom: 10px;
+}
+.osap-row-box.last, .osap-row.last {
+	margin-right:0;
+}
+.hide {
+	display: none;
+}
+.wp-core-ui ul.osap-field-wrap li {
+	display: inline-block;
+}
+.wp-core-ui ul.osap-field-wrap li a.button {
+	margin: 0;
+}

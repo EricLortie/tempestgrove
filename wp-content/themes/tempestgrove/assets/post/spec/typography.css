@@ -1,0 +1,229 @@
+/* =============================================================================
+
+    TYPOGRAPHY CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Type Scale =============================================================== */
+
+    $font-scale: 1.250; /* Major Third */
+
+    $font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
+    $font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));
+    $font-scale-h3: calc(1rem*($font-scale*($font-scale)));
+    $font-scale-h4: calc(1rem*($font-scale));
+    $font-scale-baseline: 1rem;
+    $font-scale-small: calc(1rem*($font-scale/2));
+
+/* Variables ================================================================ */
+
+    /* Global */
+    $global-font-family: 'Catamaran', 'Roboto', Arial, Helvetica, sans-serif;
+
+    /* Headings */
+    $heading-font-family: $global-font-family;
+
+    /* Paragraphs */
+    $paragraph-font-family: $global-font-family;
+    $paragraph-font-size: 0.85rem;
+    $paragraph-color: var(--dal-gray);
+    $paragraph-leading--desktop: 1.4;
+
+    /* Lists */
+    $list-font-family: $global-font-family;
+
+    /* Responsive Tables */
+    /* TRANSLATION-ITEM */
+    $table-scroll-hint-content: "Hint: You can scroll the table horizontally.";
+    $table-scroll-hint-color: var(--dal-gray);
+    $table-scroll-hint-font-size: 0.8rem;
+    $table-min-width: 250%; /* Minimum width of tables in responsive state. */
+
+    /* Blockquotes */
+    $blockquote-padding: 2rem;
+    $blockquote-margin: 2rem 0 2rem 2rem;
+    $blockquote-font-family: $heading-font-family;
+    $blockquote-font-size: 1.5rem;
+    $blockquote-font-style: normal;
+    $blockquote-font-weight: normal;
+    $blockquote-color: var(--black);
+    $blockquote-border-size: 5px;
+    $blockquote-border-width: 0 0 0 $blockquote-border-size;
+    $blockquote-border-color: var(--highlight);
+
+/* Selection Color ========================================================== */
+::selection {
+    background: var(--black);
+    color: var(--uw-red);
+}
+
+/* Font Standard ============================================================ */
+html {
+    font-size: responsive;
+    min-font-size: 16px;
+    /*max-font-size: 21px;*/
+    /*line-height: responsive;*/
+    /*min-line-height: 1.2em;*/
+    /*max-line-height: 1.5em;*/
+}
+
+/* Headings ================================================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: -1px;
+}
+
+h1 {
+    font-size: $font-scale-h1;
+}
+
+h2 {
+    font-size: $font-scale-h2;
+}
+
+h3 {
+    font-size: $font-scale-h3;
+}
+
+h4 {
+    font-size: $font-scale-h4;
+}
+
+h5 {
+    font-size: $font-scale-baseline;
+    color: var(--uw-red);
+}
+
+h6 {
+    font-size: $font-scale-small;
+}
+
+/* Paragraphs =============================================================== */
+p {
+    font-size: calc($paragraph-font-size * 1.25);
+    font-family: $paragraph-font-family;
+    line-height: 1.4;
+
+    @media $(l-tablet) {
+        font-size: $paragraph-font-size;
+        line-height: $paragraph-leading--desktop;
+    }
+
+}
+
+/* Lists ==================================================================== */
+
+    /* All */
+    ul, ol {
+
+        li {
+            font-size: calc($paragraph-font-size * 1.25);
+            font-family: $paragraph-font-family;
+
+            @media $(l-tablet) {
+                font-size: $paragraph-font-size;
+                line-height: $paragraph-leading--desktop;
+            }
+
+        }
+
+    }
+
+/* Blockquotes ============================================================== */
+blockquote {
+    border: 0px solid $blockquote-border-color;
+    border-width: $blockquote-border-width;
+    padding: $blockquote-padding;
+    margin: $blockquote-margin;
+    font-family: $blockquote-font-family;
+    font-weight: $blockquote-font-weight;
+    font-style: $blockquote-font-style;
+    font-size: $blockquote-font-size;
+    color: $blockquote-color;
+}
+
+/* Responsive Tables ======================================================== */
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+
+    /* Scroll Hint */
+    &:before {
+        content: $table-scroll-hint-content;
+        color: $table-scroll-hint-color;
+        font-size: $table-scroll-hint-font-size;
+        font-family: $global-font-family;
+        text-align: left;
+        display: block;
+
+        @media $(p-tablet) {
+            display: none;
+        }
+
+    }
+
+    table {
+        min-width: $table-min-width;
+
+        @media $(p-tablet) {
+            min-width: 0;
+        }
+
+    }
+
+}
+
+/* Icons ==================================================================== */
+.core-icon {
+
+    use {
+        stroke-width: 2px;
+    }
+
+    &.inline {
+        width: 1em;
+        height: 1em;
+        margin: 0 0.25rem 0 0;
+        fill: black;
+        stroke: black;
+        transform: translate(0,15%);
+    }
+
+    &.share {
+        stroke: none;
+    }
+
+}
+
+/* Tel Links ================================================================ */
+/* Prevent clickable tel links on desktop / non-touch devices. */
+.no-touchevents {
+
+    a[href^="tel:"] {
+        pointer-events: none;
+        text-decoration: none;
+    }
+
+}
+
+/* Links ==================================================================== */
+$link-color: var(--highlight);
+$link-text-decoration: underline;
+
+    /* Links: Active */
+    $link-color--active: var(--black);
+
+    /* Links: Visited */
+    $link-color--visited: var(--dal-gray);
+
+    /* Links: Hover */
+    $link-color--hover: var(--black);

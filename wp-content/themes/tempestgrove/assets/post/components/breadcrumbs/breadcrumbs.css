@@ -1,0 +1,120 @@
+/* =============================================================================
+
+    BREADCRUMBS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $breadcrumbs-padding: 0 0 1rem;
+
+    /* Items */
+    $breadcrumbs-item-font-family: $global-font-family;
+    $breadcrumbs-item-font-weight: normal;
+    $breadcrumbs-item-font-size: 1rem;
+    $breadcrumbs-item-font-style: normal;
+    $breadcrumbs-item-text-transform: none;
+    $breadcrumbs-item-color: var(--dal-gray);
+    $breadcrumbs-item-margin: 0.75rem;
+
+    /* Divider */
+    $breadcrumbs-divider-size: 5px;
+    $breadcrumbs-divider-color: rgba(255,255,255,0.5);
+
+    /* Links */
+    $breadcrumbs-item-link-padding: 0;
+    $breadcrumbs-item-link-radius: 0;
+    $breadcrumbs-item-link-color: rgba(255,255,255,0.75);
+    $breadcrumbs-item-link-background: transparent;
+    $breadcrumbs-item-link-text-decoration: underline;
+
+        /* Links: Hover */
+        $breadcrumbs-item-link-background--hover: transparent;
+        $breadcrumbs-item-link-color--hover: white;
+
+/* Container ================================================================ */
+.breadcrumbs {
+    list-style: none;
+    padding: $breadcrumbs-padding;
+    font-size: 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Items ==================================================================== */
+.breadcrumbs__item {
+    display: inline-block;
+    font-family: $breadcrumbs-item-font-family;
+    font-weight: $breadcrumbs-item-font-weight;
+    font-size: $breadcrumbs-item-font-size;
+    font-style: $breadcrumbs-item-font-style;
+    text-transform: $breadcrumbs-item-text-transform;
+    color: $breadcrumbs-item-color;
+    margin: calc($breadcrumbs-item-margin / 2) $breadcrumbs-item-margin;
+    position: relative;
+
+    /* Divider */
+    &:after {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate($breadcrumbs-item-margin,-50%);
+        content: "";
+        width: 0;
+        height: 0;
+        border: $breadcrumbs-divider-size solid transparent;
+        border-left-color: white;
+
+        @media $(l-tablet) {
+            border-left-color: $breadcrumbs-divider-color;
+        }
+
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+
+        &:after {
+            display: none;
+        }
+
+    }
+
+}
+
+/* Links ==================================================================== */
+.breadcrumbs__item-link {
+    display: block;
+    color: white;
+    background: $breadcrumbs-item-link-background;
+    padding: $breadcrumbs-item-link-padding;
+    text-decoration: $breadcrumbs-item-link-text-decoration;
+    font-weight: bold;
+    text-shadow: -1px 1px 2px rgba(0,0,0,.5);
+    transition: color $global-timing $global-easing 0ms;
+
+    @media $(l-tablet) {
+        color: $breadcrumbs-item-link-color;
+    }
+
+}
+
+    /* Links: Hover */
+    .no-touchevents {
+
+        .breadcrumbs__item-link:hover {
+            background: $breadcrumbs-item-link-background--hover;
+            color: $breadcrumbs-item-link-color--hover;
+            transition: color $global-timing $global-easing 0ms;
+        }
+
+    }

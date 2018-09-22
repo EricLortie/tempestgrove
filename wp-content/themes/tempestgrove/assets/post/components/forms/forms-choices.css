@@ -1,0 +1,238 @@
+/* =============================================================================
+
+    FORMS: CHECKBOXES & RADIOS (CHOICES) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* All */
+    $form-choice-margin: 0.25rem 0;
+    $form-choice-size: 0.85rem;
+    $form-choice-border-width: 2px;
+
+    /* Labels */
+    $form-choice-label-font-family: $form-label-font-family;
+    $form-choice-label-font-size: $form-label-font-size;
+    $form-choice-label-color: $form-label-color;
+    $form-choice-label-font-weight: normal;
+    $form-choice-label-font-style: $form-label-font-style;
+    $form-choice-label-padding: 0.5rem;
+    $form-choice-label-text-transform: $form-label-text-transform;
+
+    /* Checkboxes */
+    $form-checkbox-margin: $form-choice-margin;
+    $form-checkbox-size: $form-choice-size;
+    $form-checkbox-border-width: $form-choice-border-width;
+    $form-checkbox-border: $form-checkbox-border-width solid var(--black);
+    $form-checkbox-background: white;
+
+        /* Checkboxes: Hover */
+        $form-checkbox-background--hover: color-mod(black a(5%));
+        $form-checkbox-border--hover: $form-checkbox-border;
+
+        /* Checkboxes: Checked */
+        $form-checkbox-background--checked: var(--highlight);
+        $form-checkbox-border--checked: 2px solid var(--black);
+        $form-checkbox-outline--checked: inset 0 0 0 4px white;
+
+    /* Radio */
+    $form-radio-margin: $form-choice-margin;
+    $form-radio-size: $form-choice-size;
+    $form-radio-border-width: $form-choice-border-width;
+    $form-radio-border: $form-radio-border-width solid var(--black);
+    $form-radio-background: white;
+
+        /* Radio: Hover */
+        $form-radio-background--hover: color-mod(black a(5%));
+        $form-radio-border--hover: $form-radio-border;
+
+        /* Radio: Checked */
+        $form-radio-background--checked: var(--highlight);
+        $form-radio-border--checked: 2px solid var(--black);
+        $form-radio-outline--checked: inset 0 0 0 4px white;
+
+    /* Radio Buttons */
+
+/* All: Radios and Checkboxes =============================================== */
+.gfield_checkbox,
+.gfield_radio {
+
+    > li {
+
+        label {
+            font-family: $form-choice-label-font-family;
+            font-size: calc($form-choice-label-font-size * 1.2);
+            color: $form-choice-label-color;
+            font-weight: $form-choice-label-font-weight;
+            font-style: $form-choice-label-font-style;
+            text-transform: $form-choice-label-text-transform;
+            padding: 0 0 0 $form-choice-label-padding;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+
+            &:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: "";
+                cursor: pointer;
+            }
+
+            @media $(p-tablet) {
+                font-size: $form-choice-label-font-size;
+            }
+
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            visibility: hidden;
+            position: absolute;
+        }
+
+    }
+
+}
+
+/* Checkboxes =============================================================== */
+.gfield_checkbox {
+    padding-left: 0.2rem !important;
+
+    > li {
+        margin: $form-checkbox-margin;
+        padding: 0 0 0 calc($form-checkbox-size + $form-checkbox-border-width);
+
+        label {
+
+            &:before {
+                border: $form-checkbox-border;
+                width: $form-checkbox-size;
+                height: $form-checkbox-size;
+                background: $form-checkbox-background;
+                position: absolute;
+                right: 100%;
+                top: 50%;
+                transform: translate3d(0,-50%,0);
+            }
+
+        }
+
+        /* Checkbox: Checked */
+        input[type="checkbox"] {
+
+            &:checked + label:before {
+                background: $form-checkbox-background--checked;
+                border: $form-checkbox-border--checked;
+                box-shadow: $form-checkbox-outline--checked;
+                animation: pop-check 100ms forwards;
+            }
+
+        }
+
+    }
+
+}
+
+    /* Checkbox: Hover */
+    .no-touchevents {
+
+        .gfield_checkbox > li label:hover {
+
+            &:before {
+                background: $form-checkbox-background--hover;
+                border: $form-checkbox-border--hover;
+            }
+
+        }
+
+    }
+
+/* Radios Only ============================================================== */
+.gfield_radio {
+
+    > li {
+        margin: $form-radio-margin;
+
+        label {
+            padding: 0;
+
+            &:before {
+                border: $form-radio-border;
+                width: $form-radio-size;
+                height: $form-radio-size;
+                margin-right: $form-choice-label-padding;
+                border-radius: 100%;
+            }
+
+        }
+
+        /* Radio: Checked */
+        input[type="radio"] {
+
+            &:checked + label {
+
+                &:before {
+                    box-shadow: $form-radio-outline--checked;
+                    background: $form-radio-background--checked;
+                    border: $form-radio-border--checked;
+                    animation: pop-radio 100ms forwards;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+    /* Radio: Hover */
+    .no-touchevents {
+
+        .gfield_radio > li label:hover {
+
+            &:before {
+                background: $form-radio-background--hover;
+                border: $form-radio-border--hover;
+            }
+
+        }
+
+    }
+
+@keyframes pop-check {
+
+    0% {
+        transform: translate3d(0,-50%,0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0,-50%,0) scale(1.1);
+    }
+
+    100% {
+        transform: translate3d(0,-50%,0) scale(1);
+    }
+
+}
+
+@keyframes pop-radio {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

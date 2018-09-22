@@ -1,0 +1,128 @@
+/* =============================================================================
+
+    PRIMARY CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* CORE ===================================================================== */
+
+    /* These files are for Bond's foundation - the grid, settings, etc. */
+
+    /* Site Palette */
+    /* In some cases, core files require color variables. */
+    @import "spec/palette.css";
+
+    /* Core: Mixins */
+    @import "core/mixins.css";
+
+    /* Core: Settings */
+    @import "core/settings.css";
+
+    /* Core: Helpers */
+    @import "core/helpers.css";
+
+    /* Core: Grid */
+
+        /* Core: Grid: Flexbox */
+        @import "core/grid/grid-flex.css";
+
+        /* Core: Flexbox Fallback (IE11) */
+        /* @import "core/grid/grid-flex-fallback.css"; */
+
+/* SPEC ===================================================================== */
+
+    /* These files include sitewide styles such as general typography, etc. */
+
+    /* Site Typography */
+    @import "spec/typography.css";
+
+    /* Layers (Z-Index) */
+    @import "spec/layers.css";
+
+/* COMPONENTS: CONTENT ====================================================== */
+
+    /* Content: WYSIWYG */
+    @import "components/content/content-area.css";
+
+    /* Content: Wordpress Images */
+    @import "components/content/wordpress-images.css";
+
+/* COMPONENTS: BUTTONS ====================================================== */
+
+    /* Buttons: Base */
+    @import "components/buttons/buttons.css";
+
+/* COMPONENTS: NAVIGATION =================================================== */
+
+    /* Navigation: Basic */
+    /* @import "components/navigation/navigation-basic.css"; */
+
+    /* Navigation: Sidebar */
+    @import "components/navigation/navigation-sidebar.css";
+
+/* COMPONENTS: FOOTER ======================================================= */
+
+    /* Footer: Base */
+    @import "components/footer/footer.css";
+
+    /* Footer: Quick Links */
+    @import "components/footer/quick-links.css";
+
+    /* Footer: Subfooter */
+    @import "components/footer/subfooter.css";
+
+/* COMPONENTS: CODEX ========================================================= */
+
+    /* Hero: Landing Banner */
+    @import "components/codex/codex.css";
+
+/* COMPONENTS: HERO ========================================================= */
+
+    /* Hero: Landing Banner */
+    @import "components/hero/landing-banner.css";
+
+/* COMPONENTS: FORMS ======================================================== */
+
+    /* Forms: Base */
+    @import "components/forms/forms-base.css";
+
+    /* Forms: Choices */
+    @import "components/forms/forms-choices.css";
+
+    /* Forms: Validation */
+    @import "components/forms/forms-validation.css";
+
+    /* Forms: BBPress */
+    @import "components/forms/forms-bbpress.css";
+
+/* COMPONENTS: SOCIAL ======================================================= */
+
+    /* Social: Icons */
+    @import "components/social/social-icons.css";
+
+    /* Social: Sharing */
+    @import "components/social/social-sharing.css";
+
+/* COMPONENTS: BLOCKS ======================================================= */
+
+    /* Blocks: Base */
+    @import "components/blocks/blocks.css";
+
+/* COMPONENTS: DIALOG ================================================== */
+
+    /* Breadcrumbs: Dialog */
+    @import "components/dialog/dialog.css";
+
+/* COMPONENTS: BREADCRUMBS ================================================== */
+
+    /* Breadcrumbs: Base */
+    @import "components/breadcrumbs/breadcrumbs.css";
+
+/* COMPONENTS: GALLERY ====================================================== */
+
+    /* Gallery: Base */
+    @import "components/gallery/gallery.css";

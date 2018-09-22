@@ -1,0 +1,107 @@
+/* =============================================================================
+
+    FORMS: VARIABLES
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Sections */
+$form-section-padding: 1rem 0;
+
+    /* Sections: Titles */
+    $form-section-title-font-family: $global-font-family;
+    $form-section-title-font-weight: bold;
+    $form-section-title-font-style: normal;
+    $form-section-title-font-size: $font-scale-h4;
+    $form-section-title-color: var(--white);
+    $form-section-title-text-transform: none;
+    $form-section-title-border: 3px solid var(--uw-red);
+    $form-section-title-padding: 0;
+    $form-section-title-margin: 0 0 0.75rem;
+
+    /* Sections: Description */
+    $form-section-desc-font-family: $global-font-family;
+    $form-section-desc-font-weight: normal;
+    $form-section-desc-font-style: normal;
+    $form-section-desc-font-size: $paragraph-font-size;
+    $form-section-desc-color: $paragraph-color;
+    $form-section-desc-text-transform: none;
+    $form-section-desc-padding: 0;
+    $form-section-desc-margin: 0;
+
+/* Labels */
+
+    /* Labels: Primary */
+    $form-label-font-family: $global-font-family;
+    $form-label-font-size: 0.85rem;
+    $form-label-color: var(--white);
+    $form-label-font-weight: 600;
+    $form-label-font-style: normal;
+    $form-label-margin: 0 0 0.25rem;
+    $form-label-text-transform: none;
+
+    /* Labels: Sublabels */
+    $form-sublabel-font-family: $global-font-family;
+    $form-sublabel-font-size: 0.75rem;
+    $form-sublabel-color: var(--uw-red);
+    $form-sublabel-font-weight: normal;
+    $form-sublabel-font-style: normal;
+    $form-sublabel-margin: 0.25rem 0 0;
+    $form-sublabel-text-transform: none;
+
+/* Fields */
+$form-field-margin: 1rem;
+$form-field-border: 2px solid var(--white);
+$form-field-border-radius: 0;
+$form-field-font-family: $paragraph-font-family;
+$form-field-font-size: $paragraph-font-size;
+$form-field-font-weight: normal;
+$form-field-padding: 0.75rem;
+$form-field-background: white;
+$form-field-color: var(--white);
+
+    /* Fields: Hover */
+    $form-field-border-color--hover: var(--uw-red);
+
+    /* Fields: Focus */
+    $form-field-border-color--focus: var(--highlight);
+    $form-field-background--focus: color-mod($form-field-border-color--focus tint(95%));
+
+    /* Fields: Textarea */
+    $form-field-textarea-height: 250px;
+
+    /* Fields: Select */
+    $form-field-select-background--hover: $form-field-background--focus;
+
+    /* Fields: File */
+    $form-field-file-background: var(--black);
+    $form-field-border-radius: $form-field-border-radius;
+    $form-field-file-padding: $form-field-padding;
+    $form-field-file-color: white;
+    $form-field-file-font-family: $form-field-font-family;
+    $form-field-file-font-weight: bold;
+    $form-field-file-font-style: normal;
+    $form-field-file-text-transform: none;
+    $form-field-file-font-size: $form-field-font-size;
+
+/* Errors */
+$form-field-color-error: var(--color-utility--danger);
+$form-field-font-error: $global-font-family;
+
+/* Submit Button */
+$form-submit-button-padding: $button-padding;
+$form-submit-button-radius: $button-radius;
+$form-submit-button-font-family: $button-font-family;
+$form-submit-button-font-size: $button-font-size;
+$form-submit-button-font-weight: $button-font-weight;
+$form-submit-button-font-style: $button-font-style;
+$form-submit-button-text-transform: $button-text-transform;
+$form-submit-button-background: $button-background;
+$form-submit-button-color: $button-color;
+
+    /* Submit Button: Hover */
+    $form-submit-button-color--hover: $button-color--hover;
+    $form-submit-button-background--hover: $button-background--hover;

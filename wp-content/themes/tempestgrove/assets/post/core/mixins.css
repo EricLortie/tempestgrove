@@ -1,0 +1,100 @@
+/* =============================================================================
+
+    MIXINS CSS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Containers =============================================================== */
+
+@define-mixin container-xsmall {
+    margin: 0 auto;
+    max-width: $page-width-xsmall;
+    width: 90%;
+
+    @media $(p-tablet) {
+        width: 60%;
+    }
+
+    @media $(cinema-xl) {
+        width: 40%;
+    }
+
+}
+
+@define-mixin container-small {
+    margin: 0 auto;
+    max-width: $page-width-small;
+    width: 90%;
+
+    @media $(p-tablet) {
+        width: 70%;
+    }
+
+    @media $(cinema-xl) {
+        width: 50%;
+    }
+
+}
+
+@define-mixin container-medium {
+    margin: 0 auto;
+    max-width: $page-width-medium;
+    width: 90%;
+
+    @media $(p-tablet) {
+        width: 80%;
+    }
+
+    @media $(l-tablet) {
+        width: 60%;
+    }
+
+}
+
+@define-mixin container-large {
+    margin: 0 auto;
+    max-width: $page-width-large;
+    width: 90%;
+
+    @media $(p-tablet) {
+        width: 80%;
+    }
+
+    @media $(cinema-xl) {
+        width: 70%;
+    }
+
+}
+
+@define-mixin container-xl {
+    margin: 0 auto;
+    max-width: $page-width-xl;
+    width: 90%;
+
+    @media $(p-tablet) {
+        width: 95%;
+    }
+
+}
+
+/* Section Padding ========================================================== */
+@define-mixin section-padding {
+    padding: $padding-unit 0;
+
+    @media $(p-tablet) {
+        padding: calc($padding-unit*1.5) 0;
+    }
+
+    @media $(l-tablet) {
+        padding: calc($padding-unit*2) 0;
+    }
+
+}
+
+@define-mixin section-padding-small {
+    padding: $padding-unit 0;
+}

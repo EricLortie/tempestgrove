@@ -1,0 +1,311 @@
+/* =============================================================================
+
+    LANDING BANNER CSS
+
+    Authored by:
+        - Justin Bellefontaine
+
+============================================================================= */
+
+.landing-banner {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 60%;
+
+    @media $(p-tablet) {
+        padding: $padding-unit 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-attachment: fixed;
+        padding-right: $padding-unit;
+        background-size: cover;
+        min-height: 80vh;
+        background-position: center;
+    }
+
+    &:before {
+        z-index: 2;
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+        opacity: 0.8;
+
+        @media $(l-tablet) {
+            height: 100%;
+            background: linear-gradient(45deg, var(--uw-red), rgba(0,0,0,0.1));
+            opacity: 0.25;
+            mix-blend-mode: overlay;
+        }
+
+    }
+
+    &:after {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 3;
+        content: "";
+        /* background: transparent url('../img/shards.png') no-repeat left bottom; */
+        opacity: 1;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Subpages Only */
+    &.sub {
+        background-position: center bottom;
+        flex-flow: column;
+        align-items: flex-start;
+        z-index: 5;
+        background-size: cover;
+        padding-right: 0 !important;
+
+        &:after {
+            background-attachment: local;
+            opacity: 0.8;
+        }
+
+        @media $(p-tablet) {
+            min-height: 40vh;
+        }
+
+        .landing-banner__logo-link {
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+
+        + .page-section {
+            position: relative;
+            z-index: 10;
+        }
+
+        .landing-banner__title {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 0;
+            padding-bottom: 3rem;
+            font-size: $font-scale-h2;
+            text-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+
+            @media $(p-tablet) {
+                font-size: $font-scale-h1;
+            }
+
+            @media $(cinema-xl) {
+                font-size: calc($font-scale-h1 * 1.250);
+            }
+
+            &:before,
+            &:after {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+.landing-banner__border {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    background: rgba(255,255,255,0.35);
+    /* mix-blend-mode: overlay; */
+}
+
+.landing-banner__logo-link {
+    padding: 2rem;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 15;
+    transform: translate(-50%,0);
+
+    @media $(p-tablet) {
+        left: 0;
+        transform: none;
+        width: 40%;
+    }
+
+    @media $menu-media-query {
+        display: none;
+    }
+
+}
+
+.landing-banner__block {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    background: black;
+
+    @media $(p-tablet) {
+        width: 45%;
+    }
+
+    @media $(l-tablet) {
+        width: 35%;
+    }
+
+}
+
+$landing-box-padding: 2rem;
+
+.landing-banner__title {
+    margin: 0;
+    font-size: $font-scale-h3;
+    font-weight: bold;
+    line-height: 1.1;
+    padding: calc($landing-box-padding / 1.5);
+    color: var(--uw-red);
+    /* background: linear-gradient(to bottom, color-mod(var(--dal-gold) shade(10%)), var(--dal-gold)); */
+    position: relative;
+    z-index: 10;
+    text-shadow: -2px 2px 0 rgba(0,0,0,0.05);
+
+    #particles-js {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    span {
+        color: #ccc;
+    }
+
+    &:before {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: 12px;
+        background: linear-gradient(to right, var(--uw-red), white);
+        content: "";
+        opacity: 0.35;
+    }
+
+    &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        display: block;
+        border: 15px solid transparent;
+        border-left-color: #ccc;
+        transform: translate(20%,-20%) rotate(-45deg);
+
+        @media $(p-tablet) {
+            border-width: 20px;
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    @media $(p-tablet) {
+        padding: $landing-box-padding;
+    }
+
+    @media $(cinema-xl) {
+        font-size: $font-scale-h2;
+        padding: calc($landing-box-padding * 1.25);
+    }
+
+}
+
+.landing-banner__content {
+    margin: 0;
+    padding: calc($landing-box-padding / 1.25);
+    flex: 1;
+    background: #111;
+    position: relative;
+    z-index: 5;
+    box-shadow: -5px 5px 80px 0 rgba(0,0,0,0.4);
+
+    &:before {
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        top: 0;
+        opacity: 0.25;
+        /* background: transparent url('../img/blend.png') no-repeat right bottom; */
+        background-size: 60%;
+    }
+
+    .shard {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    @media $(p-tablet) {
+        padding: $landing-box-padding;
+    }
+
+    @media $(cinema-xl) {
+        padding: calc($landing-box-padding * 1.25);
+
+        p {
+            font-size: 1rem;
+        }
+
+    }
+
+}
+
+.landing-banner__content-inner {
+    position: relative;
+    z-index: 10;
+}
+
+.landing-banner__cta {
+    margin: 0.5rem 0 0;
+}
+
+@keyframes slide-in {
+
+    0% {
+        transform: translate3d(100%,0,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+    }
+
+}

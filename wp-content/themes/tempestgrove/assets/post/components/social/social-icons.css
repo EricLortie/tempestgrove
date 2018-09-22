@@ -1,0 +1,259 @@
+/* =============================================================================
+
+    SOCIAL ICONS CSS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Items */
+    $social-icons-spacing: 0;
+
+    /* Links */
+    $social-icons-link-radius: 0;
+    $social-icons-link-size: 2rem; /* sets both width and height to the box */
+    $social-icons-link-size--mobile: 2.5rem;
+    $social-icons-link-background: var(--black);
+
+    /* Icons */
+    $social-icons-icon-size: 1.2rem;
+    $social-icons-icon-color: white;
+
+        /* Facebook */
+        $social-icons-icon-size--facebook: 0.9rem;
+
+        /* Google Plus */
+        $social-icons-icon-size--google-plus: $social-icons-icon-size;
+
+        /* Instagram */
+        $social-icons-icon-size--instagram: 1rem;
+
+        /* Linkedin */
+        $social-icons-icon-size--linkedin: 0.75rem;
+
+        /* Pinterest */
+        $social-icons-icon-size--pinterest: $social-icons-icon-size;
+
+        /* Twitter */
+        $social-icons-icon-size--twitter: 1rem;
+
+        /* Youtube */
+        $social-icons-icon-size--youtube: 1rem;
+
+        /* Email */
+        $social-icons-icon-size--email: 1rem;
+
+/* Container ================================================================ */
+.social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Items ==================================================================== */
+.social-icons__item {
+    padding: $social-icons-spacing;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Links ==================================================================== */
+.social-icons__item-link,
+[class*="social-icons__item-link--"] {
+    border-radius: $social-icons-link-radius;
+    width: $social-icons-link-size--mobile;
+    height: $social-icons-link-size--mobile;
+    background: $social-icons-link-background;
+    text-align: center;
+    position: relative;
+    padding: 50% 0;
+    display: block;
+    transition: background $global-timing $global-easing 0ms;
+
+    @media $(l-tablet) {
+        width: $social-icons-link-size;
+        height: $social-icons-link-size;
+    }
+
+    /* All Icons */
+    [class*="core-icon--"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        fill: $social-icons-icon-color;
+        width: $social-icons-icon-size;
+        height: $social-icons-icon-size;
+
+        use {
+            fill: $social-icons-icon-color;
+        }
+
+    }
+
+    /* Facebook */
+    &[href*="facebook.com"] {
+        /* background: $facebook-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--facebook;
+            height: $social-icons-icon-size--facebook;
+        }
+
+    }
+
+    /* Google Plus */
+    &[href*="plus.google.com"] {
+        /* background: $gplus-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--google-plus;
+            height: $social-icons-icon-size--google-plus;
+        }
+
+    }
+
+    /* Instagram */
+    &[href*="instagram.com"] {
+        /* background: $instagram-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--instagram;
+            height: $social-icons-icon-size--instagram;
+        }
+
+    }
+
+    /* LinkedIn */
+    &[href*="linkedin.com"] {
+        /* background: $linkedin-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--linkedin;
+            height: $social-icons-icon-size--linkedin;
+        }
+
+    }
+
+    /* Twitter */
+    &[href*="twitter.com"] {
+        /* background: $twitter-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--twitter;
+            height: $social-icons-icon-size--twitter;
+        }
+
+    }
+
+    /* YouTube */
+    &[href*="youtube.com"] {
+        /* background: $youtube-brand; */
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--youtube;
+            height: $social-icons-icon-size--youtube;
+        }
+
+    }
+
+    /* YouTube */
+    &[class*="email-trigger"] {
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--email;
+            height: $social-icons-icon-size--email;
+        }
+
+    }
+
+}
+
+/* Hover */
+.no-touchevents {
+
+    .social-icons__item-link,
+    [class*="social-icons__item-link--"] {
+
+        &:hover {
+            background: var(--uw-red);
+            transition: background $global-timing $global-easing 0ms;
+        }
+
+    }
+
+}
+
+/* No Background Option ===================================================== */
+.social-icons.no-bg {
+
+    .social-icons__item-link,
+    [class*="social-icons__item-link--"] {
+        background: transparent !important;
+
+        /* All Icons */
+        [class*="core-icon--"] use {
+            fill: var(--black);
+        }
+
+        /* Facebook */
+        &[href*="facebook.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $facebook-brand;
+            }
+
+        }
+
+        /* Google Plus */
+        &[href*="plus.google.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $gplus-brand;
+            }
+
+        }
+
+        /* Instagram */
+        &[href*="instagram.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $instagram-brand;
+            }
+
+        }
+
+        /* LinkedIn */
+        &[href*="linkedin.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $linkedin-brand;
+            }
+
+        }
+
+        /* Twitter */
+        &[href*="twitter.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $twitter-brand;
+            }
+
+        }
+
+        /* YouTube */
+        &[href*="youtube.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $youtube-brand;
+            }
+
+        }
+
+    }
+
+}

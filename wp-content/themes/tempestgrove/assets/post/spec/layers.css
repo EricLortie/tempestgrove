@@ -1,0 +1,55 @@
+/* =============================================================================
+
+    LAYERS (Z-INDEX) CSS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+    Use this file to set z-index layers for elements on a global scale.
+
+    Please organize this file from foreground to background:
+        The highest layer should be at the top and the lowest at the bottom.
+
+    Position values should be included in the element's component file and
+    NOT in this file.
+
+============================================================================= */
+
+/* Sidebar Specific */
+.sidebar-nav {
+    z-index: 30;
+}
+
+.sidebar-nav__overlay {
+    z-index: 25;
+}
+
+[class*="sidebar-nav__pane--"] {
+    z-index: 25;
+}
+
+/* Prevents multi-level menu overlaps on desktop. */
+@media $menu-media-query {
+
+    .sidebar-nav__pane-nav--level-1 {
+        z-index: 25;
+    }
+
+    .sidebar-nav__pane-nav--level-2 {
+        z-index: 24;
+    }
+
+    .sidebar-nav__pane-nav--level-3 {
+        z-index: 23;
+    }
+
+}
+
+.nav-toggle {
+    z-index: 30;
+}
+
+.gallery--full {
+    z-index: 22;
+}

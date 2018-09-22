@@ -1,0 +1,87 @@
+/* =============================================================================
+
+    PLUGIN: WORDPRESS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Images */
+    $wp-image-margin: 2rem;
+
+    /* Captions */
+    $wp-image-caption-font-family: $heading-font-family;
+    $wp-image-caption-font-size: $font-scale-small;
+    $wp-image-caption-color: white;
+    $wp-image-caption-font-weight: bold;
+    $wp-image-caption-font-style: normal;
+    $wp-image-caption-background: var(--black);
+    $wp-image-caption-padding: 0.5rem 1rem;
+    $wp-image-caption-margin: 0;
+    $wp-image-caption-alignment: left;
+
+/* Wordpress WYSIWYG Images ================================================= */
+[class*="wp-image"] {
+    height: auto !important;
+}
+
+[class*="wp-image"].alignnone {
+
+    @media $(l-tablet) {
+
+    }
+
+}
+
+.wp-image__wrapper {
+    /* margin: $wp-image-margin 0; */
+    max-width: 100% !important;
+}
+
+/* Images =================================================================== */
+.alignleft,
+.alignright {
+    display: block;
+    margin: 0 0 calc($wp-image-margin / 2) 0;
+}
+
+.alignleft {
+
+    @media $(p-tablet) {
+        float: left;
+        margin: 0 $wp-image-margin calc($wp-image-margin / 2) 0;
+    }
+
+}
+
+.alignright {
+
+    @media $(p-tablet) {
+        float: right;
+        margin: 0 0 calc($wp-image-margin / 2) $wp-image-margin;
+    }
+
+}
+
+.aligncenter {
+	display: block;
+    margin: 0 auto;
+}
+
+/* Captions ================================================================= */
+.wp-caption-text {
+    font-family: $wp-image-caption-font-family;
+    font-size: $wp-image-caption-font-size;
+    color: $wp-image-caption-color;
+    font-weight: $wp-image-caption-font-weight;
+    font-style: $wp-image-caption-font-style;
+    background: $wp-image-caption-background;
+    padding: $wp-image-caption-padding;
+    margin: $wp-image-caption-margin;
+    text-align: $wp-image-caption-alignment;
+    display: inline-block;
+}

@@ -1,0 +1,115 @@
+/* =============================================================================
+
+    DIALOG CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Dialog */
+    $dialog-padding: 3rem;
+    $dialog-background: #333;
+
+        /* Dialog: Widths */
+        $dialog-width--mobile: 85%;
+        $dialog-width--p-tablet: 80%;
+        $dialog-width--l-tablet: 70%;
+        $dialog-width--cinema: 60%;
+        $dialog-width--cinema-xl: 40%;
+
+    /* Overlay */
+    $dialog-overlay-background: rgba(0,0,0,0.95);
+
+    /* Close Button */
+    $dialog-close-top-offset: 0;
+    $dialog-close-right-offset: 0;
+    $dialog-close-background: var(--black);
+    $dialog-close-color: #222;
+    $dialog-close-padding: 0 0.25rem;
+    $dialog-close-size: 2rem;
+
+        /* Close Button: Hover */
+        $dialog-close-background--hover: gray;
+        $dialog-close-color--hover: white;
+
+/* Dialog =================================================================== */
+.dialog {
+    background: $dialog-background;
+    padding: calc($dialog-padding / 3);
+    width: $dialog-width--mobile;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-height: 80%;
+    overflow: auto;
+    transform: translate3d(-50%,100vh,0);
+    transition: transform 250ms $global-easing 0ms;
+    color: #ccc;
+
+    &.open {
+        transform: translate3d(-50%,-50%,0);
+        transition: transform 250ms $global-easing 0ms;
+    }
+
+    @media $(p-tablet) {
+        padding: calc($dialog-padding / 2);
+        width: $dialog-width--p-tablet;
+    }
+
+    @media $(l-tablet) {
+        padding: $dialog-padding;
+        width: $dialog-width--l-tablet;
+    }
+
+    @media $(cinema) {
+        width: $dialog-width--cinema;
+    }
+
+    @media $(cinema-xl) {
+        width: $dialog-width--cinema-xl;
+    }
+
+}
+
+/* Overlay ================================================================== */
+.dialog__overlay {
+    background: $dialog-overlay-background;
+    cursor: url('../icons/core-icon--close.svg'), auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transform: translate3d(0,100%,0);
+    opacity: 0;
+    transition: opacity 250ms $global-easing 0ms,
+                transform 0ms ease 250ms;
+
+    &.open {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        transition: opacity 250ms $global-easing 0ms;
+    }
+
+}
+
+/* Close Button ============================================================= */
+.dialog__close-button {
+    top: $dialog-close-top-offset;
+    right: $dialog-close-right-offset;
+    background: $dialog-close-background;
+    fill: $dialog-close-color;
+    padding: $dialog-close-padding;
+    width: $dialog-close-size;
+    position: absolute;
+}
+
+    /* Close Button: Hover */
+    .no-touchevents .dialog__close-button:hover {
+        background: $dialog-close-background--hover;
+        fill: $dialog-close-color--hover;
+    }

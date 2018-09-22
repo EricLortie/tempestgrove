@@ -1,0 +1,99 @@
+/* =============================================================================
+
+    FOOTER SUB-FOOTER CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Containers */
+    $main-footer-subfooter-border: none;
+    $main-footer-subfooter-spacing: 0.5rem 0 0;
+
+    /* Copyright & Credit */
+    $main-footer-subfooter-font-family: $global-font-family;
+    $main-footer-subfooter-font-color: var(--dal-gray);
+    $main-footer-subfooter-font-weight: normal;
+    $main-footer-subfooter-font-size: 0.65rem;
+    $main-footer-subfooter-font-style: normal;
+    $main-footer-subfooter-text-transform: none;
+
+        /* Links: Hovers */
+        $main-footer-subfooter-font-color--hover: var(--uw-red);
+
+/* Container ================================================================ */
+.main-footer__subfooter {
+    padding: $main-footer-subfooter-spacing;
+    margin: 0;
+    border-top: 1px solid $main-footer-subfooter-border;
+    flex-flow: row wrap;
+    font-size: 1rem;
+
+    @media $(p-tablet) {
+
+        p {
+            font-size: $main-footer-subfooter-font-size;
+        }
+
+    }
+
+}
+
+/* Copyright ================================================================ */
+.main-footer__subfooter-copyright {
+    font-family: $main-footer-subfooter-font-family;
+    color: $main-footer-subfooter-font-color;
+    font-weight: $main-footer-subfooter-font-weight;
+    font-size: 1rem;
+    font-style: $main-footer-subfooter-font-style;
+    text-transform: $main-footer-subfooter-text-transform;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    @media $(p-tablet) {
+        width: auto;
+        padding-left: $main-footer-quick-links-item-spacing;
+        font-size: $main-footer-subfooter-font-size;
+    }
+
+}
+
+/* Credit =================================================================== */
+.main-footer__subfooter-credit {
+    font-family: $main-footer-subfooter-font-family;
+    color: $main-footer-subfooter-font-color;
+    font-weight: $main-footer-subfooter-font-weight;
+    font-size: 1rem;
+    font-style: $main-footer-subfooter-font-style;
+    text-transform: $main-footer-subfooter-text-transform;
+    margin: $main-footer-subfooter-spacing;
+    padding: 0;
+    width: 100%;
+
+    @media $(p-tablet) {
+        width: auto;
+        margin: 0;
+        font-size: $main-footer-subfooter-font-size;
+    }
+
+}
+
+.main-footer__subfooter-credit-link {
+    color: inherit;
+    transition: color $global-timing $global-easing 0ms;
+}
+
+/* Hovers =================================================================== */
+.no-touchevents {
+
+    .main-footer__subfooter-credit-link:hover {
+        color: $main-footer-subfooter-font-color--hover;
+        transition: color $global-timing $global-easing 0ms;
+    }
+
+}

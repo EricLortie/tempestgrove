@@ -1,0 +1,238 @@
+/* =============================================================================
+
+    SETTINGS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Media Variables ========================================================== */
+/* Example usage: @media $(portrait) */
+
+/* Portrait */
+$portrait: screen and (orientation: portrait);
+
+/* Landscape */
+$landscape: screen and (orientation: landscape);
+
+/* Phone (Portrait): 320px */
+$p-phone: screen and (min-width: 20em);
+
+/* Phone (Landscape): 480px */
+$l-phone: screen and (min-width: 30em);
+
+/* Tablet (Portrait): 768px */
+$p-tablet: screen and (min-width: 48em);
+
+/* Tablet (Landscape): 1024px */
+$l-tablet: screen and (min-width: 64em);
+
+/* Desktop: Just over 1024px */
+$desktop: screen and (min-width: 64.01em);
+
+/* Cinema: 1600px */
+$cinema: screen and (min-width: 100em);
+
+/* Cinema XL: 1760px */
+$cinema-xl: screen and (min-width: 110em);
+
+/* Menu Media Query */
+$menu-media-query: $(l-tablet);
+
+/* Padding Units ============================================================ */
+$padding-unit: 3rem;
+
+$padding-small: calc($padding-unit/2);
+$padding-regular: $padding-unit;
+$padding-medium: calc($padding-unit*4);
+$padding-large: calc($padding-unit*6);
+$padding-xlarge: calc($padding-unit*8);
+
+/* Max Page Widths (Container System) ======================================= */
+$page-width-xsmall: 50em;    /* 800px */
+$page-width-small: 62.5em;   /* 1000px */
+$page-width-medium: 71.25em; /* 1140px */
+$page-width-large: 90em;     /* 1440px */
+$page-width-xl: 100em;       /* 1600px */
+
+/* Sidebar Navigation Widths ================================================ */
+/* Sets width for sidebar and equivalent <body> padding. */
+$sidebar-nav-width--tablet: 12vw;
+$sidebar-nav-width--cinema: 10vw;
+$sidebar-nav-width--cinema-xl: 8vw;
+
+/* Animations =============================================================== */
+$global-easing: cubic-bezier(0.2,1,0.3,1);
+$global-timing: 400ms;
+
+/* Core Colors ============================================================== */
+
+    /* Social Colours */
+    $gplus-brand: #dd4b39;
+    $facebook-brand: #3b5999;
+    $instagram-brand: #e4405f;
+    $linkedin-brand: #0077B5;
+    $pinterest-brand: #bd081c;
+    $twitter-brand: #55acee;
+    $youtube-brand: #cd201f;
+
+/* Standards ================================================================ */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    margin: 0;
+    background: black;
+}
+
+section {
+    position: relative;
+}
+
+a {
+  color: white;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+/* Containers =============================================================== */
+
+    /* XL */
+    .container--xl {
+        @mixin container-xl;
+    }
+
+    /* Large */
+    .container--large {
+        @mixin container-large;
+    }
+
+    /* Medium */
+    .container--medium {
+        @mixin container-medium;
+    }
+
+    /* Small */
+    .container--small {
+        @mixin container-small;
+    }
+
+    /* Small */
+    .container--xsmall {
+        @mixin container-xsmall;
+    }
+
+/* Section Padding ========================================================== */
+.page-section {
+    @mixin section-padding;
+
+    &.small {
+        @mixin section-padding-small;
+    }
+
+}
+
+/* Element Max Widths ======================================================= */
+img,
+iframe {
+    max-width: 100%;
+}
+
+/* Images =================================================================== */
+img:not([src]) {
+    visibility: hidden;
+}
+
+[data-src],
+[data-srcset] {
+  display: block;
+  min-height: 1px;
+
+  &.loading {
+      /* background: var(--gray--mid); */
+      opacity: 0;
+      transition: opacity $global-timing $global-easing 0ms;
+  }
+
+  &.loaded {
+      opacity: 1;
+      transition: opacity $global-timing $global-easing 0ms;
+  }
+
+}
+
+/* Responsive Embeds ======================================================== */
+.embed__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed__container iframe,
+.embed__container object,
+.embed__container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG Dimension Fix for IE ================================================= */
+[src*=".svg"] {
+    max-height: 100%;
+}
+
+/* Outdated Browser Note ==================================================== */
+.dated-browser-note {
+    background: var(--color-utility--danger);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    z-index: 9999;
+    text-align: center;
+    display: block;
+    margin: 0;
+
+    a {
+        color: inherit;
+    }
+
+}
+
+/* iOS Overflow Fix ========================================================= */
+/* Prevents the entire page from scrolling in iOS when a full viewport element
+is open such as a modal or a mobile menu. */
+/*
+[id*="iPhone"],
+[id*="iPad"] {
+
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .page-wrapper {
+        height: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &.hide-overflow {
+        overflow-y: hidden;
+    }
+
+} */

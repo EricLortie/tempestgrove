@@ -1,0 +1,82 @@
+/* =============================================================================
+
+    FOOTER QUICK LINKS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Links */
+    $main-footer-quick-links-item-spacing: 0.5rem;
+    $main-footer-quick-links-font-family: $global-font-family;
+    $main-footer-quick-links-font-color: var(--white);
+    $main-footer-quick-links-font-weight: normal;
+    $main-footer-quick-links-font-size: $main-footer-font-size;
+    $main-footer-quick-links-font-style: normal;
+    $main-footer-quick-links-text-transform: none;
+
+        /* Links: Hover */
+        $main-footer-quick-links-font-color--hover: var(--uw-red);
+
+/* Containers =============================================================== */
+.main-footer__quick-links-wrapper {
+    width: 100%;
+    margin: 0 0 2rem;
+
+    @media $(p-tablet) {
+        width: auto;
+        margin: 0;
+    }
+
+}
+
+.main-footer__quick-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Items ==================================================================== */
+.main-footer__quick-links-item {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media $(p-tablet) {
+        width: auto;
+    }
+
+}
+
+/* Links ==================================================================== */
+.main-footer__quick-links-item-link {
+    font-family: $main-footer-quick-links-font-family;
+    color: $main-footer-quick-links-font-color;
+    font-weight: $main-footer-quick-links-font-weight;
+    font-style: $main-footer-quick-links-font-style;
+    text-transform: $main-footer-quick-links-text-transform;
+    padding: $main-footer-quick-links-item-spacing 0;
+    display: block;
+    font-size: 1rem;
+    transition: color $global-timing $global-easing 0ms;
+
+    @media $(p-tablet) {
+        font-size: $main-footer-quick-links-font-size;
+        padding: 0 $main-footer-quick-links-item-spacing;
+    }
+
+}
+
+/* Hovers =================================================================== */
+.no-touchevents {
+
+    .main-footer__quick-links-item-link:hover {
+        color: $main-footer-quick-links-font-color--hover;
+        transition: color $global-timing $global-easing 0ms;
+    }
+
+}

@@ -1,0 +1,8 @@
+[25-Nov-2017 21:51:52 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/capercon/public_html/tempestgrove.com/wp-admin/user/menu.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-admin/user/menu.php on line 10
+[25-Nov-2017 21:52:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/capercon/public_html/tempestgrove.com/wp-admin/user/menu.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-admin/user/menu.php on line 10

@@ -1,0 +1,613 @@
+.page-template-character-builder p, .page-template-character-builder h1, .page-template-character-builder h2, .page-template-character-builder h3, .page-template-character-builder h4, .page-template-character-builder h5, .page-template-character-builder span, .page-template-character-builder button {
+  font-size: 80% !important;
+}
+
+
+
+.repeater-content h4 {
+  border-bottom: 1px solid darkred;
+}
+.switcher-element {
+  margin-top: 5rem;
+  border-top: 3px dotted darkred;
+  padding-top: 4rem;
+  border-bottom: 1px solid whitesmoke
+  cursor: pointer;
+}
+.switcher-box {
+  border: 1px solid whitesmoke
+  border-bottom: none;
+  background:#444;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2.switcher.active {
+  font-weight:bold;
+  color: red !important;
+}
+#generated-character {
+  margin-bottom: 3rem;
+  background: #222;
+  padding: 2rem;
+}
+#gen-opts {
+  margin: 4rem 0;
+}
+#gen-opts label {
+  text-transform: uppercase;
+}
+#gen-opts .col-sm-2 {
+  margin-top: 1rem;
+}
+.gen-opt {
+  width: 100%;
+  background: darkred;
+  border: none;
+  color: whitesmoke;
+}
+
+.skill_desc {
+  background: #111;
+  border: 1px solid darkgrey;
+  padding: 1rem;
+  margin: 2rem;
+  width: 94%;
+}
+
+.skill_header, .skill_row {
+  padding: 1rem;
+}
+
+#skills_section {
+  padding: 3rem 0;
+}
+#skill_header {
+  margin-bottom: 2rem;
+}
+#legend {
+  padding: 0 4rem;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  background: black;
+  width: 100%;
+  padding-top: 8px;
+}
+#legend a {
+  color: darkred;
+}
+#legend.opened #legend_content {
+  display:block;
+}
+#legend.opened #legend_close, #legend.closed #legend_open {
+  display: block;
+}
+#legend.closed #legend_content {
+  display:none;
+}
+#legend.opened #legend_open, #legend.closed #legend_close {
+  display: none;
+}
+#legend_content {
+  background: black;
+  padding: .5rem 0;
+}
+.skill_header {
+  text-transform:uppercase;
+  font-size: .8rem;
+  font-weight:bolder;
+  border-bottom: 1px solid darkred;
+}
+#skill_list.avail_only .skill_row.locked, #skill_list.avail_only .skill_row.purchased {
+  display: none !important;
+}
+.skill_row {
+  border-bottom: 1px dotted darkred;
+  font-size: .5rem;
+}
+.skill_row.locked, .skill_row.purchased  {
+  background:black;
+  cursor: not-allowed;
+}
+.skill_row.locked .skill_add, .skill_row.purchased .skill_add  {
+  color: black;
+}
+.skill_cost {
+  display: none;
+}
+.cost_strings .skill_cost {
+}
+.skill_meta {
+  text-align:right;
+}
+.skill_add {
+  cursor: pointer;
+  color: darkred;
+}
+.skill_add:hover {
+  color: whitesmoke;
+}
+.skill_purchased {
+  top: 0;
+  display: none;
+  color: green;
+}
+.skill_closer {
+  text-transform:uppercase;
+  color: darkred;
+}
+.skill_expander {
+  color: darkred;
+  cursor: help;
+}
+.skill_req {
+  color: darkgoldenrod !important;
+}
+.skill_menu {
+  font-weight: bolder;
+}
+.mandatory_section {
+  display: none;
+}
+.btn_warning {
+  padding-top: 1rem;
+}
+.btn_warning a {
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+#btn_undo.locked {
+  color: darkgrey;
+  cursor:not-allowed;
+}
+select.mandatory:disabled {
+  background: darkgrey;
+  color: black;
+}
+#btn_generate.locked {
+  background: grey !important;
+  cursor: not-allowed;
+}
+#btn_reset {
+  /*font-size: 12px !important;
+  padding: .5rem !important;
+  height: auto !important;
+  line-height: 22px !important;*/
+}
+#generator-tabs {
+  display: none;
+}
+#generator-tabs a.gen-tab {
+  border-bottom: darkred !important;
+}
+#generator-tabs li.active a.gen_tab {
+  background-color: darkred !important;
+}
+.btn-skill, .btn-red {
+  position: relative;
+  margin: 0px auto;
+  background: darkred;
+  color: whitesmoke;
+}
+.btn-skill:hover, btn-red:hover {
+  color: whitesmoke;
+  background: red;
+}
+.btn-skill.active, .btn-red.active {
+  background: whitesmoke;
+  color: darkred;
+}
+.btn-red {
+  width: 100%;
+  font-weight: bolder;
+}
+.btn-red:hover {
+  color: whitesmoke;
+  background: red;
+}
+.cb_display_content {
+  display: none;
+}
+.cb_display_content.active {
+  display: block;
+}
+#cb_armour_details {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+#cb_armour_details i {
+  cursor: pointer;
+  color: darkred;
+}
+.armour_slot {
+  padding-top: 4px;
+}
+.armour_slot_data {
+  display:none;
+  padding: 2px;
+  border-bottom: 1px solid grey;
+}
+.armour_slot_data_1 {
+  border-bottom: 1px solid grey;
+}
+.armour_slot_data_1 {
+  background: #333;
+}
+.armour_slot_data_2 {
+  background: #111;
+}
+.modal-header button.close {
+  color:whitesmoke;
+  font-weight:bold;
+  background: none;
+  opacity: 1;
+}
+#armour_modal .modal-dialog {
+  width: 300px;
+  margin-top: 140px;
+}
+.builder_modal .modal-content {
+  background: #333;
+  border: 1px solid whitesmoke;
+}
+.builder_modal select {
+  padding: .5rem;
+  margin-top: .5rem;
+  width: 100%;
+  background: #222;
+  color: #ccc;
+}
+.builder_modal button {
+  font-weight: bold;
+  background: darkred;
+}
+#spell_modal .modal-dialog {
+  max-width: 500px;
+  margin-top: 50px;
+}
+.spell_desc {
+  width: 92%;
+}
+#spellbook_modal .modal-dialog {
+  width: 90%;
+}
+#spellbook_modal .nav-tabs>li>a {
+  color: yellow;
+}
+#spellbook_modal .nav-tabs>li.active>a, #spellbook_modal .nav-tabs>li.active>a:focus, #spellbook_modal .nav-tabs>li.active>a:hover {
+  color: black;
+}
+.spell_circle {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.spell_circle.disabled {
+ display:none;
+}
+.spell_circle label {
+  font-size: 3rem;
+  float: right;
+}
+.spell_circle.elf label {
+  font-size: 2rem;
+}
+.spell_slot {
+  height: 50px;
+  border: 1px solid whitesmoke;
+  background: lightgrey;
+  width: 98%;
+  position:relative;
+  margin:0px auto;
+}
+.spell_slot.disabled {
+  background:#555;
+  border:1px solid darkred;
+}
+.spell_slot p.spell_name {
+  font-size: 80%;
+  font-weight: bolder;
+}
+.spell_slot p.change_spell {
+  font-size: 80%;
+  float:right;
+  cursor: pointer;
+}
+.spell_slot p {
+  color: black;
+}
+.spell_slot.disabled p {
+  display:none;
+}
+.sphere-row {
+  margin-top: 1rem;
+  border-top: 1px whitesmoke solid;
+}
+table.sphere {
+  width: 90%;
+  position: relative;
+  margin: auto;
+}
+table.sphere td {
+  padding: .2rem;
+}
+.sphere_header {
+  background: darkgrey;
+  color: black;
+  font-size: 120%;
+  font-weight: bolder;
+  text-align: center;
+}
+.spell_expander {
+  font-size: 12px;
+  color: yellow;
+}
+.spell_data {
+  color: #ddd;
+}
+
+.spell_info {
+  display:none;
+}
+.locked .action_buttons {
+  display: none;
+}
+.cat_label {
+  text-transform: uppercase;
+  color: darkred;
+}
+#skill_list.W .skill_row.W, #skill_list.R .skill_row.R, #skill_list.S .skill_row.S,
+#skill_list.A .skill_row.A, #skill_list.C .skill_row.C, #skill_list.P .skill_row.P  {
+  display: block;
+}
+
+#skill_list.W .skill_row.S, #skill_list.W .skill_row.R, #skill_list.W .skill_row.P, #skill_list.W .skill_row.C, #skill_list.W .skill_row.A,
+#skill_list.R .skill_row.S, #skill_list.R .skill_row.W, #skill_list.R .skill_row.P, #skill_list.R .skill_row.C, #skill_list.R .skill_row.A,
+#skill_list.S .skill_row.R, #skill_list.S .skill_row.W, #skill_list.S .skill_row.P, #skill_list.S .skill_row.C, #skill_list.S .skill_row.A,
+#skill_list.P .skill_row.S, #skill_list.P .skill_row.W, #skill_list.P .skill_row.R, #skill_list.P .skill_row.C, #skill_list.P .skill_row.A,
+#skill_list.C .skill_row.S, #skill_list.C .skill_row.W, #skill_list.C .skill_row.P, #skill_list.C .skill_row.R, #skill_list.C .skill_row.A,
+#skill_list.A .skill_row.S, #skill_list.A .skill_row.W, #skill_list.A .skill_row.P, #skill_list.A .skill_row.R, #skill_list.A .skill_row.C {
+  display:none;
+}
+.cat_label, .skill_expander, .frag_cost {
+  color: darkgoldenrod;
+}
+
+p#option_string span.opt {
+  color: whitesmoke;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#opt-clear {
+  color: darkred;
+  cursor: pointer;
+}
+#character_data.sticky {
+   position: fixed;
+   top: 45px;
+}
+.character-meta {
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 1px solid red;
+  margin-bottom: 1rem;
+}
+#character_section {
+  background: black;
+  border: 1px solid grey;
+  padding: 1rem;
+}
+#character_section hr {
+  color: grey;
+}
+#character_section span {
+  color: whitesmoke;
+}
+#data_fields {
+  display:none;
+}
+#data_fields input {
+  width: 100%;
+  font-size: 80%;
+}
+#data_fields div {
+  padding-top: 2rem;
+}
+#generate_export, #process_import {
+  margin-bottom: 1rem;
+}
+#load_character_section {
+  padding-top: 0px !important;
+}
+.level_cost {
+  display: block !important;
+}
+.frag_cost {
+  font-weight: bold;
+}
+.cat_restricted {
+  display: none !important;
+}
+div#race_selector, div#class_selector, div#occupation_selector, div#vocation_selector {
+  display:none;
+}
+.race.content, .class.content {
+  display:none;
+}
+
+div.nav-ele {
+  margin: 1rem;
+  padding: 2rem;
+  background: #242424;
+  color: white;
+  height: 84px;
+  border: 1px solid darkred;
+}
+
+.race_info.desktop {
+  /* height: 450px; */
+  overflow:scroll;
+}
+.slider_selector {
+  text-transform:uppercase;
+  text-align:center;
+}
+.builder_photo {
+  /* border: 2px solid whitesmoke; */
+  max-height: 300px;
+  background: black;
+}
+.builder_selector {
+  width: 100%;
+  margin-top: 2rem;
+}
+#menu_launcher {
+  padding-top: 6rem;
+}
+#menu_launcher.bg_1 {
+  background: url('/wp-content/themes/tempestgrove/assets/img/builder_bg1.jpg') no-repeat center center fixed;
+}
+#menu_launcher.bg_2 {
+  background: url('/wp-content/themes/tempestgrove/assets/img/builder_bg2.jpg') no-repeat center center fixed;
+}
+#menu_launcher.bg_3 {
+  background: url('/wp-content/themes/tempestgrove/assets/img/builder_bg3.jpg') no-repeat center center fixed;
+}
+#menu_launcher.bg_4 {
+  background: url('/wp-content/themes/tempestgrove/assets/img/builder_bg4.jpg') no-repeat center center fixed;
+}
+#menu_launcher.bg_5 {
+  background: url('/wp-content/themes/tempestgrove/assets/img/builder_bg5.jpg') no-repeat center center fixed;
+}
+
+#menu_items {
+  max-width: 300px;
+  position: relative;
+  border: 1px solid #222;
+  box-shadow: 5px 5px 10px black;
+  margin: 0px auto;
+  background: url('/wp-content/themes/tempestgrove/assets/img/bg_black.png');
+  border-radius: 1rem;
+  margin-bottom: 6rem;
+  padding: 1rem;
+}
+
+.race-slider-nav.mobile .race.slick-slide {
+  width: 150px !important;
+}
+
+.custom-dropdown--large {
+	font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+	font-size: .7em;
+}
+
+.custom-dropdown__select{
+	font-size: inherit; /* inherit size from .custom-dropdown */
+	padding: .5em; /* add some space*/
+	margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--red {
+	background-color: darkred;
+	color: whitesmoke;
+}
+
+@supports (pointer-events: none) and
+	  ((-webkit-appearance: none) or
+	  (-moz-appearance: none) or
+	  (appearance: none)) {
+
+	.custom-dropdown {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.custom-dropdown__select {
+		padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+		border: 0;
+		border-radius: 3px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	.custom-dropdown::before,
+	.custom-dropdown::after {
+		content: "";
+		position: absolute;
+		pointer-events: none;
+    color: whitesmoke;
+	}
+
+	.custom-dropdown::after { /*  Custom dropdown arrow */
+		content: "\25BC";
+		height: 1em;
+		font-size: .625em;
+		line-height: 1;
+		right: 1.2em;
+		top: 50%; margin-top: -.5em;
+    color: whitesmoke;
+	}
+
+	.custom-dropdown::before { /*  Custom dropdown arrow cover */
+		width: 2em;
+		right: 0; top: 0; bottom: 0;
+		border-radius: 0 3px 3px 0;
+	}
+
+	.custom-dropdown__select[disabled] {
+		color: rgba(0,0,0,.3);
+	}
+
+	.custom-dropdown.custom-dropdown--disabled::after {
+		color: rgba(0,0,0,.1);
+	}
+
+	/* White dropdown style */
+	.custom-dropdown--red::before {
+		background-color: darkred;
+		border-left: 1px solid rgba(0,0,0,.1);
+	}
+
+	.custom-dropdown--red::after {
+		color: rgba(0,0,0,.9);
+	}
+
+	/* FF only temp fix */
+	@-moz-document url-prefix() {
+		.custom-dropdown__select 			 { padding-right: .9em }
+		.custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+		.custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+	}
+}
+
+#race-menu p, #class-menu p, #occupation-menu p, #vocation-menu p {
+  text-align:center;
+}
+
+.styled-dropdown {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+}
+.builder_selector {
+  text-align: left;
+  text-transform: uppercase;
+}
+.full-width {
+  width:100%;
+}
+.skill_row.restricted {
+  display: none !important;
+}
+#race-content, #class-content, #occupation-content, #vocation-content {
+  min-height: 400px;
+}
+#occupation_selector, #vocation_selector {
+  position:relative;
+  margin:0px auto;
+}

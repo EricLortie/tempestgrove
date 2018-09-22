@@ -1,0 +1,4 @@
+[06-Jun-2018 06:05:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/capercon/public_html/tempestgrove.com/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/capercon/public_html/tempestgrove.com/wp-includes/theme-compat/embed-content.php on line 13
