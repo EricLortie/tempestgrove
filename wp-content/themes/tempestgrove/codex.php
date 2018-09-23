@@ -21,7 +21,7 @@
 <section class="sub">
     <div class="container--xl text-center">
         <a href="/" class="landing-banner__logo-link">
-            <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
+            <img src="/wp-content/themes/tempestgrove/assets/img/logo--black.png" alt="" class="landing-banner__logo">
         </a>
 				<?php
 				if( have_posts() ):
@@ -78,11 +78,11 @@
             <div id="spheres" class="flex-grid">
               <?php $count = 1; ?>
               <?php foreach ($spell_spheres as $sphere => $spells) {?>
-                <div class="small-1of3">
+                <div class="full med-1of3 lg-1of4">
 
                   <div class="builder-photo__block">
                       <div class="builder-photo__content">
-                          <div class="builder-photo__content-inner">
+                          <div class="builder-photo__content-inner sphere_col">
                             <table class="sphere" border="1">
                               <tr>
                                 <th colspan="2" class="sphere_header"><label><?php echo $sphere; ?></label></th>
