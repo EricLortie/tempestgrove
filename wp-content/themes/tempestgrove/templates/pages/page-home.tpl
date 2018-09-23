@@ -1,9 +1,6 @@
 <!-- Landing Banner -->
 <section class="landing-banner" style="background-image: url('https://tempestgrove.com//wp-content/uploads/2017/09/37113065645_52718149af_k.jpg;">
-    <div class="landing-banner__border"></div>
-    <a href="/" class="landing-banner__logo-link">
-        <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
-    </a>
+
     <div class="landing-banner__block">
         <h1 class="landing-banner__title has-particles">
             RUN<span>.</span> FIGHT<span>.</span> HIDE<span>.</span>

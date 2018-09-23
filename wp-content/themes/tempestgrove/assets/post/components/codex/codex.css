@@ -7,7 +7,7 @@
 
 ============================================================================= */
 
-.landing-banner {
+.builder-photo {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -86,7 +86,7 @@
             min-height: 40vh;
         }
 
-        .landing-banner__logo-link {
+        .builder-photo__logo-link {
             left: 50%;
             transform: translate(-50%,0);
         }
@@ -96,8 +96,9 @@
             z-index: 10;
         }
 
-        .landing-banner__title {
-            background: transparent;
+        .builder-photo__title {
+            background: #222;
+            text-align: center;
             border: none;
             color: white;
             padding: 0;
@@ -124,7 +125,7 @@
 
 }
 
-.landing-banner__border {
+.builder-photo__border {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -134,18 +135,14 @@
     /* mix-blend-mode: overlay; */
 }
 
-.landing-banner__logo-link {
-    padding: 1rem 0;
-    width: 50%;
-    /* position: absolute; */
+.builder-photo__logo-link {
+    padding: 2rem;
+    width: 60%;
+    position: absolute;
     top: 0;
     left: 50%;
     z-index: 15;
     transform: translate(-50%,0);
-
-    img {
-      width: 40%;
-    }
 
     @media $(p-tablet) {
         left: 0;
@@ -159,27 +156,21 @@
 
 }
 
-.landing-banner__block {
+.builder-photo__block {
     width: 100%;
     display: flex;
     flex-flow: column;
     position: relative;
     background: black;
-
-    @media $(p-tablet) {
-        width: 45%;
-    }
-
-    @media $(l-tablet) {
-        width: 35%;
-    }
+    padding: 0 1rem;
 
 }
 
-$landing-box-padding: 2rem;
+$landing-box-padding: .5rem;
 
-.landing-banner__title {
+.builder-photo__title {
     margin: 0;
+    text-align: center;
     font-size: $font-scale-h3;
     font-weight: bold;
     line-height: 1.1;
@@ -243,7 +234,7 @@ $landing-box-padding: 2rem;
 
 }
 
-.landing-banner__content {
+.builder-photo__content {
     margin: 0;
     padding: calc($landing-box-padding / 1.25);
     flex: 1;
@@ -293,12 +284,12 @@ $landing-box-padding: 2rem;
 
 }
 
-.landing-banner__content-inner {
+.builder-photo__content-inner {
     position: relative;
     z-index: 10;
 }
 
-.landing-banner__cta {
+.builder-photo__cta {
     margin: 0.5rem 0 0;
 }
 
