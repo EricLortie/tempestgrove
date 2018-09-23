@@ -85,6 +85,11 @@
     /* Hero: Landing Banner */
     @import "components/hero/landing-banner.css";
 
+/* COMPONENTS: FORUMS ======================================================== */
+
+    /* Forms: Base */
+    @import "components/forums/forums.css";
+
 /* COMPONENTS: FORMS ======================================================== */
 
     /* Forms: Base */

@@ -1,0 +1,9 @@
+#bbpress-forums div.even, #bbpress-forums ul.even, #bbpress-forums div.odd, #bbpress-forums ul.odd {
+  background: none !important;
+}
+#bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer {
+  background: #111 !important;
+}
+#bbpress-forums div.bbp-forum-header, #bbpress-forums div.bbp-topic-header, #bbpress-forums div.bbp-reply-header {
+  background: none !important;
+}
