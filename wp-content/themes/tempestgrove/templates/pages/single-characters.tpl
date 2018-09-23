@@ -12,40 +12,47 @@
         <h1 class="landing-banner__title">{$title}</h1>
     </div>
 </section>
+<div class="sphere-row flex-grid">
 
-<!-- characters -->
-<section class="landing-characters">
-  <div class="landing-characters__container container--xl flex-grid">
-    <div class="landing-characters__character box med-1of2">
+  <div class="small-1of1 med-4of12 box">
 
-      <div class="landing-characters__character-inner">
-          <a href="{$character->permalink}" class="landing-characters__character-image-link">
-              <img data-src="{$character->thumbnail_url}" alt="{$character->post_title}" class="landing-characters__character-image">
-          </a>
-      </div>
-    </div>
+    <a href="{$character->permalink}" class="landing-characters__character-image-link">
+        <img data-src="{$character->thumbnail_url}" alt="{$character->post_title}" class="landing-characters__character-image">
+    </a>
 
-    <div class="landing-characters__character box med-1of2">
-
-      <div class="landing-characters__character-copy">
-
-          {if $character->fields['race'] || $character->fields['class']}
-            <h2 class="landing-characters__character-title">{$character->fields['race']} {$character->fields['class']}</h2>
-          {/if}
-
-          <p>{the_content()}</p>
-
-          <a href="/characters" class="landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
-            <span>Back to Characters</span>
-          </a>
-
-          <a href="#" id="popup-bio-form" title="Update Character"data-dialog="character-form" class="dialog__trigger landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
-            <span>Suggest an Edit</span>
-          </a>
-      </div>
-    </div>
   </div>
-</section>
+
+  <div class="small-1of1 med-8of12 box">
+
+    <div class="builder-photo__block">
+      <div class="builder-photo__content">
+        <div class="builder-photo__content-inner">
+
+            {if $character->fields['race'] || $character->fields['class']}
+              <h2 class="landing-characters__character-title">{$character->fields['race']} {$character->fields['class']}</h2>
+            {/if}
+
+            {if $character->fields['player']}
+              <h5 class="landing-blocks__block-title player_name">Played By: <a href="{$character->profile_url}">{$character->fields['player']['user_firstname']}</a></h5>
+            {/if}
+
+            <p>{$character->content}</p>
+
+            <a href="/characters" class="landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
+              <span>Back to Characters</span>
+            </a>
+
+            <a href="#" id="popup-bio-form" title="Update Character"data-dialog="character-form" class="dialog__trigger landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
+              <span>Suggest an Edit</span>
+            </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 <div class="dialog__overlay dialog__close"></div>
 <div class="dialog" data-dialog="character-form">

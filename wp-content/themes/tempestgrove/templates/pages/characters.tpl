@@ -30,7 +30,7 @@
                               <h5 class="landing-blocks__block-title">{$block->fields['race']} {$block->fields['class']}</h5>
                             {/if}
 		                        {if $block->fields['player']}
-                              <h5 class="landing-blocks__block-title">Played By: <a href="{$block->fields['player']->user_url}">{$block->fields['player']['user_firstname']}</a></h5>
+                              <h5 class="landing-blocks__block-title player_name">Played By: <a href="{$block->profile_url}">{$block->fields['player']['user_firstname']}</a></h5>
                             {/if}
 		                        <p>{$block->post_excerpt}</p>
 		                    </div>
