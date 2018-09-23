@@ -134,6 +134,9 @@
     }
 
 }
+.landing-blocks__block-title.player_name {
+  font-size: 80% !important;
+}
 
 .landing-blocks__block-image-link {
     display: block;

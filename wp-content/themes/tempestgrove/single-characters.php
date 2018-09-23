@@ -17,6 +17,10 @@ $post->content = the_content();
 
 $smarty = wp_smarty();
 $smarty->assign('title', $post->post_title);
+$post->content = apply_filters('the_content', get_post_field('post_content', $post->ID));
+if ($post->content == "") {
+	$post->content = $post->post_excerpt;
+}
 $smarty->assign('character', $post);
 
 get_header();

@@ -263,6 +263,10 @@ function get_characters($count = -1){
         $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
         $post->permalink = get_the_permalink($post->ID);
         $post->fields = get_fields($post->ID);
+        if($post->fields['player']){
+          um_fetch_user($post->fields['player']['ID']);
+          $post->profile_url = um_user_profile_url();
+        }
         if($post->post_excerpt == ""){
           $posts_2[] = $post;
         } else {
