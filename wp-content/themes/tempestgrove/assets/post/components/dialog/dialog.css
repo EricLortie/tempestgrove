@@ -49,6 +49,7 @@
     transform: translate3d(-50%,100vh,0);
     transition: transform 250ms $global-easing 0ms;
     color: #ccc;
+    z-index: 10000;
 
     &.open {
         transform: translate3d(-50%,-50%,0);

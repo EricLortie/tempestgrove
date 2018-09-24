@@ -10,6 +10,7 @@
             </ul>
         {/if}
         <h1 class="landing-banner__title">{$title}</h1>
+        <p>This page lists all known characters in Tempest Grove, including race/class info and who plays them. Don't see your character here? <a href="https://tempestgrove.com/character-biography-form/">Fill out this form to submit your character.</a></p>
     </div>
 </section>
 
