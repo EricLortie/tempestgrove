@@ -264,8 +264,7 @@ function get_characters($count = -1){
         $post->permalink = get_the_permalink($post->ID);
         $post->fields = get_fields($post->ID);
         if($post->fields['player']){
-          um_fetch_user($post->fields['player']['ID']);
-          $post->profile_url = um_user_profile_url();
+          $post->profile_url = "/player-details?player_id=" . $post->fields['player']['ID'];
         }
         if($post->post_excerpt == ""){
           $posts_2[] = $post;
@@ -280,6 +279,35 @@ function get_characters($count = -1){
     }
     wp_reset_query();
     return $posts;
+}
+
+// Gets and structures a list of current alerts
+function get_player_characters($id){
+  // global $ultimatemember;
+// $loop = $ultimatemember->query->make('post_type=page&posts_per_page=10&offset=0&author=' . um_profile_id() );
+  $args = array (
+    'post_type'              => array( 'characters' ),  // YOUR POST TYPE
+    'meta_query'             => array(
+      array(
+        'key'       => 'player',
+        'value'     => $id
+      ),
+    ),
+  );
+
+  // The Query
+  $characters = [];
+
+  $posts_query = new WP_Query($args);
+  while($posts_query->have_posts()){
+      $posts_query->the_post();
+      global $post;
+      $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
+      $post->permalink = get_the_permalink($post->ID);
+      $post->fields = get_fields($post->ID);
+      $characters[] = $post;
+  }
+  return $characters;
 }
 
 
@@ -640,6 +668,9 @@ function get_spells(){
 
 }
 
+add_theme_support( 'post-thumbnails' );
+
+
 /* add a custom tab to show user pages */
 add_filter('um_profile_tabs', 'characters_tab', 1000 );
 function characters_tab( $tabs ) {
@@ -678,10 +709,6 @@ function um_profile_content_characters_default( $args ) {
       $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
       $post->permalink = get_the_permalink($post->ID);
       $post->fields = get_fields($post->ID);
-      if($post->fields['player']){
-        um_fetch_user($post->fields['player']['ID']);
-        $post->profile_url = um_user_profile_url();
-      }
       $characters[] = $post;
   }
 	?>
