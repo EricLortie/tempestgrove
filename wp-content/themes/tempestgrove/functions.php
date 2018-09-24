@@ -639,3 +639,82 @@ function get_spells(){
 	 return $spell_spheres;
 
 }
+
+/* add a custom tab to show user pages */
+add_filter('um_profile_tabs', 'characters_tab', 1000 );
+function characters_tab( $tabs ) {
+	$tabs['characters'] = array(
+		'name' => 'Characters',
+		'icon' => 'um-faicon-pencil',
+		'custom' => true
+	);
+	return $tabs;
+}
+
+/* Tell the tab what to display */
+add_action('um_profile_content_characters_default', 'um_profile_content_characters_default');
+function um_profile_content_characters_default( $args ) {
+	global $ultimatemember;
+	// $loop = $ultimatemember->query->make('post_type=page&posts_per_page=10&offset=0&author=' . um_profile_id() );
+    $args = array (
+      'post_type'              => array( 'characters' ),  // YOUR POST TYPE
+      'meta_query'             => array(
+          array(
+              'key'       => 'player',
+              'value'     => um_profile_id(),  // THE COUNTRY TO SEARCH
+              // 'compare'   => 'LIKE',  // TO SEARCH THIS COUNTRY IN YOUR COMMA SEPERATED STRING
+              // 'type'      => 'CHAR',
+          ),
+      ),
+  );
+
+  // The Query
+  $characters = [];
+
+  $posts_query = new WP_Query($args);
+  while($posts_query->have_posts()){
+      $posts_query->the_post();
+      global $post;
+      $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
+      $post->permalink = get_the_permalink($post->ID);
+      $post->fields = get_fields($post->ID);
+      if($post->fields['player']){
+        um_fetch_user($post->fields['player']['ID']);
+        $post->profile_url = um_user_profile_url();
+      }
+      $characters[] = $post;
+  }
+	?>
+
+    <!-- Blocks -->
+    <section class="landing-blocks">
+        <div class="landing-blocks__container container--xl flex-grid">
+          <?php foreach ($characters as $block){ ?>
+              <div class="landing-blocks__block box med-1of2">
+                  <div class="landing-blocks__block-inner">
+                      <a href="{$block->permalink}" class="landing-blocks__block-image-link">
+                          <img data-src="<?php echo $block->thumbnail_url; ?>" alt="<?php echo $block->post_title; ?>" class="landing-blocks__block-image">
+                      </a>
+                      <div class="landing-blocks__block-content">
+                          <div class="landing-blocks__block-copy">
+                              <h4 class="landing-blocks__block-title"><?php echo $block->post_title; ?></h4>
+                              <?php if ($block->fields['race'] || $block->fields['class']) { ?>
+                                <h5 class="landing-blocks__block-title"><?php echo $block->fields['race']; ?> <?php echo $block->fields['class']; ?></h5>
+                              <?php } ?>
+                              <p><?php echo $block->post_excerpt; ?></p>
+                          </div>
+                          <?php if($block->permalink) {?>
+                            <a href="<?php echo $block->permalink; ?>" class="landing-blocks__block-cta button--basic--outline small">
+                              <span>LEARN MORE</span>
+                            </a>
+                          <?php } ?>
+                      </div>
+                  </div>
+              </div>
+            <?php } ?>
+        </div>
+    </section>
+
+
+	<?php
+}
