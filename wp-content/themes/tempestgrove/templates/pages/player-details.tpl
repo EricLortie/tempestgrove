@@ -24,6 +24,7 @@
       </ul>
       <div class="tabs__tab-content current full box" data-tab="characters">
         <div class="content-area">
+          <h3>These are all the known PCs and NPCs played by this person.</h3>
           {if $characters}
             <div class="flex-grid">
       	    	{foreach from=$characters item=block}
@@ -58,6 +59,7 @@
       </div>
       <div class="tabs__tab-content full box" data-tab="posts">
         <div class="content-area">
+          <h3>This table lists all forum posts where this player is active.</h3>
           <div id="bbpress-forums">
             {bbp_get_template_part( 'loop', 'topics' )}
           </div>
@@ -65,6 +67,7 @@
       </div>
       <div class="tabs__tab-content full box" data-tab="replies">
         <div class="content-area">
+          <h3>This table lists all forum posts made by the player.</h3>
           <div id="bbpress-forums">
             {bbp_get_template_part( 'loop', 'replies' )}
           </div>
