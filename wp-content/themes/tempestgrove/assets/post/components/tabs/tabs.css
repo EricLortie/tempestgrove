@@ -1,0 +1,145 @@
+/* =============================================================================
+
+    TABS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Tab List */
+    $tab-list-border: 2px solid var(--black);
+
+    /* Tab Items */
+    $tab-item-spacing: 0.25rem;
+
+    /* Tab Links */
+    $tab-link-background: var(--black);
+    $tab-link-border: 2px solid var(--black);
+    $tab-link-padding: 0.5rem 1rem;
+    $tab-link-font-size: 1rem;
+    $tab-link-font-family: $global-font-family;
+    $tab-link-font-weight: bold;
+    $tab-link-font-style: normal;
+    $tab-link-color: white;
+    $tab-link-text-decoration: none;
+    $tab-link-radius: 5px;
+
+        /* Tab Links: Hover */
+        $tab-link-background--hover: var(--highlight);
+        $tab-link-border--hover: var(--black);
+        $tab-link-color--hover: white;
+
+        /* Tab Links: Current */
+        $tab-link-border--current: var(--black);
+        $tab-link-background--current: white;
+        $tab-link-color--current: var(--highlight);
+
+/* Tab Navigation (All) ===================================================== */
+
+    /* List */
+    [class^="tabs--"],
+    .tabs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Items */
+    .tabs__tab-item {
+        display: block;
+        vertical-align: bottom;
+        margin: $tab-item-spacing 0;
+
+        @media $(l-phone) {
+            display: inline-block;
+        }
+
+        @media $(l-tablet) {
+            margin: 0 $tab-item-spacing;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+    }
+
+    /* Links */
+    .tabs__tab-item-link {
+        display: block;
+        background: $tab-link-background;
+        border: $tab-link-border;
+        padding: $tab-link-padding;
+        font-family: $tab-link-font-family;
+        font-weight: $tab-link-font-weight;
+        font-style: $tab-link-font-style;
+        color: $tab-link-color;
+        font-size: $tab-link-font-size;
+        text-decoration: $tab-link-text-decoration;
+        border-radius: 0;
+
+        &.current {
+            background: $tab-link-background--current;
+            color: $tab-link-color--current;
+            border-color: $tab-link-border--current;
+            pointer-events: none;
+        }
+
+        @media $(l-tablet) {
+            border-radius: $tab-link-radius;
+        }
+
+    }
+
+        /* Links: Hover */
+        .no-touchevents {
+
+            .tabs__tab-item-link:not(.current):hover {
+                background: $tab-link-background--hover;
+                color: $tab-link-color--hover;
+                border-color: $tab-link-border--hover;
+            }
+
+        }
+
+/* Tab Navigation (Overlap) ================================================= */
+@media $(l-tablet) {
+
+    .tabs--overlap {
+        border-bottom: $tab-list-border;
+
+        .tabs__tab-item {
+            margin-bottom: -2px;
+        }
+
+        .tabs__tab-item-link {
+            border-radius: $tab-link-radius $tab-link-radius 0 0;
+
+            &.current {
+                border-bottom-color: transparent;
+            }
+
+        }
+
+    }
+
+}
+
+/* Tab Content ============================================================== */
+.tabs__tab-content {
+    display: none;
+
+    &.current {
+        display: block;
+    }
+
+}
+
+.content-area #bbpress-forums {
+  margin-top: 1rem;
+}

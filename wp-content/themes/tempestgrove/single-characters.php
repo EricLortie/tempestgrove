@@ -21,6 +21,9 @@ $post->content = apply_filters('the_content', get_post_field('post_content', $po
 if ($post->content == "") {
 	$post->content = $post->post_excerpt;
 }
+if($post->fields['player']){
+	$post->profile_url = "/player-details?player_id=" . $post->fields['player']['ID'];
+}
 $smarty->assign('character', $post);
 
 get_header();
