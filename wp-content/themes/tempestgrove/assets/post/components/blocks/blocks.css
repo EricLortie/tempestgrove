@@ -131,6 +131,7 @@
     display: flex;
     flex: 1;
     flex-flow: column;
+    align-items: center;
 }
 
 .landing-blocks__block-title {
