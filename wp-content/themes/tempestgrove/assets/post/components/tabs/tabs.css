@@ -140,6 +140,12 @@
 
 }
 
-.content-area #bbpress-forums {
-  margin-top: 1rem;
+.content-area {
+  h3 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  #bbpress-forums {
+    margin-top: 1rem;
+  }
 }
