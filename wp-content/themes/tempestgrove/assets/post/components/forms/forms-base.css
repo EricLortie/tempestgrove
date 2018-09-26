@@ -12,12 +12,6 @@
 
 /* Gravity Forms ============================================================ */
 
-  .ginput_container {
-    input, textarea {
-      color: black;
-    }
-  }
-
     /* Complex (2 Column) */
     .ginput_complex {
         display: flex;
