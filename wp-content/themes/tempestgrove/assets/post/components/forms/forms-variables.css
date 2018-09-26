@@ -61,7 +61,7 @@ $form-field-font-size: $paragraph-font-size;
 $form-field-font-weight: normal;
 $form-field-padding: 0.75rem;
 $form-field-background: white;
-$form-field-color: var(--white);
+$form-field-color: var(--black);
 
     /* Fields: Hover */
     $form-field-border-color--hover: var(--uw-red);
