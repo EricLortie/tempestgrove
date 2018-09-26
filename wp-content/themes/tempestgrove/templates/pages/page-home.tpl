@@ -47,6 +47,13 @@
   </div>
 </section>
 
+<section class="services-blocks">
+  <div class="landing-blocks__container video-container container--xl flex-grid">
+    <div class="landing-banner__border"></div>
+    <iframe class="video" src="https://www.youtube.com/embed/RjIyGID199I?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
 {if $characters}
 	<!-- Blocks -->
 	<section class="landing-blocks">

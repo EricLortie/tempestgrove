@@ -131,3 +131,9 @@
 
     /* Gallery: Base */
     @import "components/gallery/gallery.css";
+
+
+/* COMPONENTS: TABS ========================================================= */
+
+    /* Tabs: Base */
+    @import "components/tabs/tabs.css";

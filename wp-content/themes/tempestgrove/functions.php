@@ -745,3 +745,24 @@ function um_profile_content_characters_default( $args ) {
 
 	<?php
 }
+function bbp_get_user_replies( $user_id = 0 ) {
+
+  // Validate user
+  $user_id = bbp_get_user_id( $user_id );
+  if ( empty( $user_id ) )
+      return false;
+
+  // Query defaults
+  $default_query = array(
+      'author'         => $user_id,
+      'show_stickies'  => false,
+      'order'          => 'DESC',
+  );
+
+  // Try to get the topics
+  $query = bbp_has_replies( $default_query );
+  if ( empty( $query ) )
+      return false;
+
+  return apply_filters( 'bbp_get_user_replies', $query, $user_id );
+}
