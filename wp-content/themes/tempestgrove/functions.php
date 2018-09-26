@@ -211,7 +211,7 @@ function generate_og_tags() {
         'title'             => $post->post_title,
         'url'               => get_permalink($post->ID),
         'description'       => wp_trim_words(wp_strip_all_tags($post->post_content), 40, ''),
-        'image'             => ASSETS_DIR . 'img/social-logo.jpg',
+        'image'             => ASSETS_DIR . 'img/tg_logo.jpg',
         'type'              => 'article'
     );
 
@@ -224,11 +224,13 @@ function generate_og_tags() {
     }
 
     if(!$post->post_content){
-        $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure as part of the Underworld LARP franchise.';
+        $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
     }
 
     if(is_home() || is_front_page()){
         $og_tags['title'] = get_bloginfo('name');
+        $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
+
     }
 
     return $og_tags;
