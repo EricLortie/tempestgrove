@@ -21,7 +21,7 @@
         input,
         select,
         textarea {
-
+          color: black;
             + label {
                 font-family: $form-sublabel-font-family;
                 font-size: $form-sublabel-font-size;
