@@ -4,7 +4,10 @@
         <a href="/" class="landing-banner__logo-link">
             <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
         </a>
-        <h1 class="landing-banner__title">{$title}</h1>
+        <h1 class="landing-banner__title has_particles">
+            <span id="particles-js"></span>
+            <span class="title_text">{$title}<span>
+        </h1>
       </div>
 </section>
 

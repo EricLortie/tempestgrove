@@ -6,7 +6,7 @@
         </a>
         <h1 class="landing-banner__title has_particles">
             <span id="particles-js"></span>
-            <span class="title_text">{$title}<span>
+            <span class="title_text">{$event->post_title}<span>
         </h1>
     </div>
 </section>
@@ -14,8 +14,8 @@
 
   <div class="small-1of1 med-4of12 box">
 
-    <a href="{$character->permalink}" class="landing-characters__character-image-link">
-        <img data-src="{$character->thumbnail_url}" alt="{$character->post_title}" class="landing-characters__character-image">
+    <a href="{$event->permalink}" class="landing-characters__character-image-link">
+        <img data-src="{$event->fields['event_photo']}" alt="{$event->post_title}" class="landing-characters__character-image">
     </a>
 
   </div>
@@ -26,22 +26,17 @@
       <div class="builder-photo__content">
         <div class="builder-photo__content-inner">
 
-            {if $character->fields['race'] || $character->fields['class']}
-              <h2 class="landing-characters__character-title">{$character->fields['race']} {$character->fields['class']}</h2>
+            <h3 class="landing-characters__character-title">START: {$event->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h3>
+            <h3 class="landing-characters__character-title">END: {$event->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h3>
+
+            {if $event_has_passed}
+              <p>{$event->fields['preview']}</p>
+            {else}
+              <p>{$event->fields['summary']}</p>
             {/if}
 
-            {if $character->fields['player']}
-              <h5 class="landing-blocks__block-title player_name">Played By: <a href="{$character->profile_url}">{$character->fields['player']['user_firstname']}</a></h5>
-            {/if}
-
-            <p>{$character->content}</p>
-
-            <a href="/characters" class="landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
-              <span>Back to Characters</span>
-            </a>
-
-            <a href="#" id="popup-bio-form" title="Update Character"data-dialog="character-form" class="dialog__trigger landing-characters__character-cta button--basic--outline small" title="Back to Characters" >
-              <span>Suggest an Edit</span>
+            <a href="/events" class="landing-characters__character-cta button--basic--outline small" title="Back to Events" >
+              <span>Back to Events</span>
             </a>
 
         </div>

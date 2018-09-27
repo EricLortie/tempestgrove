@@ -5,6 +5,9 @@ register_nav_menu('footer_menu', 'Footer Menu');
 
 function get_nav_tree($location){
     $theme_locations = get_nav_menu_locations();
+    if(!isset($theme_locations[$location])){
+      return null;
+    }
     $menu_id = $theme_locations[$location];
     $items = wp_get_nav_menu_items($menu_id);
     return  $items ? buildTree($items, 0) : null;

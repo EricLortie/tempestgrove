@@ -17,6 +17,15 @@ require_once('includes/menus.php');
 
 
 /* ************************************************************************ **
+** Generate custom post types                                               **
+** ************************************************************************ */
+
+require_once('includes/post_types/games.php');
+require_once('includes/post_types/alerts.php');
+require_once('includes/post_types/rp_awards.php');
+
+
+/* ************************************************************************ **
 ** Enqueue Files & Register WP Options                                      **
 ** ************************************************************************ */
 
@@ -27,7 +36,7 @@ function add_javascripts(){
     wp_enqueue_script('modernizr',  ASSETS_DIR . 'vendor/modernizr.js#async',                               array(), ASSET_VERSION, 0);
     wp_enqueue_script('lazyload',   ASSETS_DIR . 'vendor/lazyload.min.js#async',                            array(), ASSET_VERSION, 1);
     wp_enqueue_script('matchmedia', ASSETS_DIR . 'vendor/matchMedia.js#async',                              array(), ASSET_VERSION, 1);
-    // wp_enqueue_script('particles',  ASSETS_DIR . 'vendor/particles.min.js#async',                           array(), ASSET_VERSION, 1);
+    wp_enqueue_script('particles',  ASSETS_DIR . 'vendor/particles.min.js#async',                           array(), ASSET_VERSION, 1);
     wp_enqueue_script('core',       ASSETS_DIR . 'js/core.js#async',                                        array(), ASSET_VERSION, 1);
     wp_enqueue_script('content',    ASSETS_DIR . 'js/components/content/content.js#async',                  array(), ASSET_VERSION, 1);
     wp_enqueue_script('navigation', ASSETS_DIR . 'js/components/navigation/navigation-sidebar.js#defer',    array(), ASSET_VERSION, 1);
@@ -265,7 +274,7 @@ function get_characters($count = -1){
         $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
         $post->permalink = get_the_permalink($post->ID);
         $post->fields = get_fields($post->ID);
-        if($post->fields['player']){
+        if(isset($post->fields['player'])){
           $post->profile_url = "/player-details?player_id=" . $post->fields['player']['ID'];
         }
         if($post->post_excerpt == ""){
@@ -278,6 +287,63 @@ function get_characters($count = -1){
       $posts = array_merge($posts_1, $posts_2);
     } else {
       $posts = array_slice($posts_1, 0, 4);
+    }
+    wp_reset_query();
+    return $posts;
+}
+
+// Gets and structures a list of current alerts
+function get_games(){
+    $today = date('Ymd');
+    $args = array(
+        'post_type' => 'games',
+        'posts_per_page' => -1,
+        'post_status' => 'publish',
+        'orderby' => 'meta_value',
+        'meta_key' => 'event_start',
+        'order' => 'DESC'
+    );
+    $posts = [];
+    $next_event = [];
+    $posts_query = new WP_Query($args);
+    while($posts_query->have_posts()){
+        $posts_query->the_post();
+        global $post;
+        $post->fields = get_fields($post->ID);
+        $date = strtotime($post->fields['event_end']);
+        $remaining = $date - time();
+        $days_remaining = floor($remaining / 86400);
+        $hours_remaining = floor(($remaining % 86400) / 3600);
+        $post->time_remaining = "This event has passed.";
+        if(strtotime($post->fields['event_end']) > time()){
+          $post->time_remaining = "In $days_remaining days, $hours_remaining hours.";
+        }
+        $post->permalink = get_the_permalink($post->ID);
+        if($next_event == null && (strtotime($post->fields['event_end']) > time())){
+          $next_event = $post;
+        }
+        $posts[] = $post;
+    }
+    wp_reset_query();
+    $ret = ['games' => $posts, 'next_game' => $next_event];
+    return $ret;
+}
+
+// Gets and structures a list of current alerts
+function get_alerts(){
+    $args = array(
+        'post_type' => 'alerts',
+        'posts_per_page' => -1,
+        'post_status' => 'publish'
+    );
+    $posts = [];
+    $posts_query = new WP_Query($args);
+    while($posts_query->have_posts()){
+        $posts_query->the_post();
+        global $post;
+        $post->fields = get_fields($post->ID);
+
+        $posts[] = $post;
     }
     wp_reset_query();
     return $posts;
