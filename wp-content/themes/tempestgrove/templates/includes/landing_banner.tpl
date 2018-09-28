@@ -17,7 +17,11 @@
         </a>
         <h1 class="landing-banner__title has_particles">
             <span id="particles-js"></span>
-            <span class="title_text">{$title}<span>
+            {if $title}
+              <span class="title_text">{$title}<span>
+            {else}
+              <span class="title_text">{$post->post_title}<span>
+            {/if}
         </h1>
     </div>
 </section>

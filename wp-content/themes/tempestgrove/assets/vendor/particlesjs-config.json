@@ -12,14 +12,14 @@
     },
     "color":
     {
-      "value":"#000000"
+      "value":"#111"
     },
     "shape":
     {
       "type":"circle",
       "stroke":
       {
-        "width":1,
+        "width":2,
         "color":"#571919"
       },
       "polygon":
@@ -41,7 +41,7 @@
       },
       "size":
       {
-        "value":16.03412060865523,
+        "value":6.03412060865523,
         "random":true,
         "anim":
         {
