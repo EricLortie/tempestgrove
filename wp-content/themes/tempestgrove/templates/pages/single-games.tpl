@@ -14,19 +14,17 @@
 
     <div class="builder-photo__block">
       <div class="builder-photo__content">
-        <div class="builder-photo__content-inner">
+        <div class="builder-photo__content-inner game_content">
 
             <h2>{$game->time_remaining}</h2>
 
             <h5 class="landing-characters__character-title"><span class="white-text">START:</span> {$game->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h5>
             <h5 class="landing-characters__character-title"><span class="white-text">END:</span> {$game->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h5>
 
-            <p>{$game->fields['preview']}</p>
-
-            {if $event_has_passed || $event->fields['summary']}
-              <p>{$event->fields['preview']}</p>
+            {if $event_has_passed || $game->fields['summary']}
+              <p>{$game->fields['preview']}</p>
             {else}
-              <p>{$event->fields['summary']}</p>
+              <p>{$game->fields['summary']}</p>
             {/if}
 
             <a href="/games" class="landing-characters__character-cta button--basic--outline small" title="Back to Games" >

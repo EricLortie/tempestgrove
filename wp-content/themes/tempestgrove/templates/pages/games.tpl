@@ -15,7 +15,7 @@
 
     <div class="builder-photo__block">
       <div class="builder-photo__content">
-        <div class="builder-photo__content-inner">
+        <div class="builder-photo__content-inner game_content">
             <h2>{$next_game->time_remaining}</h2>
 
             <h5 class="landing-characters__character-title"><span class="white-text">START:</span> {$next_game->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h5>
@@ -42,7 +42,7 @@
 		                    <img data-src="{$block->fields['event_photo']}" alt="{$block->post_title}" class="landing-blocks__block-image">
 		                </a>
 		                <div class="landing-blocks__block-content">
-		                    <div class="landing-blocks__block-copy">
+		                    <div class="landing-blocks__block-copy game_content">
                           <h2>{$block->time_remaining}</h2>
                           <h5 class="landing-characters__character-title">START: {$block->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h5>
                           <h5 class="landing-characters__character-title">END: {$block->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h5>
