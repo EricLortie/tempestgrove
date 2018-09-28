@@ -310,14 +310,7 @@ function get_games(){
         $posts_query->the_post();
         global $post;
         $post->fields = get_fields($post->ID);
-        $date = strtotime($post->fields['event_start']);
-        $remaining = $date - time();
-        $days_remaining = floor($remaining / 86400);
-        $hours_remaining = floor(($remaining % 86400) / 3600);
-        $post->time_remaining = "This event has passed.";
-        if(strtotime($post->fields['event_start']) > time()){
-          $post->time_remaining = "In $days_remaining days, $hours_remaining hours.";
-        }
+        $post->time_remaining = get_game_time_remaining($post);
         $post->permalink = get_the_permalink($post->ID);
         if($next_event == null && (strtotime($post->fields['event_end']) > time())){
           $next_event = $post;
@@ -328,6 +321,25 @@ function get_games(){
     $ret = ['games' => $posts, 'next_game' => $next_event];
     return $ret;
 }
+
+function get_game_time_remaining($post){
+  $date = strtotime($post->fields['event_start']);
+  $remaining = $date + 14400 - time();
+  $days_remaining = floor($remaining / 86400);
+  $hours_remaining = floor(($remaining % 86400) / 3600);
+  $minutes_remaining = 0; //floor(($remaining % 86400) / 60);
+  $post->time_remaining = "This event has passed.";
+  if(strtotime($post->fields['event_start']) > time()){
+    if($days_remaining == 0){
+      return "In $hours_remaining hours."; //, $minutes_remaining minutes.";
+    } else if ($hours_remaining == 0 && $days_remaining == 0) {
+      return "In $minutes_remaining minutes.";
+    } else {
+      return "In $days_remaining days, $hours_remaining hours.";
+    }
+  }
+  }
+
 
 // Gets and structures a list of current alerts
 function get_alerts(){
