@@ -14,7 +14,8 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
-    padding:0px;
+    min-height: 80vh;
+    padding: 3rem 3rem 3rem 0 !important;
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
 
     @media $(p-tablet) {
@@ -22,7 +23,6 @@
         justify-content: flex-end;
         align-items: flex-start;
         background-attachment: fixed;
-        padding-right: $padding-unit;
         background-size: cover;
         min-height: 80vh;
         background-position: center;
@@ -85,6 +85,10 @@
 
         @media $(p-tablet) {
             min-height: 40vh;
+        }
+        .landing_banner {
+          min-height: 40vh;
+          padding: 0;
         }
 
         .landing-banner__logo-link {
@@ -187,14 +191,12 @@
 $landing-box-padding: 0rem;
 
 .landing-banner__title {
+    padding: 1.33333rem;
     margin: 0;
-    min-height: 40vh;
     font-size: $font-scale-h3;
     font-weight: bold;
     line-height: 1.1;
-    padding: 3rem 0;
     color: var(--uw-red);
-    /* background: linear-gradient(to bottom, color-mod(var(--dal-gold) shade(10%)), var(--dal-gold)); */
     position: relative;
     z-index: 10;
     text-shadow: -2px 2px 0 rgba(0,0,0,0.05);
@@ -318,6 +320,7 @@ $landing-box-padding: 0rem;
 .landing-banner__content-inner {
     position: relative;
     z-index: 10;
+    padding: 1rem;
 }
 
 .landing-banner__cta {
