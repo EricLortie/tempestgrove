@@ -1,23 +1,11 @@
-<!-- Landing Banner -->
-<section class="sub">
-    <div class="container--xl text-center">
-        <a href="/" class="landing-banner__logo-link">
-            <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
-        </a>
-        {if $breadcrumbs}
-            <ul class="breadcrumbs">
-                {$breadcrumbs}
-            </ul>
-        {/if}
-        <h1 class="landing-banner__title">{$title}</h1>
-        <p>This page lists all known characters in Tempest Grove, including race/class info and who plays them. Don't see your character here? <a href="https://tempestgrove.com/character-biography-form/">Fill out this form to submit your character.</a></p>
-    </div>
-</section>
+{include file='../includes/landing_banner.tpl'}
 
 {if $characters}
 	<!-- Blocks -->
 	<section class="landing-blocks">
 	    <div class="landing-blocks__container container--xl flex-grid">
+      <h3 class="landing-banner__subtitle">This page lists all known characters in Tempest Grove, including race/class info and who plays them. Don't see your character here? <a href="https://tempestgrove.com/character-biography-form/">Fill out this form to submit your character.</a></h3>
+
 	    	{foreach from=$characters item=block}
 		        <div class="landing-blocks__block box med-1of2 lg-1of3 xl-1of4">
 		            <div class="landing-blocks__block-inner">

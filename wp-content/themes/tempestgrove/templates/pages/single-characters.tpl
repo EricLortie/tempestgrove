@@ -1,17 +1,5 @@
-<!-- Landing Banner -->
-<section class="sub">
-    <div class="container--xl text-center">
-        <a href="/" class="landing-banner__logo-link">
-            <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
-        </a>
-        {if $breadcrumbs}
-            <ul class="breadcrumbs">
-                {$breadcrumbs}
-            </ul>
-        {/if}
-        <h1 class="landing-banner__title">{$title}</h1>
-    </div>
-</section>
+{include file='../includes/landing_banner.tpl'}
+
 <div class="sphere-row flex-grid">
 
   <div class="small-1of1 med-4of12 box">

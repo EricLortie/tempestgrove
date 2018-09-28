@@ -50,7 +50,7 @@
     "dependencies": {
         "jquery": "^3.2.1",
         "match-media": "^0.2.0",
-        "modernizr": "^3.5.0",
+        "modernizr": "^3.6.0",
         "normalize.css": "latest",
         "pikaday": "^1.6.1",
         "select2": "^4.0.3",

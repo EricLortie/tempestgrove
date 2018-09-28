@@ -40,13 +40,13 @@
              e.stopPropagation();
              return false;
          });
-         // 
-         // // Particles (Homepage) ===============================================
-         // if($('[class*="has-particles"]').length) {
-         //     particlesJS.load('particles-js', '/wp-content/themes/dalinno/assets/vendor/particlesjs-config.json', function() {
-         //
-         //     });
-         // }
+
+         // Particles (Homepage) ===============================================
+         if($('[class*="has_particles"]').length) {
+             particlesJS.load('particles-js', '/wp-content/themes/tempestgrove/assets/vendor/particlesjs-config.json', function() {
+               console.log("hello");
+             });
+         }
 
     });
 

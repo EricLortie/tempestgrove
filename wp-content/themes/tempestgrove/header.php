@@ -58,6 +58,8 @@
         <?php
             $smarty->assign('og_tags', generate_og_tags());
             $smarty->display('includes/open-graph.tpl');
+            $smarty->assign('alerts', get_alerts());
+
 
             wp_head();
         ?>
