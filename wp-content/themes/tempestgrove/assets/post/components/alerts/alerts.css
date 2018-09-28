@@ -1,0 +1,23 @@
+/* =============================================================================
+
+    ALERT CSS
+
+    Authored by:
+        - Eric Lortie
+
+============================================================================= */
+
+.alert {
+  h4 {
+    background: var(--uw-red);
+    border-radius: 5px;
+    margin: .4rem;
+    color: var(--black);
+    padding: .3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    a {
+      color: var(--black);
+    }
+  }
+}

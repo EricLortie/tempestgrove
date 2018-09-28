@@ -8,6 +8,7 @@ function add_page_javascripts(){
 
 $smarty = wp_smarty();
 $smarty->assign('is_404', true);
+$smarty->assign('title', "404 - Page Not Found");
 
 get_header();
 $smarty->display('pages/404.tpl');

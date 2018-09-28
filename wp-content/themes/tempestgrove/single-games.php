@@ -17,5 +17,5 @@ $smarty->assign('event', $post);
 $smarty->assign('event_has_passed', (strtotime($post->fields['event_end']) > time()));
 
 get_header();
-$smarty->display('pages/single-events.tpl');
+$smarty->display('pages/single-games.tpl');
 get_footer();
