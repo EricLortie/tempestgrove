@@ -310,7 +310,7 @@ function get_games(){
         $posts_query->the_post();
         global $post;
         $post->fields = get_fields($post->ID);
-        $date = strtotime($post->fields['event_end']);
+        $date = strtotime($post->fields['event_start']);
         $remaining = $date - time();
         $days_remaining = floor($remaining / 86400);
         $hours_remaining = floor(($remaining % 86400) / 3600);

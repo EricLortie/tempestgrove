@@ -4,8 +4,8 @@
 
   <div class="small-1of1 med-4of12 box">
 
-    <a href="{$event->permalink}" class="landing-characters__character-image-link">
-        <img data-src="{$event->fields['event_photo']}" alt="{$event->post_title}" class="landing-characters__character-image">
+    <a href="{$game->permalink}" class="landing-characters__character-image-link">
+        <img data-src="{$game->fields['event_photo']}" alt="{$game->post_title}" class="landing-characters__character-image">
     </a>
 
   </div>
@@ -16,17 +16,21 @@
       <div class="builder-photo__content">
         <div class="builder-photo__content-inner">
 
-            <h3 class="landing-characters__character-title">START: {$event->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h3>
-            <h3 class="landing-characters__character-title">END: {$event->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h3>
+            <h2>{$game->time_remaining}</h2>
 
-            {if $event_has_passed}
+            <h5 class="landing-characters__character-title"><span class="white-text">START:</span> {$game->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h5>
+            <h5 class="landing-characters__character-title"><span class="white-text">END:</span> {$game->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h5>
+
+            <p>{$game->fields['preview']}</p>
+
+            {if $event_has_passed || $event->fields['summary']}
               <p>{$event->fields['preview']}</p>
             {else}
               <p>{$event->fields['summary']}</p>
             {/if}
 
-            <a href="/events" class="landing-characters__character-cta button--basic--outline small" title="Back to Events" >
-              <span>Back to Events</span>
+            <a href="/games" class="landing-characters__character-cta button--basic--outline small" title="Back to Games" >
+              <span>Back to Games</span>
             </a>
 
         </div>
