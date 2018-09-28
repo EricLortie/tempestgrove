@@ -315,7 +315,7 @@ function get_games(){
         $days_remaining = floor($remaining / 86400);
         $hours_remaining = floor(($remaining % 86400) / 3600);
         $post->time_remaining = "This event has passed.";
-        if(strtotime($post->fields['event_end']) > time()){
+        if(strtotime($post->fields['event_start']) > time()){
           $post->time_remaining = "In $days_remaining days, $hours_remaining hours.";
         }
         $post->permalink = get_the_permalink($post->ID);
