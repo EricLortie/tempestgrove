@@ -43,6 +43,9 @@
 		                </a>
 		                <div class="landing-blocks__block-content">
 		                    <div class="landing-blocks__block-copy game_content">
+                          {if $block == $next_game}
+                            <h6>This is the next game.</h6>
+                          {/if}
                           <h2>{$block->time_remaining}</h2>
                           <h5 class="landing-characters__character-title">START: {$block->fields['event_start']|date_format:"%A, %B %e @ %H:%M"}</h5>
                           <h5 class="landing-characters__character-title">END: {$block->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h5>
