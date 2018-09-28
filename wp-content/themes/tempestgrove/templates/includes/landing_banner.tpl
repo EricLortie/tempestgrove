@@ -17,7 +17,7 @@
         </a>
         <h1 class="landing-banner__title has_particles">
             <span id="particles-js"></span>
-            <span class="title_text">{$event->post_title}<span>
+            <span class="title_text">{$title}<span>
         </h1>
     </div>
 </section>
