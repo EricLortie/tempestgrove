@@ -33,10 +33,10 @@ require_once('includes/post_types/rp_awards.php');
 add_action('wp_enqueue_scripts', 'add_javascripts');
 function add_javascripts(){
     wp_enqueue_script('jquery');
+    wp_enqueue_script('particles',  ASSETS_DIR . 'vendor/particles.min.js#async',                           array(), ASSET_VERSION, 1);
     wp_enqueue_script('modernizr',  ASSETS_DIR . 'vendor/modernizr.js#async',                               array(), ASSET_VERSION, 0);
     wp_enqueue_script('lazyload',   ASSETS_DIR . 'vendor/lazyload.min.js#async',                            array(), ASSET_VERSION, 1);
     wp_enqueue_script('matchmedia', ASSETS_DIR . 'vendor/matchMedia.js#async',                              array(), ASSET_VERSION, 1);
-    wp_enqueue_script('particles',  ASSETS_DIR . 'vendor/particles.min.js#async',                           array(), ASSET_VERSION, 1);
     wp_enqueue_script('core',       ASSETS_DIR . 'js/core.js#async',                                        array(), ASSET_VERSION, 1);
     wp_enqueue_script('content',    ASSETS_DIR . 'js/components/content/content.js#async',                  array(), ASSET_VERSION, 1);
     wp_enqueue_script('navigation', ASSETS_DIR . 'js/components/navigation/navigation-sidebar.js#defer',    array(), ASSET_VERSION, 1);
