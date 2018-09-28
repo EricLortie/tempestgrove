@@ -12,15 +12,15 @@
     },
     "color":
     {
-      "value":"#222"
+      "value":"#000"
     },
     "shape":
     {
       "type":"circle",
       "stroke":
       {
-        "width":2,
-        "color":"red"
+        "width":1,
+        "color":"#571919"
       },
       "polygon":
       {
@@ -41,7 +41,7 @@
       },
       "size":
       {
-        "value":6.03412060865523,
+        "value":3.03412060865523,
         "random":true,
         "anim":
         {
@@ -62,7 +62,7 @@
         "move":
         {
           "enable":true,
-          "speed":8.017060304327615,
+          "speed":4.017060304327615,
           "direction":"top",
           "random":true,
           "straight":false,
@@ -106,7 +106,7 @@
           "bubble":
           {
             "distance":170.53621458328246,
-            "size":32.48308849205381,
+            "size":12.48308849205381,
             "duration":4.304009225197129,
             "opacity":8,
             "speed":3
