@@ -328,7 +328,6 @@ function get_game_time_remaining($post){
   $days_remaining = floor($remaining / 86400);
   $hours_remaining = floor(($remaining % 86400) / 3600);
   $minutes_remaining = 0; //floor(($remaining % 86400) / 60);
-  $post->time_remaining = "This event has passed.";
   if(strtotime($post->fields['event_start']) > time()){
     if($days_remaining == 0){
       return "In $hours_remaining hours."; //, $minutes_remaining minutes.";
@@ -337,8 +336,10 @@ function get_game_time_remaining($post){
     } else {
       return "In $days_remaining days, $hours_remaining hours.";
     }
+  } else {
+    return "This event has passed.";
   }
-  }
+}
 
 
 // Gets and structures a list of current alerts
