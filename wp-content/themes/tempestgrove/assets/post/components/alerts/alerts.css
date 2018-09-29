@@ -12,12 +12,13 @@
     background: var(--uw-red);
     border-radius: 5px;
     margin: .4rem;
-    color: var(--black);
+    color: #222;
     padding: .3rem;
     font-weight: normal;
     text-transform: uppercase;
+    font-size: .8rem;
     a {
-      color: var(--black);
+      color: #222;
     }
   }
 }
