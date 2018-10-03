@@ -7,6 +7,35 @@
 
 ============================================================================= */
 
+/* RP Awards elements */
+
+.game_header {
+  border-bottom: 2px solid var(--black);
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+.game_tab_header {
+  text-transform: uppercase;
+}
+.character_name {
+  text-transform: uppercase;
+}
+.vote_count {
+  text-align: left;
+}
+.rp_awards_content {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--black);
+}
+p.vote_description {
+  padding: .4rem;
+  margin: 0px;
+}
+p.vote_description:nth-child(odd) {
+  background: var(--black);
+}
+
 .landing-banner {
     display: flex;
     align-items: flex-end;
@@ -339,3 +368,4 @@ $landing-box-padding: 0rem;
     }
 
 }
+

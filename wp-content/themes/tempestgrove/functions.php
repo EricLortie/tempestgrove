@@ -391,7 +391,6 @@ function get_player_characters($id){
   return $characters;
 }
 
-
 function build_skill_row($post, $s_count, $skill_type) {
 	$s_count++;
 	$name = get_sub_field('name');
