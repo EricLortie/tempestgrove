@@ -44,10 +44,16 @@
     height: 100%;
 }
 
+.header-section {
+  width: 100% !important;
+  border-bottom: 2px solid var(--dark);
+  color: var(--dark);
+}
+
 
 /* Landing Blocks =========================================================== */
 .landing-blocks {
-    background: var(--gray--dark);
+    background: var(--medium);
     padding: 1rem 0;
     border-top: 1px solid rgba(0,0,0,.1);
 
@@ -125,7 +131,7 @@
 }
 
 .landing-blocks__block-inner {
-    background: #111;
+    background: #222;
     box-shadow: -5px 5px 60px 0 rgba(0,0,0,0.1),
                 0 2px 3px 0 rgba(0,0,0,0.075);
     display: flex;
@@ -204,6 +210,7 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-between;
+    color: var(--light);
 
     &:before {
         position: absolute;

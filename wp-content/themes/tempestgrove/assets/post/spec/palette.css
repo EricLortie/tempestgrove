@@ -7,7 +7,7 @@
 
 ============================================================================= */
 :root {
-    --gray--dark: #222;
+    /* --gray--dark: #222;
     --black: #000;
 
     --uw-red: #D80032;
@@ -15,9 +15,28 @@
 
     --highlight: var(--uw-red);
 
-    --color-utility--danger: #ff5d5d;
+    --color-utility--danger: #ff5d5d; */
+
+    --primary-accent: #bbc34a;
+    --light: #f1f8e9;
+    --medium: #dcedc8;
+    --dark: #33691e;
+    --light-accent: #ccff90;
+    --dark-accent: #64dd17;
+
+/* Replacements */
+    --gray--dark: var(--light);
+    --black: var(--dark);
+
+    --uw-red: var(--primary-accent);
+    --dal-gray: var(--light-accent);
+
+    --highlight: var(--dark-accent);
+
+    --color-utility--danger: var(--medium);
+
 }
 
 body {
-  color: #ccc;
+  color: var(--light);
 }

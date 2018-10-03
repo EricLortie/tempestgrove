@@ -80,15 +80,15 @@
         $sidebar-nav-pane-border--nav: 1px solid #eaeaea;
 
         /* Pane Nav: Level 1 */
-        $sidebar-nav-pane-nav-level-1-background: #050505;
+        $sidebar-nav-pane-nav-level-1-background: var(--dark);
         $sidebar-nav-pane-nav-level-1-border: $sidebar-nav-pane-border--nav;
 
         /* Pane Nav: Level 2 */
-        $sidebar-nav-pane-nav-level-2-background: #050505;
+        $sidebar-nav-pane-nav-level-2-background: var(--dark);
         $sidebar-nav-pane-nav-level-2-border: $sidebar-nav-pane-border--nav;
 
         /* Pane Nav: Level 3 */
-        $sidebar-nav-pane-nav-level-3-background: #050505;
+        $sidebar-nav-pane-nav-level-3-background: var(--dark);
         $sidebar-nav-pane-nav-level-3-border: $sidebar-nav-pane-border--nav;
 
         /* Pane Nav: Links */
@@ -271,7 +271,7 @@
 
     /* Logo */
     .sidebar-nav__item--logo {
-        padding: 1rem 15% 0 0;
+        padding: 1rem 0;
 
         .sidebar-nav__item-link {
             border: none;

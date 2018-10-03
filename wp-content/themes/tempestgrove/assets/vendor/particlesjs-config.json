@@ -3,16 +3,16 @@
   {
     "number":
     {
-      "value":208,
+      "value":30,
       "density":
       {
         "enable":false,
-        "value_area":868.0624057955
+        "value_area":208.0624057955
       }
     },
     "color":
     {
-      "value":"#000"
+      "value":"#33691e"
     },
     "shape":
     {
@@ -20,7 +20,7 @@
       "stroke":
       {
         "width":1,
-        "color":"#571919"
+        "color":"darkgreen"
       },
       "polygon":
       {
@@ -29,7 +29,7 @@
       },
       "opacity":
       {
-        "value":0.312665351868777,
+        "value":0,
         "random":true,
         "anim":
         {
@@ -62,7 +62,7 @@
         "move":
         {
           "enable":true,
-          "speed":4.017060304327615,
+          "speed":1.017060304327615,
           "direction":"top",
           "random":true,
           "straight":false,

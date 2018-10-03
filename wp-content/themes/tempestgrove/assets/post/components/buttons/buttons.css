@@ -118,7 +118,7 @@ input[type="submit"] {
 [class*="button--"][class*="--outline"] {
     background: transparent;
     color: white;
-    border: 2px solid var(--dal-gray);
+    border: 2px solid var(--dark);
     transition: background $global-timing $global-easing 0ms,
                 color $global-timing $global-easing 0ms;
 }
@@ -127,8 +127,8 @@ input[type="submit"] {
     .no-touchevents {
 
         [class*="button--"][class*="--outline"]:hover {
-            background: var(--dal-gray);
-            color: white;
+            background: var(--light);
+            color: var(--dark);
             transition: background $global-timing $global-easing 0ms,
                         color $global-timing $global-easing 0ms;
         }

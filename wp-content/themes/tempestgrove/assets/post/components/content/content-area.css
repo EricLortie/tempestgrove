@@ -27,7 +27,7 @@
 
         /* Tables: Cells */
         $table-cell-background: transparent;
-        $table-cell-border: 1px solid #ccc;
+        $table-cell-border: 1px solid var(--dark);
         $table-cell-padding: $table-heading-padding;
         $table-cell-font-family: $paragraph-font-family;
         $table-cell-font-size: $paragraph-font-size;
@@ -237,6 +237,7 @@
 }
 
 .game_content {
+  color: var(--medium);
   p {
     padding: 1rem 0;
   }

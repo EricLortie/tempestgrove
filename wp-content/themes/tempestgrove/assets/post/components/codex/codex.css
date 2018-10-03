@@ -190,7 +190,7 @@ $landing-box-padding: .5rem;
     }
 
     span {
-        color: #ccc;
+        color: var(--dark);
     }
 
     &:before {

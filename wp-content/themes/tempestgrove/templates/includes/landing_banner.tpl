@@ -11,7 +11,7 @@
       {/foreach}
     </div>
   {/if}
-    <div class="container--xl text-center">
+    <div class="container--xl text-center header-section">
         <a href="/" class="landing-banner__logo-link">
             <img src="{$assets_dir}img/logo--black.png" alt="" class="landing-banner__logo">
         </a>
