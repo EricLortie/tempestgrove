@@ -33,7 +33,7 @@ p.vote_description {
   margin: 0px;
 }
 p.vote_description:nth-child(odd) {
-  background: var(--black);
+  background: var(--light);
 }
 
 .landing-banner {
