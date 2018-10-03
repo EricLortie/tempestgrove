@@ -84,7 +84,9 @@ $global-timing: 400ms;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+html {
+  margin-top: 0px !important;
+}
 html,
 body {
     margin: 0;

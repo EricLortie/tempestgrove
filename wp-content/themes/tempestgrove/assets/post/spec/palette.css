@@ -36,7 +36,3 @@
     --color-utility--danger: var(--medium);
 
 }
-
-body {
-  color: var(--light);
-}

@@ -10,6 +10,7 @@
 
 .services-blocks {
   background: black;
+  color: var(--light);
   padding: 1rem 0.5rem;
   .service {
     padding: 1rem;
