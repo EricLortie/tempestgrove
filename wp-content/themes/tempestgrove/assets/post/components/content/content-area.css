@@ -237,7 +237,7 @@
 }
 
 .game_content {
-  color: var(--medium);
+  color: var(--light);
   p {
     padding: 1rem 0;
   }
