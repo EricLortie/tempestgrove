@@ -10,7 +10,8 @@
 
 /* Variables ================================================================ */
 
-    $main-footer-background: #111;
+    $main-footer-background: none;
+    $main-footer-colour: #000;
     $main-footer-padding: 0.5rem 0;
     $main-footer-border: transparent;
     $main-footer-font-size: 0.75rem;
@@ -18,6 +19,7 @@
 /* Container ================================================================ */
 .main-footer {
     background: $main-footer-background;
+    colour: $main-footer-colour;
     border-top: 1px solid rgba(0,0,0,0.1);
 
     @media $(p-tablet) {

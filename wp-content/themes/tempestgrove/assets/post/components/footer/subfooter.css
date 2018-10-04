@@ -16,7 +16,7 @@
 
     /* Copyright & Credit */
     $main-footer-subfooter-font-family: $global-font-family;
-    $main-footer-subfooter-font-color: var(--dal-gray);
+    $main-footer-subfooter-font-color: #111;
     $main-footer-subfooter-font-weight: normal;
     $main-footer-subfooter-font-size: 0.65rem;
     $main-footer-subfooter-font-style: normal;

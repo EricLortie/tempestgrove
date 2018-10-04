@@ -1,9 +1,9 @@
 {include file='../includes/landing_banner.tpl'}
 
 {if $next_game}
-<div class="sphere-row flex-grid">
-<h3 class="landing-banner__subtitle">This is the next game. For all past and future games keep scrolling.</h3>
-  <div class="small-1of1 med-4of12 box">
+<div class="flex-grid game-row">
+  <h3 class="landing-banner__subtitle">This is the next game. For all past and future games keep scrolling.</h3>
+  <div class="small-1of1 med-4of12 box builder-photo__img_block">
 
     <a href="{$next_game->permalink}" class="landing-characters__character-image-link">
         <img data-src="{$next_game->fields['event_photo']}" alt="{$next_game->post_title}" class="landing-characters__character-image">

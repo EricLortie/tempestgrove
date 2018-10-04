@@ -1,6 +1,6 @@
 {include file='../includes/landing_banner.tpl'}
 
-<div class="sphere-row flex-grid">
+<div class="game-row flex-grid">
 
   <div class="small-1of1 med-4of12 box">
 
@@ -22,9 +22,9 @@
             <h5 class="landing-characters__character-title"><span class="white-text">END:</span> {$game->fields['event_end']|date_format:"%A, %B %e @ %H:%M"}</h5>
 
             {if $event_has_passed || $game->fields['summary']}
-              <p>{$game->fields['preview']}</p>
-            {else}
               <p>{$game->fields['summary']}</p>
+            {else}
+              <p>{$game->fields['preview']}</p>
             {/if}
 
             <a href="/games" class="landing-characters__character-cta button--basic--outline small" title="Back to Games" >
