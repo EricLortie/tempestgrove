@@ -2,7 +2,7 @@
 <meta property="og:site_name" content="{$og_tags.site_name}">
 
 <!-- Title -->
-<meta property="og:title" content="{$og_tags.title|escape}"">
+<meta property="og:title" content="{$og_tags.title|escape}">
 
 <!-- URL -->
 <meta property="og:url" content="{$og_tags.url}">
