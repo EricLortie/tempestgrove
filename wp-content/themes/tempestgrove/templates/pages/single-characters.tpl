@@ -1,6 +1,6 @@
 {include file='../includes/landing_banner.tpl'}
 
-<div class="sphere-row flex-grid">
+<div class="game-row flex-grid">
 
   <div class="small-1of1 med-4of12 box">
 
@@ -14,7 +14,7 @@
 
     <div class="builder-photo__block">
       <div class="builder-photo__content">
-        <div class="builder-photo__content-inner">
+        <div class="builder-photo__content-inner game_content">
 
             {if $character->fields['race'] || $character->fields['class']}
               <h2 class="landing-characters__character-title">{$character->fields['race']} {$character->fields['class']}</h2>

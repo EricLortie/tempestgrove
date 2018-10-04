@@ -6,7 +6,7 @@
 
         <!-- ### Meta Data ### -->
         <meta charset="utf-8">
-        <title>Tempest Grove Live Action Roleplay</title>
+        <title>Underworld LARP: Tempest Grove</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- ### Favicons ### -->
