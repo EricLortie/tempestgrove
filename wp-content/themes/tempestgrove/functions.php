@@ -217,34 +217,40 @@ function change_login_title(){
 
 
 function generate_og_tags() {
-    global $post;
 
-    $og_tags = array(
-        'site_name'         => get_bloginfo('name'),
-        'title'             => $post->post_title,
-        'url'               => get_permalink($post->ID),
-        'description'       => wp_trim_words(wp_strip_all_tags($post->post_content), 40, ''),
-        'image'             => ASSETS_DIR . 'img/tg_logo.jpg',
-        'type'              => 'article'
-    );
+      if(is_home() || is_front_page()){
+          $og_tags['site_name'] = "Underworld LARP: Tempest Grove";
+          $og_tags['title'] = "Run. Fight. Hide.";
+          $og_tags['url'] = get_site_url();
+          $og_tags['type'] = 'article';
+          $og_tags['image'] = 'https://tempestgrove.com/wp-content/uploads/2017/09/37113065645_52718149af_k.jpg';
+          $og_tags['description'] = 'Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
 
-    $featured_image = get_field('featured_image', $post->ID);
-    $header_image = get_field('header_background', $post->ID);
-    if($featured_image){
-        $og_tags['image'] = $featured_image['sizes']['650x650'];
-    }elseif($header_image){
-        $og_tags['image'] = $header_image['sizes']['650x650'];
-    }
+      } else {
+        global $post;
 
-    if(!$post->post_content){
-        $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
-    }
+        $og_tags = array(
+            'site_name'         => get_bloginfo('name'),
+            'title'             => $post->post_title,
+            'url'               => get_permalink($post->ID),
+            'description'       => wp_trim_words(wp_strip_all_tags($post->post_content), 40, ''),
+            'image'             => ASSETS_DIR . 'img/tg_logo.jpg',
+            'type'              => 'article'
+        );
 
-    if(is_home() || is_front_page()){
-        $og_tags['title'] = get_bloginfo('name');
-        $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
+        $featured_image = get_field('featured_image', $post->ID);
+        $header_image = get_field('header_background', $post->ID);
+        if($featured_image){
+            $og_tags['image'] = $featured_image['sizes']['650x650'];
+        }elseif($header_image){
+            $og_tags['image'] = $header_image['sizes']['650x650'];
+        }
 
-    }
+        if(!$post->post_content){
+            $og_tags['description'] = 'Tempest Grove: Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
+        }
+
+      }
 
     return $og_tags;
 }
