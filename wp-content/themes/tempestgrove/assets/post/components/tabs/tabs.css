@@ -132,6 +132,7 @@
 
 /* Tab Content ============================================================== */
 .tabs__tab-content {
+  padding-top: 2rem;
     display: none;
 
     &.current {
