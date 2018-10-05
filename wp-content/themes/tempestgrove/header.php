@@ -22,16 +22,16 @@
         <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
 
         <!-- Fonts: 2. Asset Requests (Preload) -->
-        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Catamaran:500,700">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Catamaran:500,700">
 
         <!-- Vendor CSS: Normalize -->
-        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?php echo ASSETS_DIR . 'vendor/normalize.css'; ?>">
+        <link rel="stylesheet" href="<?php echo ASSETS_DIR . 'vendor/normalize.css'; ?>">
 
         <!-- ### Primary CSS ### -->
-        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?php echo ASSETS_DIR . 'css/style.css'; ?>">
-        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?php echo ASSETS_DIR . 'css/character-builder.css'; ?>">
+        <link rel="stylesheet" href="<?php echo ASSETS_DIR . 'css/style.css'; ?>" >
+        <link rel="stylesheet" href="<?php echo ASSETS_DIR . 'css/character-builder.css'; ?>">
 
-        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
 
