@@ -34,6 +34,24 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="full box">
+    {foreach from=$rp_awards key=k item=block}
+      <div class="content-area flex-grid">
+				{foreach from=$block['votes'] item=char}
+					<div class="small-1of1 med-4of12 box rp_awards_content">
+						<h2 class="character_name">{$char['name']}</h2>
+						<h4 class="vote_count">Votes: {$char['descriptions']|@count}</h4>
+					</div>
+					<div class="small-1of1 med-8of12 box rp_awards_content">
+						{foreach from=$char['descriptions'] item=vote}
+							<p class="vote_description">{$vote}</p>
+						{/foreach}
+					</div>
+				{/foreach}
+      </div>
+		{/foreach}
 
   </div>
 </div>
