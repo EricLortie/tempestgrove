@@ -282,6 +282,9 @@ function get_characters($count = -1){
         $posts_query->the_post();
         global $post;
         $post->thumbnail_url = get_the_post_thumbnail_url($post->ID);
+        if($post->thumbnail_url == ""){
+          $post->thumbnail_url = "/wp-content/themes/tempestgrove/assets/img/person_placeholder.jpg";
+        }
         $post->permalink = get_the_permalink($post->ID);
         $post->fields = get_fields($post->ID);
         if(isset($post->fields['player'])){

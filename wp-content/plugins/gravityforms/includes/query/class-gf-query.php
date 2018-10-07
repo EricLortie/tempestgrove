@@ -647,7 +647,7 @@ class GF_Query {
 
 		$results = $this->query();
 
-		$this->total_found = $wpdb->get_var( 'SELECT FOUND_ROWS()' );
+		$this->total_found = (int) $wpdb->get_var( 'SELECT FOUND_ROWS()' );
 
 		/**
 		 * Inititalize them all.
@@ -690,7 +690,7 @@ class GF_Query {
 
 		$results = $this->query();
 
-		$this->total_found = $wpdb->get_var( 'SELECT FOUND_ROWS()' );
+		$this->total_found = (int) $wpdb->get_var( 'SELECT FOUND_ROWS()' );
 
 		$ids = array();
 

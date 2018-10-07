@@ -52,6 +52,6 @@
     <h3>Suggest Character Biography</h3>
 
     <p>You can suggest additions or changes to this character by submitting this form. This should only be publicly known information. Think of this as "Here's what you may have heard about this character around town."</p>
-    {do_shortcode('[contact-form-7 id="421" title="Character Biography Form"]')}
+    {do_shortcode('[gravityform id="2" title="true" description="true"]')}
 
 </div>

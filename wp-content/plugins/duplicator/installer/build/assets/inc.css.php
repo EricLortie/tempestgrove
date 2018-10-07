@@ -89,6 +89,7 @@
 	STEP 1 VIEW
     ====================================== */
 	table.s1-archive-local {width:100%}
+	table.s1-archive-local tr {vertical-align:top}
     table.s1-archive-local td {padding:4px 4px 4px 4px}
 	table.s1-archive-local td:first-child {font-weight:bold; width:55px}
     div#s1-area-sys-setup {padding:5px 0 0 10px}
@@ -108,7 +109,7 @@
 	div.s1-reqs div.title:hover {background-color:#dfdfdf; cursor:pointer}
 	div.s1-reqs div.info {padding:8px 8px 20px 8px; background-color:#fff; display:none; line-height:18px; font-size: 12px}
 	div.s1-reqs div.info a {color:#485AA3;}
-    div.s1-archive-failed-msg {padding:15px; border:1px dashed silver; font-size: 12px; border-radius:5px}
+    div.s1-archive-failed-msg {padding:15px; border:1px dashed maroon; font-size: 12px; border-radius:5px;}
     div.s1-err-msg {padding:8px;  border:1px dashed #999; margin:20px 0 20px 0px; border-radius:5px; color:maroon}
 
     /*Terms and Notices*/
@@ -197,11 +198,10 @@
 	table.s4-final-step {width:100%;}
 	table.s4-final-step td {padding:5px 15px 5px 5px}
 	table.s4-final-step td:first-child {white-space:nowrap;}
-	div.s4-go-back {border-top:1px dotted #dfdfdf; margin:auto; font-style:italic; font-size:10px; color:#333}
-	a.s4-final-btns {display: block; width:145px; padding:5px; line-height: 1.4; background-color:#F1F1F1; border:1px solid silver;
-		color: #000; box-shadow: 5px 5px 5px -5px #949494; text-decoration: none; text-align: center; border-radius: 4px;
-	}
-	a.s4-final-btns:hover {background-color: #dfdfdf;}
+	div.s4-go-back {border-top:1px dotted #dfdfdf; margin:auto; font-style:italic; font-size:11px; color:#333; padding-top:4px}
+	div.s4-go-back ul {line-height:18px}
+	button.s4-final-btns {cursor:pointer; color:#fff; font-size:16px; border-radius:5px; padding:7px; background-color:#13659C; border:1px solid gray; width:165px;}
+	button.s4-final-btns:hover {background-color: #dfdfdf;}
 	div.s4-gopro-btn {text-align:center; font-size:14px; margin:auto; width:200px; font-style: italic; font-weight:bold}
 	div.s4-gopro-btn a{color:green}
 

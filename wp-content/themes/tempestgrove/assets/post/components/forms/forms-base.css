@@ -182,7 +182,7 @@
     /* Confirmation */
     .gform_confirmation_message {
         font-family: Helvetica, Arial, sans-serif;
-        color: white;
+        color: black;
         font-size: 1rem;
         line-height: 1.25;
         font-weight: normal;
@@ -279,10 +279,10 @@ form {
 
         /* Form Elements: File: Label */
         .file-input__label {
-            background: $form-field-file-background;
+            background: $form-field-file-background !important;
             border-radius: $form-field-border-radius;
             padding: $button-padding;
-            color: $form-field-file-color;
+            color: $form-field-file-color !important;
             font-family: $form-field-file-font-family;
             font-weight: $form-field-file-font-weight;
             font-style: $form-field-file-font-style;

@@ -1710,8 +1710,8 @@ class GFFormDisplay {
 				continue;
 			}
 
-			// don't validate adminOnly fields.
-			if ( $field->is_administrative() ) {
+			// Don't validate fields with a visibility of administrative or hidden.
+			if ( $field->is_administrative() || $field->visibility === 'hidden' ) {
 				continue;
 			}
 

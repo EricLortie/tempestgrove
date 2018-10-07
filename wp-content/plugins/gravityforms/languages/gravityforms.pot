@@ -1,9 +1,9 @@
 # Copyright 2009-2018 Rocketgenius, Inc.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms 2.3.3.10\n"
+"Project-Id-Version: Gravity Forms 2.3.4\n"
 "Report-Msgid-Bugs-To: https://www.gravtiyforms.com\n"
-"POT-Creation-Date: 2018-09-10 17:28:03+00:00\n"
+"POT-Creation-Date: 2018-09-26 17:56:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "User IP Address"
 msgstr ""
 
-#: common.php:561 common.php:565 entry_detail.php:1187 form_detail.php:767
+#: common.php:561 common.php:565 entry_detail.php:1189 form_detail.php:767
 #: form_detail.php:1708 form_detail.php:2767 form_detail.php:2768
 #: includes/addon/class-gf-payment-addon.php:2793
 #: includes/fields/class-gf-field-date.php:13 js.php:648 js.php:1224
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Embed URL"
 msgstr ""
 
-#: common.php:576 entry_detail.php:1279 entry_list.php:828 export.php:921
+#: common.php:576 entry_detail.php:1281 entry_list.php:828 export.php:921
 #: forms_model.php:5196 select_columns.php:184
 msgid "Entry Id"
 msgstr ""
@@ -117,7 +117,7 @@ msgstr ""
 msgid "Pricing form fields"
 msgstr ""
 
-#: common.php:621 common.php:3857 form_detail.php:1454 form_detail.php:1455
+#: common.php:621 common.php:3860 form_detail.php:1454 form_detail.php:1455
 #: includes/fields/class-gf-field-radio.php:130
 msgid "Other"
 msgstr ""
@@ -202,250 +202,250 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
-#: common.php:1427 entry_detail.php:1098 gravityforms.php:1921
+#: common.php:1428 entry_detail.php:1100 gravityforms.php:1921
 #: includes/addon/class-gf-payment-addon.php:2578
 #: includes/fields/class-gf-field-total.php:24 js.php:752
 msgid "Total"
 msgstr ""
 
-#: common.php:1444 entry_detail.php:1035
+#: common.php:1445 entry_detail.php:1035
 #: includes/fields/class-gf-field-product.php:13
 msgid "Product"
 msgstr ""
 
-#: common.php:1454 entry_detail.php:1036
+#: common.php:1455 entry_detail.php:1036
 msgid "Qty"
 msgstr ""
 
-#: common.php:1464 entry_detail.php:1037
+#: common.php:1465 entry_detail.php:1037
 msgid "Unit Price"
 msgstr ""
 
-#: common.php:1474 entry_detail.php:1038 form_detail.php:591
+#: common.php:1475 entry_detail.php:1038 form_detail.php:591
 #: form_detail.php:1433 includes/fields/class-gf-field-calculation.php:87
 #: includes/fields/class-gf-field-singleproduct.php:92 js.php:729 js.php:788
 msgid "Price"
 msgstr ""
 
-#: common.php:1543
+#: common.php:1545
 msgid "Total:"
 msgstr ""
 
-#: common.php:2641
+#: common.php:2643
 msgid ""
 "Gravity Forms requires WordPress %s or greater. You must upgrade WordPress "
 "in order to use Gravity Forms"
 msgstr ""
 
-#: common.php:2768
+#: common.php:2770
 msgid "%s ago"
 msgstr ""
 
-#: common.php:2770 common.php:2773
+#: common.php:2772 common.php:2775
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: common.php:3248
+#: common.php:3250
 msgid "Product fields are not editable"
 msgstr ""
 
-#: common.php:3252
+#: common.php:3254
 msgid "Donations are not editable"
 msgstr ""
 
-#: common.php:3413
+#: common.php:3415
 msgid "There was an problem while verifying your file."
 msgstr ""
 
-#: common.php:3416
+#: common.php:3418
 msgid "Sorry, this file extension is not permitted for security reasons."
 msgstr ""
 
-#: common.php:3419
+#: common.php:3421
 msgid "Sorry, this file type is not permitted for security reasons."
 msgstr ""
 
-#: common.php:4454 form_list.php:164 form_list.php:622 form_settings.php:1120
+#: common.php:4457 form_list.php:164 form_list.php:622 form_settings.php:1120
 #: form_settings.php:2410 includes/addon/class-gf-feed-addon.php:1953
 #: js.php:268 js.php:328 notification.php:602 notification.php:1857
 msgid "Active"
 msgstr ""
 
-#: common.php:4455 form_list.php:160 form_list.php:622 form_settings.php:1116
+#: common.php:4458 form_list.php:160 form_list.php:622 form_settings.php:1116
 #: form_settings.php:2410 includes/addon/class-gf-feed-addon.php:1953
 #: js.php:268 js.php:332 notification.php:598 notification.php:1857
 msgid "Inactive"
 msgstr ""
 
-#: common.php:4456 common.php:4486 form_detail.php:1505 select_columns.php:252
+#: common.php:4459 common.php:4489 form_detail.php:1505 select_columns.php:252
 msgid "Save"
 msgstr ""
 
-#: common.php:4457 entry_detail.php:1368 form_detail.php:2418
+#: common.php:4460 entry_detail.php:1370 form_detail.php:2418
 #: gravityforms.php:3584 includes/webapi/webapi.php:184
 #: includes/webapi/webapi.php:256
 msgid "Update"
 msgstr ""
 
-#: common.php:4458 form_display.php:264 form_display.php:1020
+#: common.php:4461 form_display.php:264 form_display.php:1020
 #: form_display.php:2868 js.php:533
 msgid "Previous"
 msgstr ""
 
-#: common.php:4459
+#: common.php:4462
 msgid "Select a format"
 msgstr ""
 
-#: common.php:4460
+#: common.php:4463
 msgid "5 of %d items shown. Edit field to view all"
 msgstr ""
 
-#: common.php:4461
+#: common.php:4464
 msgid "Enter a value"
 msgstr ""
 
-#: common.php:4462
+#: common.php:4465
 msgid "Untitled Form"
 msgstr ""
 
-#: common.php:4463
+#: common.php:4466
 msgid ""
 "We would love to hear from you! Please fill out this form and we will get "
 "in touch with you shortly."
 msgstr ""
 
-#: common.php:4464 common.php:4494 form_detail.php:3008 includes/api.php:433
+#: common.php:4467 common.php:4497 form_detail.php:3008 includes/api.php:433
 msgid "Thanks for contacting us! We will get in touch with you shortly."
 msgstr ""
 
-#: common.php:4465 form_display.php:1244 form_list.php:347
+#: common.php:4468 form_display.php:1244 form_list.php:347
 msgid "Submit"
 msgstr ""
 
-#: common.php:4466 notification.php:445
+#: common.php:4469 notification.php:445
 msgid "Loading..."
 msgstr ""
 
-#: common.php:4467
+#: common.php:4470
 msgid "this field if"
 msgstr ""
 
-#: common.php:4468
+#: common.php:4471
 msgid "this section if"
 msgstr ""
 
-#: common.php:4469
+#: common.php:4472
 msgid "this page"
 msgstr ""
 
-#: common.php:4470
+#: common.php:4473
 msgid "this form button if"
 msgstr ""
 
-#: common.php:4471 js.php:256
+#: common.php:4474 js.php:256
 msgid "Show"
 msgstr ""
 
-#: common.php:4472
+#: common.php:4475
 msgid "Hide"
 msgstr ""
 
-#: common.php:4475
+#: common.php:4478
 msgid "of the following match:"
 msgstr ""
 
-#: common.php:4476 includes/addon/class-gf-addon.php:4018 notification.php:326
+#: common.php:4479 includes/addon/class-gf-addon.php:4018 notification.php:326
 #: notification.php:928
 msgid "is"
 msgstr ""
 
-#: common.php:4477 includes/addon/class-gf-addon.php:4022 notification.php:327
+#: common.php:4480 includes/addon/class-gf-addon.php:4022 notification.php:327
 #: notification.php:929
 msgid "is not"
 msgstr ""
 
-#: common.php:4478 includes/addon/class-gf-addon.php:4026 notification.php:328
+#: common.php:4481 includes/addon/class-gf-addon.php:4026 notification.php:328
 #: notification.php:930
 msgid "greater than"
 msgstr ""
 
-#: common.php:4479 includes/addon/class-gf-addon.php:4030 notification.php:329
+#: common.php:4482 includes/addon/class-gf-addon.php:4030 notification.php:329
 #: notification.php:931
 msgid "less than"
 msgstr ""
 
-#: common.php:4480 includes/addon/class-gf-addon.php:4034 notification.php:330
+#: common.php:4483 includes/addon/class-gf-addon.php:4034 notification.php:330
 #: notification.php:932
 msgid "contains"
 msgstr ""
 
-#: common.php:4481 includes/addon/class-gf-addon.php:4038 notification.php:331
+#: common.php:4484 includes/addon/class-gf-addon.php:4038 notification.php:331
 #: notification.php:933
 msgid "starts with"
 msgstr ""
 
-#: common.php:4482 includes/addon/class-gf-addon.php:4042 notification.php:332
+#: common.php:4485 includes/addon/class-gf-addon.php:4042 notification.php:332
 #: notification.php:934
 msgid "ends with"
 msgstr ""
 
-#: common.php:4484
+#: common.php:4487
 msgid "Use this confirmation if"
 msgstr ""
 
-#: common.php:4485
+#: common.php:4488
 msgid "Send this notification if"
 msgstr ""
 
-#: common.php:4487
+#: common.php:4490
 msgid "Saving..."
 msgstr ""
 
-#: common.php:4488
+#: common.php:4491
 msgid "Are you sure you wish to cancel these changes?"
 msgstr ""
 
-#: common.php:4489 form_settings.php:1807
+#: common.php:4492 form_settings.php:1807
 msgid "There was an issue saving this confirmation."
 msgstr ""
 
-#: common.php:4490
+#: common.php:4493
 msgid "Are you sure you wish to delete this confirmation?"
 msgstr ""
 
-#: common.php:4491 form_settings.php:1840
+#: common.php:4494 form_settings.php:1840
 msgid "There was an issue deleting this confirmation."
 msgstr ""
 
-#: common.php:4492
+#: common.php:4495
 msgid ""
 "There are unsaved changes to the current confirmation. Would you like to "
 "discard these changes?"
 msgstr ""
 
-#: common.php:4493
+#: common.php:4496
 msgid "Untitled Confirmation"
 msgstr ""
 
-#: common.php:4495
+#: common.php:4498
 msgid "Please select a page."
 msgstr ""
 
-#: common.php:4496
+#: common.php:4499
 msgid "Please enter a URL."
 msgstr ""
 
-#: common.php:4497
+#: common.php:4500
 msgid "Please enter a confirmation name."
 msgstr ""
 
-#: common.php:4498
+#: common.php:4501
 msgid ""
 "Warning! Deleting this field will also delete all entry data associated "
 "with it. 'Cancel' to stop. 'OK' to delete."
 msgstr ""
 
-#: common.php:4500
+#: common.php:4503
 msgid ""
 "Warning! This form contains conditional logic dependent upon this field. "
 "Deleting this field will deactivate those conditional logic rules and also "
@@ -453,140 +453,140 @@ msgid ""
 "to abort."
 msgstr ""
 
-#: common.php:4501
+#: common.php:4504
 msgid ""
 "This form contains conditional logic dependent upon this choice. Are you "
 "sure you want to delete this choice? 'OK' to delete, 'Cancel' to abort."
 msgstr ""
 
-#: common.php:4502
+#: common.php:4505
 msgid ""
 "This form contains conditional logic dependent upon this choice. Are you "
 "sure you want to modify this choice? 'OK' to delete, 'Cancel' to abort."
 msgstr ""
 
-#: common.php:4503
+#: common.php:4506
 msgid ""
 "This form contains conditional logic dependent upon this field. Are you "
 "sure you want to mark this field as Admin Only? 'OK' to confirm, 'Cancel' "
 "to abort."
 msgstr ""
 
-#: common.php:4505
+#: common.php:4508
 msgid "Merge Tags"
 msgstr ""
 
-#: common.php:4505
+#: common.php:4508
 msgid ""
 "Merge tags allow you to dynamically populate submitted field values in your "
 "form content wherever this merge tag icon is present."
 msgstr ""
 
-#: common.php:4514
+#: common.php:4517
 msgid "Add a condition"
 msgstr ""
 
-#: common.php:4515
+#: common.php:4518
 msgid "Remove a condition"
 msgstr ""
 
-#: common.php:4516
+#: common.php:4519
 msgid "Include results if {0} match:"
 msgstr ""
 
-#: common.php:4518
+#: common.php:4521
 msgid "Custom Choices"
 msgstr ""
 
-#: common.php:4519
+#: common.php:4522
 msgid "Predefined Choices"
 msgstr ""
 
-#: common.php:4835
+#: common.php:4838
 msgid "Any form field"
 msgstr ""
 
-#: common.php:4900 common.php:4989 common.php:5055
+#: common.php:4903 common.php:4992 common.php:5058
 msgid "yyyy-mm-dd"
 msgstr ""
 
-#: common.php:4983 includes/addon/class-gf-addon.php:2714
+#: common.php:4986 includes/addon/class-gf-addon.php:2714
 msgid "Entry ID"
 msgstr ""
 
-#: common.php:4987 export.php:922 forms_model.php:5202
+#: common.php:4990 export.php:922 forms_model.php:5202
 #: includes/addon/class-gf-addon.php:2715 select_columns.php:185
 msgid "Entry Date"
 msgstr ""
 
-#: common.php:4993
+#: common.php:4996
 msgid "Starred"
 msgstr ""
 
-#: common.php:5007
+#: common.php:5010
 msgid "IP Address"
 msgstr ""
 
-#: common.php:5011
+#: common.php:5014
 msgid "Source URL"
 msgstr ""
 
-#: common.php:5015 export.php:927 forms_model.php:5208 select_columns.php:188
+#: common.php:5018 export.php:927 forms_model.php:5208 select_columns.php:188
 msgid "Payment Status"
 msgstr ""
 
-#: common.php:5053 export.php:926 forms_model.php:5214 select_columns.php:191
+#: common.php:5056 export.php:926 forms_model.php:5214 select_columns.php:191
 msgid "Payment Date"
 msgstr ""
 
-#: common.php:5059 export.php:925 forms_model.php:5217
+#: common.php:5062 export.php:925 forms_model.php:5217
 #: includes/addon/class-gf-payment-addon.php:2267
 #: includes/addon/class-gf-payment-addon.php:2272 select_columns.php:190
 msgid "Payment Amount"
 msgstr ""
 
-#: common.php:5063
+#: common.php:5066
 msgid "Transaction ID"
 msgstr ""
 
-#: common.php:5067 entry_detail.php:1287 forms_model.php:5220
+#: common.php:5070 entry_detail.php:1289 forms_model.php:5220
 #: select_columns.php:192
 msgid "User"
 msgstr ""
 
-#: common.php:5159
+#: common.php:5162
 msgid "This type of file is not allowed. Must be one of the following: "
 msgstr ""
 
-#: common.php:5160
+#: common.php:5163
 msgid "Delete this file"
 msgstr ""
 
-#: common.php:5161
+#: common.php:5164
 msgid "in progress"
 msgstr ""
 
-#: common.php:5162
+#: common.php:5165
 msgid "File exceeds size limit"
 msgstr ""
 
-#: common.php:5163
+#: common.php:5166
 msgid "This type of file is not allowed."
 msgstr ""
 
-#: common.php:5164
+#: common.php:5167
 msgid "Maximum number of files reached"
 msgstr ""
 
-#: common.php:5165
+#: common.php:5168
 msgid "There was a problem while saving the file on the server"
 msgstr ""
 
-#: common.php:5166
+#: common.php:5169
 msgid "Please wait for the uploading to complete"
 msgstr ""
 
-#: common.php:5167 entry_detail.php:1381 form_detail.php:1496
+#: common.php:5170 entry_detail.php:1383 form_detail.php:1496
 #: form_detail.php:1506 form_detail.php:2430
 #: includes/addon/class-gf-results.php:325
 #: includes/locking/class-gf-locking.php:201
@@ -594,50 +594,50 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: common.php:5168
+#: common.php:5171
 msgid "Cancel this upload"
 msgstr ""
 
-#: common.php:5169
+#: common.php:5172
 msgid "Cancelled"
 msgstr ""
 
-#: common.php:5762
+#: common.php:5765
 msgid "Visible"
 msgstr ""
 
-#: common.php:5764
+#: common.php:5767
 msgid "Default option. The field is visible when viewing the form."
 msgstr ""
 
-#: common.php:5767 form_detail.php:568 form_detail.php:646 form_detail.php:764
+#: common.php:5770 form_detail.php:568 form_detail.php:646 form_detail.php:764
 #: form_detail.php:1962 form_detail.php:1998
 #: includes/fields/class-gf-field-hidden.php:13
 msgid "Hidden"
 msgstr ""
 
-#: common.php:5769
+#: common.php:5772
 msgid ""
 "The field is hidden when viewing the form. Useful when you require the "
 "functionality of this field but do not want the user to be able to see this "
 "field."
 msgstr ""
 
-#: common.php:5772
+#: common.php:5775
 msgid "Administrative"
 msgstr ""
 
-#: common.php:5774
+#: common.php:5777
 msgid ""
 "The field is only visible when administering submitted entries. The field "
 "is not visible or functional when viewing the form."
 msgstr ""
 
-#: common.php:5805 form_detail.php:2299
+#: common.php:5808 form_detail.php:2299
 msgid "Visibility"
 msgstr ""
 
-#: common.php:5805
+#: common.php:5808
 msgid "Select the visibility for this field."
 msgstr ""
 
@@ -754,11 +754,11 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
-#: entry_detail.php:66 entry_detail.php:1145
+#: entry_detail.php:66 entry_detail.php:1147
 msgid "Subscription Details"
 msgstr ""
 
-#: entry_detail.php:66 entry_detail.php:1145
+#: entry_detail.php:66 entry_detail.php:1147
 msgid "Payment Details"
 msgstr ""
 
@@ -849,109 +849,109 @@ msgstr ""
 msgid "show empty fields"
 msgstr ""
 
-#: entry_detail.php:1171
+#: entry_detail.php:1173
 msgid "Status"
 msgstr ""
 
-#: entry_detail.php:1187
+#: entry_detail.php:1189
 msgid "Start Date"
 msgstr ""
 
-#: entry_detail.php:1204
+#: entry_detail.php:1206
 msgid "Subscription Id"
 msgstr ""
 
-#: entry_detail.php:1204 export.php:924 forms_model.php:5211
+#: entry_detail.php:1206 export.php:924 forms_model.php:5211
 #: select_columns.php:189
 msgid "Transaction Id"
 msgstr ""
 
-#: entry_detail.php:1222 includes/addon/class-gf-payment-addon.php:2220
+#: entry_detail.php:1224 includes/addon/class-gf-payment-addon.php:2220
 #: includes/addon/class-gf-payment-addon.php:2224
 msgid "Recurring Amount"
 msgstr ""
 
-#: entry_detail.php:1222 includes/addon/class-gf-payment-addon.php:2111
+#: entry_detail.php:1224 includes/addon/class-gf-payment-addon.php:2111
 msgid "Amount"
 msgstr ""
 
-#: entry_detail.php:1280
+#: entry_detail.php:1282
 msgid "Submitted on"
 msgstr ""
 
-#: entry_detail.php:1282 export.php:931 forms_model.php:5199
+#: entry_detail.php:1284 export.php:931 forms_model.php:5199
 #: includes/addon/class-gf-addon.php:2716 select_columns.php:186
 msgid "User IP"
 msgstr ""
 
-#: entry_detail.php:1288
+#: entry_detail.php:1290
 msgid "View user profile"
 msgstr ""
 
-#: entry_detail.php:1294
+#: entry_detail.php:1296
 msgid "Embed Url"
 msgstr ""
 
-#: entry_detail.php:1301
+#: entry_detail.php:1303
 msgid "Edit Post"
 msgstr ""
 
-#: entry_detail.php:1302
+#: entry_detail.php:1304
 msgid "Click to edit post"
 msgstr ""
 
-#: entry_detail.php:1324 entry_list.php:1154 entry_list.php:1263
+#: entry_detail.php:1326 entry_list.php:1154 entry_list.php:1263
 msgid "Not Spam"
 msgstr ""
 
-#: entry_detail.php:1330 entry_detail.php:1343
+#: entry_detail.php:1332 entry_detail.php:1345
 msgid "You are about to delete this entry. 'Cancel' to stop, 'OK' to delete."
 msgstr ""
 
-#: entry_detail.php:1330 entry_detail.php:1343 entry_list.php:1132
+#: entry_detail.php:1332 entry_detail.php:1345 entry_list.php:1132
 #: entry_list.php:1163 entry_list.php:1260 entry_list.php:1264
 msgid "Delete Permanently"
 msgstr ""
 
-#: entry_detail.php:1338 entry_list.php:1123 entry_list.php:1259
+#: entry_detail.php:1340 entry_list.php:1123 entry_list.php:1259
 #: form_list.php:531 form_list.php:673 form_list.php:674
 msgid "Restore"
 msgstr ""
 
-#: entry_detail.php:1352 form_detail.php:2441
+#: entry_detail.php:1354 form_detail.php:2441
 msgid "Move to Trash"
 msgstr ""
 
-#: entry_detail.php:1358
+#: entry_detail.php:1360
 msgid "Mark as Spam"
 msgstr ""
 
-#: entry_detail.php:1368 form_settings.php:2429 gravityforms.php:3993
+#: entry_detail.php:1370 form_settings.php:2429 gravityforms.php:3993
 #: gravityforms.php:4310 includes/addon/class-gf-feed-addon.php:1385
 #: notification.php:1882
 msgid "Edit"
 msgstr ""
 
-#: entry_detail.php:1409
+#: entry_detail.php:1411
 msgid ""
 "You cannot resend notifications for this entry because this form does not "
 "currently have any notifications configured."
 msgstr ""
 
-#: entry_detail.php:1411 entry_list.php:2041
+#: entry_detail.php:1413 entry_list.php:2041
 msgid "Configure Notifications"
 msgstr ""
 
-#: entry_detail.php:1427 entry_list.php:2061 notification.php:813
+#: entry_detail.php:1429 entry_list.php:2061 notification.php:813
 msgid "Send To"
 msgstr ""
 
-#: entry_detail.php:1433 entry_list.php:1272 entry_list.php:1648
+#: entry_detail.php:1435 entry_list.php:1272 entry_list.php:1648
 #: entry_list.php:1999 entry_list.php:2066
 msgid "Resend Notifications"
 msgstr ""
 
-#: entry_detail.php:1435 entry_list.php:2068
+#: entry_detail.php:1437 entry_list.php:2068
 msgid "Resending..."
 msgstr ""
 
@@ -10974,12 +10974,12 @@ msgstr ""
 msgid "https://www.rocketgenius.com"
 msgstr ""
 
-#: common.php:4473
+#: common.php:4476
 msgctxt "Conditional Logic"
 msgid "All"
 msgstr ""
 
-#: common.php:4474
+#: common.php:4477
 msgctxt "Conditional Logic"
 msgid "Any"
 msgstr ""

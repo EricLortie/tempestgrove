@@ -1061,7 +1061,9 @@ class GFEntryDetail {
 														<?php
 													}
 												}
-												$subtotal = floatval( $product['quantity'] ) * $price;
+												$quantity = GFCommon::to_number( $product['quantity'], $lead['currency'] );
+
+												$subtotal = $quantity * $price;
 												$total += $subtotal;
 												?>
 											</ul>

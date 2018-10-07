@@ -102,11 +102,12 @@
 .dialog__close-button {
     top: $dialog-close-top-offset;
     right: $dialog-close-right-offset;
-    background: $dialog-close-background;
     fill: $dialog-close-color;
     padding: $dialog-close-padding;
     width: $dialog-close-size;
     position: absolute;
+    color: white;
+    font-size: 2rem;
 }
 
     /* Close Button: Hover */
