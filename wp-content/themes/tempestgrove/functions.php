@@ -246,7 +246,7 @@ function generate_og_tags() {
             $og_tags['url'] = get_site_url()."/".$current_page->name;
             $og_tags['type'] = 'article';
             $og_tags['image'] = 'https://tempestgrove.com/wp-content/uploads/2017/09/37113065645_52718149af_k.jpg';
-            $og_tags['description'] = 'With over a dozen games per year there is always an opportunity to join.;
+            $og_tags['description'] = 'With over a dozen games per year there is always an opportunity to join.';
 
       } else {
         global $post;
