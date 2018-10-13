@@ -218,6 +218,10 @@ function change_login_title(){
 
 function generate_og_tags() {
 
+      // Get the queried object and sanitize it
+      $current_page = sanitize_post( $GLOBALS['wp_the_query']->get_queried_object() );
+      // Get the page slug
+      $slug = $current_page->name;
       if(is_home() || is_front_page()){
           $og_tags['site_name'] = "Underworld LARP: Tempest Grove";
           $og_tags['title'] = "Run. Fight. Hide.";
@@ -225,6 +229,24 @@ function generate_og_tags() {
           $og_tags['type'] = 'article';
           $og_tags['image'] = 'https://tempestgrove.com/wp-content/uploads/2017/09/37113065645_52718149af_k.jpg';
           $og_tags['description'] = 'Live Action Roleplay in Cape Breton, Nova Scotia. An amazing adventure and part of Underworld LARP.';
+
+      } else if ($slug == "characters") {
+
+            $og_tags['site_name'] = "Underworld LARP: Tempest Grove";
+            $og_tags['title'] = $current_page->label;
+            $og_tags['url'] = get_site_url()."/".$current_page->name;
+            $og_tags['type'] = 'article';
+            $og_tags['image'] = 'https://tempestgrove.com/wp-content/uploads/2017/09/37113065645_52718149af_k.jpg';
+            $og_tags['description'] = 'These are some of the amazing characters created by our players.';
+
+      } else if ($slug == "games") {
+
+            $og_tags['site_name'] = "Underworld LARP: Tempest Grove";
+            $og_tags['title'] = $current_page->label;
+            $og_tags['url'] = get_site_url()."/".$current_page->name;
+            $og_tags['type'] = 'article';
+            $og_tags['image'] = 'https://tempestgrove.com/wp-content/uploads/2017/09/37113065645_52718149af_k.jpg';
+            $og_tags['description'] = 'With over a dozen games per year there is always an opportunity to join.;
 
       } else {
         global $post;
