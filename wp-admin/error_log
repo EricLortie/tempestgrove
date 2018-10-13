@@ -774,3 +774,60 @@ ORDER BY occur_begin, event_title ASC made by activate_plugin, do_action('activa
 [17-Sep-2018 00:17:28 UTC] WordPress database error Table 'tempesv2_WPRYS.wp_my_calendar_categories' doesn't exist for query SELECT * FROM wp_my_calendar_categories  ORDER BY category_name ASC made by activate_plugin, do_action('activate_my-calendar/my-calendar.php'), WP_Hook->do_action, WP_Hook->apply_filters, mc_plugin_activated, my_calendar_check, mc_default_settings, mc_generate_calendar_page, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, WPSEO_Link_Watcher->save_post, WPSEO_Link_Watcher->process, apply_filters('the_content'), WP_Hook->apply_filters, do_shortcode, preg_replace_callback, do_shortcode_tag, my_calendar_insert, my_calendar, mc_generate_calendar_nav, mc_category_key
 [17-Sep-2018 00:17:28 UTC] WordPress database error Table 'tempesv2_WPRYS.wp_my_calendar' doesn't exist for query SELECT event_begin FROM wp_my_calendar WHERE event_approved = 1 AND event_flagged <> 1 ORDER BY event_begin ASC LIMIT 0 , 1 made by activate_plugin, do_action('activate_my-calendar/my-calendar.php'), WP_Hook->do_action, WP_Hook->apply_filters, mc_plugin_activated, my_calendar_check, mc_default_settings, mc_generate_calendar_page, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, WPSEO_Link_Watcher->save_post, WPSEO_Link_Watcher->process, apply_filters('the_content'), WP_Hook->apply_filters, do_shortcode, preg_replace_callback, do_shortcode_tag, my_calendar_insert, my_calendar, mc_generate_calendar_nav, mc_date_switcher
 [26-Sep-2018 14:03:19 UTC] PHP Warning:  rmdir(/home4/tempesv2/public_html/wp-content/plugins/my-calendar/../icons_backup/): Directory not empty in /home4/tempesv2/public_html/wp-content/plugins/my-calendar/my-calendar-install.php on line 607
+[07-Oct-2018 01:12:06 UTC] PHP Fatal error:  Uncaught Error: Class 'um\admin\core\Admin_Navmenu' not found in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php:674
+Stack trace:
+#0 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(533): UM->admin_navmenu()
+#1 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(230): UM->includes()
+#2 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(89): UM->_um_construct()
+#3 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1390): UM::instance()
+#4 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1395): UM()
+#5 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/ultimate-member.php(32): require_once('/home4/tempesv2...')
+#6 /home4/tempesv2/public_html/wp-settings.php(305): include_once('/home4/tempesv2...')
+#7 /home4/tempesv2/public_html/wp-config.php(91): require_once('/home4/tempesv2...')
+ in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php on line 674
+[07-Oct-2018 01:12:33 UTC] PHP Fatal error:  Uncaught Error: Class 'um\admin\core\Admin_Navmenu' not found in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php:674
+Stack trace:
+#0 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(547): UM->admin_navmenu()
+#1 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(230): UM->includes()
+#2 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(89): UM->_um_construct()
+#3 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1390): UM::instance()
+#4 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1395): UM()
+#5 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/ultimate-member.php(32): require_once('/home4/tempesv2...')
+#6 /home4/tempesv2/public_html/wp-settings.php(305): include_once('/home4/tempesv2...')
+#7 /home4/tempesv2/public_html/wp-config.php(91): require_once('/home4/tempesv2...')
+ in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php on line 674
+[07-Oct-2018 01:13:06 UTC] PHP Fatal error:  Uncaught Error: Class 'um\admin\core\Admin_Navmenu' not found in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php:674
+Stack trace:
+#0 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(533): UM->admin_navmenu()
+#1 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(230): UM->includes()
+#2 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(89): UM->_um_construct()
+#3 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1390): UM::instance()
+#4 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1395): UM()
+#5 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/ultimate-member.php(32): require_once('/home4/tempesv2...')
+#6 /home4/tempesv2/public_html/wp-settings.php(305): include_once('/home4/tempesv2...')
+#7 /home4/tempesv2/public_html/wp-config.php(91): require_once('/home4/tempesv2...')
+ in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php on line 674
+[07-Oct-2018 01:13:46 UTC] PHP Fatal error:  Uncaught Error: Class 'um\admin\core\Admin_Navmenu' not found in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php:674
+Stack trace:
+#0 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(547): UM->admin_navmenu()
+#1 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(230): UM->includes()
+#2 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(89): UM->_um_construct()
+#3 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1390): UM::instance()
+#4 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1395): UM()
+#5 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/ultimate-member.php(32): require_once('/home4/tempesv2...')
+#6 /home4/tempesv2/public_html/wp-settings.php(305): include_once('/home4/tempesv2...')
+#7 /home4/tempesv2/public_html/wp-config.php(91): require_once('/home4/tempesv2...')
+ in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php on line 674
+[07-Oct-2018 01:15:07 UTC] PHP Fatal error:  Uncaught Error: Class 'um\admin\core\Admin_Navmenu' not found in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php:674
+Stack trace:
+#0 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(533): UM->admin_navmenu()
+#1 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(230): UM->includes()
+#2 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(89): UM->_um_construct()
+#3 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1390): UM::instance()
+#4 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php(1395): UM()
+#5 /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/ultimate-member.php(32): require_once('/home4/tempesv2...')
+#6 /home4/tempesv2/public_html/wp-settings.php(305): include_once('/home4/tempesv2...')
+#7 /home4/tempesv2/public_html/wp-config.php(91): require_once('/home4/tempesv2...')
+ in /home4/tempesv2/public_html/wp-content/plugins/ultimate-member/includes/class-init.php on line 674
+[07-Oct-2018 01:16:32 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home4/tempesv2/public_html/wp-content/plugins/wordpress-seo/inc/options/class-wpseo-options.php on line 187
+[07-Oct-2018 01:16:32 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home4/tempesv2/public_html/wp-content/plugins/wordpress-seo/inc/options/class-wpseo-options.php on line 187
