@@ -14,6 +14,21 @@
         </a>
     </li>
 
+    {if $next_game}
+      <li class="sidebar-nav__item sidebar-nav_countdown">
+        <span id="game_date" style="display:none">{$next_game->fields['event_start']}</span>
+        <a href="{$next_game->permalink}" class="sidebar-nav__item-link sidebar-nav__item-countdown">
+          Next Game
+          <div class="flex-grid" id="countdown">
+            <div class="small-1of4 box"><span id="days"></span>D</div>
+            <div class="small-1of4 box"><span id="hours"></span>H</div>
+            <div class="small-1of4 box"><span id="minutes"></span>M</div>
+            <div class="small-1of4 box"><span id="seconds"></span>S</div>
+          </div>
+        </a>
+      </li>
+    {/if}
+
     {foreach from=$main_menu item=item}
           <li class="sidebar-nav__item{if $item->mobile_more}--more in-tab-bar{/if} {if $item->in_tab_bar && !$item->mobile_more}in-tab-bar{/if}">
               <a

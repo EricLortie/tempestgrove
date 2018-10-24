@@ -26,6 +26,11 @@
     }
   }
 }
+.rulebook_icon {
+  padding: .6rem;
+  font-size: 8rem;
+  text-align: center;
+}
 .video-blocks {
   background: #111;
   padding: 1rem 0.5rem;

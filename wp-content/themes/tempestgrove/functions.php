@@ -328,7 +328,7 @@ function get_characters($count = -1){
 }
 
 // Gets and structures a list of current alerts
-function get_games(){
+function get_games($next_game_only=false){
     $today = date('Ymd');
     $args = array(
         'post_type' => 'games',
@@ -353,6 +353,9 @@ function get_games(){
         $posts[] = $post;
     }
     wp_reset_query();
+    if($next_game_only){
+      return $next_event;
+    }
     $ret = ['games' => $posts, 'next_game' => $next_event];
     return $ret;
 }

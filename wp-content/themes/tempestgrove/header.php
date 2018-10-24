@@ -59,7 +59,15 @@
             $smarty->assign('og_tags', generate_og_tags());
             $smarty->display('includes/open-graph.tpl');
             $smarty->assign('alerts', get_alerts());
+            $next_game = get_games(true);
+            // pre($next_game);
+            $smarty->assign('next_game', $next_game);
 
+            // Add Page Javascripts
+            add_action('wp_enqueue_scripts', 'add_header_javascripts');
+            function add_header_javascripts(){
+            	wp_enqueue_script('countdown',		ASSETS_DIR . 'js/countdown.js', 		array(), ASSET_VERSION, 1);
+            }
 
             wp_head();
         ?>

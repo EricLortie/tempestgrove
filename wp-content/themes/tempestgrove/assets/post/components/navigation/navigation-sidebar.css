@@ -792,3 +792,25 @@ a[data-sidebar-level] {
         }
 
     }
+
+.sidebar-nav_countdown {
+  background: darkgreen;
+}
+.sidebar-nav__item-countdown {
+  padding: .2rem !important;
+}
+div#countdown {
+  margin: 0;
+  padding: 0;
+  div {
+    display: inline-block;
+    font-size: 0.8em;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+}
